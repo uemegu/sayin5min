@@ -1,0 +1,37 @@
+{
+  "name": "sayin5min",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite & npx tailwindcss -i ./src/input.css -o ./src/output.css --watch",
+    "build": "tsc -b && vite build",
+    "lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "@pixiv/three-vrm": "^2.1.2",
+    "@react-three/drei": "^9.108.3",
+    "@react-three/fiber": "^8.16.8",
+    "@react-three/postprocessing": "^2.16.2",
+    "@types/three": "^0.164.1",
+    "postprocessing": "^6.35.6",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "three": "^0.164.1",
+    "valtio": "^1.13.2"
+  },
+  "devDependencies": {
+    "@types/react": "^18.3.3",
+    "@types/react-dom": "^18.3.0",
+    "@typescript-eslint/eslint-plugin": "^7.13.1",
+    "@typescript-eslint/parser": "^7.13.1",
+    "@vitejs/plugin-react-swc": "^3.5.0",
+    "eslint": "^8.57.0",
+    "eslint-plugin-react-hooks": "^4.6.2",
+    "eslint-plugin-react-refresh": "^0.4.7",
+    "tailwindcss": "^3.4.4",
+    "typescript": "^5.2.2",
+    "vite": "^5.3.1"
+  }
+}

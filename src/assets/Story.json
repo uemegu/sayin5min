@@ -1,0 +1,114 @@
+{
+  "config": {
+    "avatars": [
+      {
+        "key": "heroine",
+        "value": "./models/sample_woman.vrm"
+      },
+      {
+        "key": "friend_girl1",
+        "value": "./models/sample_woman2.vrm"
+      }
+    ],
+    "animations": [
+      {
+        "key": "idle",
+        "value": "./animations/Idle.fbx"
+      },
+      {
+        "key": "punching",
+        "value": "./animations/Punching.fbx"
+      },
+      {
+        "key": "bow",
+        "value": "./animations/Quick Formal Bow.fbx"
+      },
+      {
+        "key": "greeting",
+        "value": "./animations/Standing Greeting.fbx"
+      }
+    ],
+    "backgrounds": [
+      {
+        "key": "park",
+        "value": "./images/park.webp"
+      }
+    ],
+    "bgms": [
+      {
+        "key": "normal",
+        "value": "./bgms/Normal.mp3"
+      }
+    ]
+  },
+  "chapters": [
+    {
+      "title": "はじまりのチャプター",
+      "location": "公園",
+      "scenes": [
+        {
+          "avatars": [
+            {
+              "position": "center",
+              "id": "heroine",
+              "action": "idle",
+              "expression": "normal"
+            }
+          ],
+          "bgm": "normal",
+          "background": "park",
+          "text": "最初のシナリオです"
+        },
+        {
+          "avatars": [
+            {
+              "position": "center",
+              "id": "heroine",
+              "action": "bow",
+              "expression": "sad"
+            },
+            {
+              "id": "friend_girl1",
+              "action": "idle",
+              "expression": "normal"
+            }
+          ],
+          "bgm": "normal",
+          "background": "park",
+          "text": "2個目のセリフです"
+        },
+        {
+          "avatars": [
+            {
+              "position": "center",
+              "id": "heroine",
+              "action": "greeting",
+              "expression": "happy"
+            },
+            {
+              "id": "friend_girl1",
+              "action": "idle",
+              "expression": "happy"
+            }
+          ],
+          "bgm": "normal",
+          "background": "park",
+          "text": "3個目のセリフです"
+        },
+        {
+          "avatars": [
+            {
+              "position": "center",
+              "id": "heroine",
+              "action": "punching",
+              "expression": "angry"
+            }
+          ],
+          "bgm": "normal",
+          "background": "park",
+          "text": "4個目のセリフです"
+        }
+      ]
+    }
+  ]
+}
