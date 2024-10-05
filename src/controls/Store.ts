@@ -1,3 +1,4 @@
+import { Vector3 } from "three";
 import { proxy } from "valtio";
 
 interface ConfigItem {
@@ -14,31 +15,33 @@ interface Config {
 
 export type Expression = "normal" | "sad" | "angry" | "happy";
 
-interface Avatar {
+export interface Avatar {
   position?: string;
   id: string;
   action: string;
   expression?: Expression;
+  attension?: boolean;
 }
 
-interface Scene {
+export interface Scene {
   avatars?: Avatar[];
   bgm?: string;
   background?: string;
   text: string;
 }
 
-interface Chapter {
+export interface Chapter {
   title: string;
   location: string;
   scenes: Scene[];
 }
 
-interface Store {
+export interface Store {
   config: Config;
   chapters: Chapter[];
   messageIndex: number;
   chapterIndex: number;
+  cameraDirection: Vector3 | null;
 }
 
 const store = proxy<Store>({
@@ -57,6 +60,7 @@ const store = proxy<Store>({
   ],
   messageIndex: 0,
   chapterIndex: 0,
+  cameraDirection: null,
 });
 
 export default store;

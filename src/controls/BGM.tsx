@@ -8,7 +8,7 @@ const BGM: React.FC = () => {
   const currentScene = chapters[chapterIndex].scenes[messageIndex];
   const bgmConfig = config.bgms?.find((bgm) => bgm.key === currentScene?.bgm);
   const bgmUrl = bgmConfig ? bgmConfig.value : "";
-  const [isPlaying, setIsPlaying] = useState(true);
+  const [isPlaying, setIsPlaying] = useState(false);
 
   useEffect(() => {
     if (bgmUrl && audioRef.current) {

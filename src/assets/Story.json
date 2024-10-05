@@ -52,7 +52,8 @@
               "position": "center",
               "id": "heroine",
               "action": "idle",
-              "expression": "normal"
+              "expression": "normal",
+              "attension": "true"
             }
           ],
           "bgm": "normal",
@@ -70,7 +71,8 @@
             {
               "id": "friend_girl1",
               "action": "idle",
-              "expression": "normal"
+              "expression": "normal",
+              "attension": "true"
             }
           ],
           "bgm": "normal",
@@ -83,7 +85,8 @@
               "position": "center",
               "id": "heroine",
               "action": "greeting",
-              "expression": "happy"
+              "expression": "happy",
+              "attension": "true"
             },
             {
               "id": "friend_girl1",
@@ -100,6 +103,26 @@
             {
               "position": "center",
               "id": "heroine",
+              "action": "idle",
+              "expression": "happy",
+              "attension": "true"
+            },
+            {
+              "id": "friend_girl1",
+              "action": "idle",
+              "expression": "happy",
+              "attension": "true"
+            }
+          ],
+          "bgm": "normal",
+          "background": "park",
+          "text": "3個目のセリフです(2)"
+        },
+        {
+          "avatars": [
+            {
+              "position": "center",
+              "id": "heroine",
               "action": "punching",
               "expression": "angry"
             }
@@ -107,6 +130,20 @@
           "bgm": "normal",
           "background": "park",
           "text": "4個目のセリフです"
+        },
+        {
+          "avatars": [
+            {
+              "position": "center",
+              "id": "heroine",
+              "action": "punching",
+              "expression": "angry",
+              "attension": "true"
+            }
+          ],
+          "bgm": "normal",
+          "background": "park",
+          "text": "4個目のセリフです(2)"
         }
       ]
     }

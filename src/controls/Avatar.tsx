@@ -5,14 +5,19 @@ import { useThree } from "@react-three/fiber";
 import { GLTFLoader } from "three/examples/jsm/loaders/GLTFLoader.js";
 import { FBXLoader } from "three/addons/loaders/FBXLoader.js";
 import * as THREE from "three";
+import { gsap } from "gsap";
+import { useSnapshot } from "valtio";
+import StorySetting from "./Store";
 
 const Avatar: React.FC<{
   url: string;
   animationUrl: string;
   expression?: string;
   index: number;
-}> = ({ url, animationUrl, expression, index }) => {
+  attention?: boolean;
+}> = ({ url, animationUrl, expression, index, attention }) => {
   const { scene, camera } = useThree();
+  const { cameraDirection } = useSnapshot(StorySetting);
   const gltf = useLoader(GLTFLoader, url, (loader) => {
     loader.register((parser) => new VRMLoaderPlugin(parser));
   });
@@ -31,6 +36,61 @@ const Avatar: React.FC<{
     }
   };
 
+  const lookMe = (avatar: VRM) => {
+    const bbox = new THREE.Box3().setFromObject(avatar.scene);
+    const facePosition = new THREE.Vector3(
+      index * 0.7,
+      (bbox.max.y * 2) / 3,
+      0
+    );
+
+    if (cameraDirection) {
+      const target = {
+        x: cameraDirection.x * 1000,
+        y: cameraDirection.y,
+        z: cameraDirection.z,
+      }; // 初期値
+      gsap.to(target, {
+        duration: 1,
+        x: facePosition.x * 1000,
+        y: facePosition.y,
+        z: facePosition.z,
+        onUpdate: () => {
+          camera.lookAt(new THREE.Vector3(target.x / 1000, target.y, target.z));
+        },
+        onComplete: () => {
+          StorySetting.cameraDirection = facePosition;
+        },
+      });
+    } else {
+      camera.lookAt(
+        new THREE.Vector3(facePosition.x, facePosition.y, facePosition.z)
+      );
+      StorySetting.cameraDirection = facePosition;
+    }
+  };
+
+  const loadAnimation = (avatar: VRM) => {
+    loadMixamoAnimation(animationUrl, avatar).then((clip) => {
+      for (let track of clip.tracks) {
+        if (track.name.includes(".position")) {
+          for (let i = 1; i < track.values.length; i += 3) {
+            track.values[i] += 0.023;
+          }
+        }
+      }
+
+      const mixer = new THREE.AnimationMixer(avatar.scene);
+      setMixer(mixer);
+      const action = mixer.clipAction(clip);
+      if (currentAnimation) {
+        action.crossFadeFrom(currentAnimation, 1, false);
+      }
+      action.play();
+      setCurrentAnimation(action);
+    });
+  };
+
   useEffect(() => {
     if (gltf.userData.vrm) {
       const vrm = gltf.userData.vrm as VRM;
@@ -38,6 +98,9 @@ const Avatar: React.FC<{
       vrm.scene.rotateY(Math.PI - (index * Math.PI) / 8);
       scene.add(vrm.scene);
       setAvatar(vrm);
+      if (attention) {
+        lookMe(gltf.userData.vrm);
+      }
     }
 
     return () => {
@@ -48,32 +111,15 @@ const Avatar: React.FC<{
   }, [gltf, index, scene]);
 
   useEffect(() => {
-    if (avatar && animationUrl) {
-      loadMixamoAnimation(animationUrl, avatar).then((clip) => {
-        for (let track of clip.tracks) {
-          if (track.name.includes(".position")) {
-            for (let i = 1; i < track.values.length; i += 3) {
-              track.values[i] += 0.023;
-            }
-          }
-        }
-
-        const mixer = new THREE.AnimationMixer(avatar.scene);
-        setMixer(mixer);
-        const action = mixer.clipAction(clip);
-        if (currentAnimation) {
-          action.crossFadeFrom(currentAnimation, 1, false);
-        }
-        action.play();
-        setCurrentAnimation(action);
-      });
+    if (attention && avatar) {
+      lookMe(avatar);
     }
+  }, [attention, avatar]);
 
-    return () => {
-      if (mixer) {
-        mixer.stopAllAction();
-      }
-    };
+  useEffect(() => {
+    if (avatar && animationUrl) {
+      loadAnimation(avatar);
+    }
   }, [avatar, animationUrl]);
 
   useEffect(() => {

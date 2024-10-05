@@ -19,16 +19,6 @@ const Background: React.FC<{ url: string }> = ({ url }) => {
   return null;
 };
 
-const CameraSetup: React.FC = () => {
-  const { camera } = useThree();
-
-  useEffect(() => {
-    camera.lookAt(new THREE.Vector3(0, 1.2, 0));
-  }, [camera]);
-
-  return null;
-};
-
 const CanvasComponent: React.FC = () => {
   const { chapters, messageIndex, chapterIndex, config } =
     useSnapshot(StorySetting);
@@ -49,16 +39,14 @@ const CanvasComponent: React.FC = () => {
         position: [0, 1, 2.5],
       }}
     >
-      <CameraSetup />
       {backgroundUrl && <Background url={backgroundUrl} />}
       <ambientLight color={0xff4444} intensity={1} />
-      <directionalLight position={[2, 1, 1]} intensity={2} />
+      <directionalLight position={[0.5, 2, 2]} intensity={2} />
       {currentScene?.avatars?.map((avatar, index) => {
         const avatarConfig = config.avatars.find((av) => av.key === avatar.id);
         const animationConfig = config.animations.find(
           (anim) => anim.key === avatar.action
         );
-        console.log(index, animationConfig ? animationConfig.value : "");
         return (
           <Avatar
             key={index}
@@ -66,6 +54,7 @@ const CanvasComponent: React.FC = () => {
             animationUrl={animationConfig ? animationConfig.value : ""}
             expression={avatar.expression}
             index={index}
+            attention={avatar.attension}
           />
         );
       })}

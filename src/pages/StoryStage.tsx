@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import CanvasComponent from "../controls/Canvas";
 import MessageWindow from "../controls/MessageWindow";
-import StorySetting from "../controls/Store";
+import StorySetting, { Chapter } from "../controls/Store";
 import json from "../assets/Story.json";
 import BGM from "../controls/BGM";
 
@@ -9,7 +9,7 @@ const StoryStage: React.FC = () => {
   const [location, setLocation] = useState("");
 
   useEffect(() => {
-    StorySetting.chapters = json.chapters;
+    StorySetting.chapters = json.chapters as Chapter[];
     StorySetting.config = json.config;
     setLocation(StorySetting.chapters[StorySetting.chapterIndex].location);
   }, []);
@@ -23,7 +23,6 @@ const StoryStage: React.FC = () => {
       setLocation(StorySetting.chapters[StorySetting.chapterIndex].location);
     }
   };
-
   return (
     <div
       style={{ width: "100vw", height: "100vh", position: "relative" }}
