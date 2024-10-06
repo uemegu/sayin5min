@@ -4,6 +4,7 @@ import MessageWindow from "../controls/MessageWindow";
 import StorySetting, { Chapter } from "../controls/Store";
 import json from "../assets/Story.json";
 import BGM from "../controls/BGM";
+import ItemsDisplay from "../controls/Items";
 
 const StoryStage: React.FC = () => {
   const [location, setLocation] = useState("");
@@ -30,6 +31,7 @@ const StoryStage: React.FC = () => {
     >
       <CanvasComponent />
       <MessageWindow />
+      <ItemsDisplay />
       <div className="fixed left-0 top-0 right-0 h-8 bg-black"></div>
       <BGM />
       <div className="fixed left-0 top-10">

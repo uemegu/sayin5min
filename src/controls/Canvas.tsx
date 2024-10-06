@@ -27,7 +27,6 @@ const CanvasComponent: React.FC = () => {
     (bg) => bg.key === currentScene?.background
   );
   const backgroundUrl = backgroundConfig ? backgroundConfig.value : "";
-
   return (
     <Canvas
       style={{ width: "100vw", height: "100vh" }}

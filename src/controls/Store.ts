@@ -23,11 +23,17 @@ export interface Avatar {
   attension?: boolean;
 }
 
+export interface Item {
+  text: string;
+  flg?: string;
+}
+
 export interface Scene {
   avatars?: Avatar[];
   bgm?: string;
   background?: string;
   text: string;
+  items?: Item[];
 }
 
 export interface Chapter {
@@ -42,6 +48,7 @@ export interface Store {
   messageIndex: number;
   chapterIndex: number;
   cameraDirection: Vector3 | null;
+  flags: string[];
 }
 
 const store = proxy<Store>({
@@ -61,6 +68,7 @@ const store = proxy<Store>({
   messageIndex: 0,
   chapterIndex: 0,
   cameraDirection: null,
+  flags: [],
 });
 
 export default store;
