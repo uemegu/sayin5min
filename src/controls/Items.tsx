@@ -3,9 +3,11 @@ import { useSnapshot } from "valtio";
 import StorySetting from "./Store";
 import Button from "./Button";
 
-type ItemsDisplayProps = {};
+type ItemsDisplayProps = {
+  onClick: () => void;
+};
 
-const ItemsDisplay: FC<ItemsDisplayProps> = () => {
+const ItemsDisplay: FC<ItemsDisplayProps> = ({ onClick }) => {
   const { chapters, messageIndex, chapterIndex } = useSnapshot(StorySetting);
   const currentScene = chapters[chapterIndex]?.scenes[messageIndex];
 
@@ -19,6 +21,7 @@ const ItemsDisplay: FC<ItemsDisplayProps> = () => {
               console.log(`${i.flg}が立ちました`);
               StorySetting.flags.push(i.flg);
             }
+            if (onClick) onClick();
           }}
         >
           {i.text}

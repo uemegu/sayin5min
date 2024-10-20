@@ -27,15 +27,15 @@ const MessageWindow: React.FC = () => {
   return (
     <div className="fixed bottom-0 left-0 right-0 h-80 text-xl p-4 pt-32 text-white  bg-gradient-to-b from-sky-950/0 via-gray-950/70 to-gray-950/90 ">
       <div className=" text-teal-100">{currentMessage}</div>
-      {charIndex ===
-        chapters[chapterIndex].scenes[messageIndex]?.text.length && (
-        <span>
-          <img
-            src={next}
-            className="rotate-90 absolute right-8 bottom-8 animate-bounce"
-          ></img>
-        </span>
-      )}
+      {charIndex === chapters[chapterIndex].scenes[messageIndex]?.text.length &&
+        !chapters[chapterIndex].scenes[messageIndex]?.items && (
+          <span>
+            <img
+              src={next}
+              className="rotate-90 absolute right-8 bottom-8 animate-bounce"
+            ></img>
+          </span>
+        )}
     </div>
   );
 };

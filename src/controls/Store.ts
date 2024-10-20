@@ -11,12 +11,12 @@ interface Config {
   animations: ConfigItem[];
   backgrounds: ConfigItem[];
   bgms: ConfigItem[];
+  voices: ConfigItem[];
 }
 
 export type Expression = "normal" | "sad" | "angry" | "happy";
 
 export interface Avatar {
-  position?: string;
   id: string;
   action: string;
   expression?: Expression;
@@ -31,14 +31,15 @@ export interface Item {
 export interface Scene {
   avatars?: Avatar[];
   bgm?: string;
+  voice?: string;
   background?: string;
   text: string;
   items?: Item[];
+  location: string;
 }
 
 export interface Chapter {
   title: string;
-  location: string;
   scenes: Scene[];
 }
 
@@ -57,11 +58,11 @@ const store = proxy<Store>({
     animations: [],
     backgrounds: [],
     bgms: [],
+    voices: [],
   },
   chapters: [
     {
       title: "",
-      location: "",
       scenes: [],
     },
   ],

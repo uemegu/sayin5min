@@ -21,7 +21,6 @@ const Avatar: React.FC<{
   const gltf = useLoader(GLTFLoader, url, (loader) => {
     loader.register((parser) => new VRMLoaderPlugin(parser));
   });
-
   const [avatar, setAvatar] = useState<VRM | null>(null);
   const [mixer, setMixer] = useState<THREE.AnimationMixer | null>(null);
   const [currentAnimation, setCurrentAnimation] =

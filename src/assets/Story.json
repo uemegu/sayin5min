@@ -32,6 +32,10 @@
       {
         "key": "park",
         "value": "./images/park.webp"
+      },
+      {
+        "key": "room",
+        "value": "./images/room.webp"
       }
     ],
     "bgms": [
@@ -39,12 +43,25 @@
         "key": "normal",
         "value": "./bgms/Normal.mp3"
       }
+    ],
+    "voices": [
+      {
+        "key": "voice1",
+        "value": "./voice/voice1.wav"
+      },
+      {
+        "key": "voice2",
+        "value": "./voice/voice2.wav"
+      },
+      {
+        "key": "voice3",
+        "value": "./voice/voice3.wav"
+      }
     ]
   },
   "chapters": [
     {
       "title": "はじまりのチャプター",
-      "location": "公園",
       "scenes": [
         {
           "avatars": [
@@ -56,8 +73,9 @@
               "attension": "true"
             }
           ],
+          "location": "自室",
           "bgm": "normal",
-          "background": "park",
+          "background": "room",
           "text": "最初のシナリオです"
         },
         {
@@ -75,14 +93,15 @@
               "attension": "true"
             }
           ],
+          "location": "自室",
           "bgm": "normal",
-          "background": "park",
+          "background": "room",
+          "voice": "voice1",
           "text": "2個目のセリフです"
         },
         {
           "avatars": [
             {
-              "position": "center",
               "id": "heroine",
               "action": "greeting",
               "expression": "happy",
@@ -94,6 +113,7 @@
               "expression": "happy"
             }
           ],
+          "location": "公園",
           "bgm": "normal",
           "background": "park",
           "text": "3個目のセリフです"
@@ -101,7 +121,6 @@
         {
           "avatars": [
             {
-              "position": "center",
               "id": "heroine",
               "action": "idle",
               "expression": "happy",
@@ -114,9 +133,11 @@
               "attension": "true"
             }
           ],
+          "location": "公園",
           "bgm": "normal",
           "background": "park",
           "text": "3個目のセリフです(2)",
+          "voice": "voice2",
           "items": [
             {
               "text": "選択肢１",
@@ -135,26 +156,27 @@
         {
           "avatars": [
             {
-              "position": "center",
               "id": "heroine",
               "action": "punching",
               "expression": "angry"
             }
           ],
+          "location": "公園",
           "bgm": "normal",
+          "voice": "voice3",
           "background": "park",
           "text": "4個目のセリフです"
         },
         {
           "avatars": [
             {
-              "position": "center",
               "id": "heroine",
               "action": "punching",
               "expression": "angry",
               "attension": "true"
             }
           ],
+          "location": "公園",
           "bgm": "normal",
           "background": "park",
           "text": "4個目のセリフです(2)"
