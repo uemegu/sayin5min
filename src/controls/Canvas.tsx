@@ -26,7 +26,7 @@ const Background: React.FC<{ url: string }> = ({ url }) => {
     if (planeRef.current) {
       // 背景の平面をカメラの位置に追従させる
       planeRef.current.position.copy(camera.position);
-      planeRef.current.position.z -= 28; // カメラの背後に配置
+      planeRef.current.position.z -= 23; // カメラの背後に配置
       planeRef.current.position.y += 2; // カメラの背後に配置
     }
   });

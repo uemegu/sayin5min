@@ -78,7 +78,7 @@ const StoryStage: React.FC = () => {
       <div className="fixed left-0 top-0 right-0 h-8 bg-black"></div>
       <BGM />
       <div className="fixed left-0 top-10">
-        <span className="absolute left-0 top-0 p-2 text-2xl text-teal-100 w-56 text-left bg-gradient-to-r from-sky-950/90 via-sky-950/70 to-sky-950/0">
+        <span className="absolute left-0 top-0 p-2 pl-4 text-2xl text-white w-56 text-left bg-gradient-to-r from-pink-700/90 via-pink-700/70 to-pink-700/0">
           {location}
         </span>
       </div>

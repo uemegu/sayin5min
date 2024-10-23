@@ -1,3 +1,23 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.animation-delay-0 {
+  animation-delay: 0s;
+}
+
+.animation-delay-1 {
+  animation-delay: 0.25s;
+}
+
+.animation-delay-2 {
+  animation-delay: 0.5s;
+}
+
+.animation-delay-3 {
+  animation-delay: 0.75s;
+}
+
+.animation-delay-4 {
+  animation-delay: 1s;
+}
