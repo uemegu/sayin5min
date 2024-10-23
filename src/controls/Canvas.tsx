@@ -7,7 +7,7 @@ import { useSnapshot } from "valtio";
 import StorySetting from "./Store";
 
 const Background: React.FC<{ url: string }> = ({ url }) => {
-  const { camera, scene } = useThree();
+  const { camera } = useThree();
   const planeRef = useRef<THREE.Mesh>(null);
 
   useEffect(() => {
