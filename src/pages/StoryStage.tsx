@@ -6,6 +6,7 @@ import BGM from "../controls/common/BGM";
 import ItemsDisplay from "../controls/common/Items";
 import Loading from "../controls/common/Loading";
 import LoadingOverlay from "../controls/common/LoadingOverlay";
+import Save from "../controls/common/Save";
 
 const StoryStage: React.FC = () => {
   const [isLoading, setIsLoading] = useState(false);
@@ -79,6 +80,7 @@ const StoryStage: React.FC = () => {
         <ItemsDisplay onClick={itemSelected} />
         <div className="fixed left-0 top-0 right-0 h-8 bg-black"></div>
         <BGM />
+        <Save />
         <div className="fixed left-0 top-10">
           <span className="absolute left-0 top-0 p-2 pl-4 text-2xl text-white w-56 text-left bg-gradient-to-r from-pink-700/90 via-pink-700/70 to-pink-700/0">
             {location}

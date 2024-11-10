@@ -17,7 +17,7 @@ const LoadingOverlay: React.FC<LoadingOverlayProps> = ({ onClose }) => {
 
   return (
     <div
-      className={`fixed inset-0 flex items-center justify-center bg-white transition-transform duration-500 ${
+      className={`fixed z-50 inset-0 flex items-center justify-center bg-white transition-transform duration-500 ${
         isActive ? "translate-x-0" : "translate-x-full"
       }`}
     >

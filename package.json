@@ -15,14 +15,17 @@
     "@react-three/fiber": "^8.16.8",
     "@react-three/postprocessing": "^2.16.2",
     "@types/three": "^0.164.1",
+    "crypto-js": "^4.2.0",
     "gsap": "^3.12.5",
     "postprocessing": "^6.35.6",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
     "three": "^0.164.1",
-    "valtio": "^1.13.2"
+    "valtio": "^1.13.2",
+    "video-canvas-screenshot": "^1.0.2"
   },
   "devDependencies": {
+    "@types/crypto-js": "^4.2.2",
     "@types/react": "^18.3.3",
     "@types/react-dom": "^18.3.0",
     "@typescript-eslint/eslint-plugin": "^7.13.1",

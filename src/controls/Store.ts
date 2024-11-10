@@ -56,6 +56,7 @@ export interface GameStatus {
   messageIndex: number;
   chapterIndex: number;
   flags: string[];
+  version: number;
 }
 
 export const gamgeConfig = proxy<Store>({
@@ -80,7 +81,16 @@ export const gameStatus = proxy<GameStatus>({
   messageIndex: 0,
   chapterIndex: -1,
   flags: [],
+  version: 1,
 });
+
+export interface SavedItem {
+  screenShot: string;
+  gameStatus: GameStatus;
+  savedData: string;
+  location: string;
+  text: string;
+}
 
 export const avatarCache: Array<{ key: string; value: GLTF | null }> = [];
 export const animationCache: Array<{
