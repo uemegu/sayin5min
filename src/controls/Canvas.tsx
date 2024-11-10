@@ -4,22 +4,19 @@ import { EffectComposer, Bloom } from "@react-three/postprocessing";
 import Avatar from "./Avatar";
 import * as THREE from "three";
 import { useSnapshot } from "valtio";
-import StorySetting from "./Store";
+import StorySetting, { imangeCache } from "./Store";
 
 const Background: React.FC<{ url: string }> = ({ url }) => {
   const { camera } = useThree();
   const planeRef = useRef<THREE.Mesh>(null);
 
   useEffect(() => {
-    const loader = new THREE.TextureLoader();
-    loader.load(url, (texture) => {
-      // テクスチャを背景平面のマテリアルに適用
-      if (planeRef.current) {
-        (planeRef.current.material as THREE.MeshBasicMaterial).map = texture;
-        (planeRef.current.material as THREE.MeshBasicMaterial).needsUpdate =
-          true;
-      }
-    });
+    const texture = imangeCache.find((r) => r.key === url)!.value!;
+    // テクスチャを背景平面のマテリアルに適用
+    if (planeRef.current) {
+      (planeRef.current.material as THREE.MeshBasicMaterial).map = texture;
+      (planeRef.current.material as THREE.MeshBasicMaterial).needsUpdate = true;
+    }
   }, [url]);
 
   useFrame(() => {

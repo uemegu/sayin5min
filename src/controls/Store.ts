@@ -1,5 +1,7 @@
 import { Vector3 } from "three";
+import { GLTF } from "three/examples/jsm/Addons.js";
 import { proxy } from "valtio";
+import * as THREE from "three";
 
 interface ConfigItem {
   key: string;
@@ -50,6 +52,7 @@ export interface Store {
   chapterIndex: number;
   cameraDirection: Vector3 | null;
   flags: string[];
+  version: number;
 }
 
 const store = proxy<Store>({
@@ -67,9 +70,22 @@ const store = proxy<Store>({
     },
   ],
   messageIndex: 0,
-  chapterIndex: 0,
+  chapterIndex: -1,
   cameraDirection: null,
   flags: [],
+  version: 1,
 });
+
+export const avatarCache: Array<{ key: string; value: GLTF | null }> = [];
+export const animationCache: Array<{
+  key: string;
+  value: THREE.Group<THREE.Object3DEventMap> | null;
+}> = [];
+export const animationClipCache: Array<{
+  key: string;
+  value: THREE.AnimationClip;
+}> = [];
+export const imangeCache: Array<{ key: string; value: THREE.Texture | null }> =
+  [];
 
 export default store;

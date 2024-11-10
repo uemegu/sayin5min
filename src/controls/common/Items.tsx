@@ -1,6 +1,6 @@
 import { FC } from "react";
 import { useSnapshot } from "valtio";
-import StorySetting from "./Store";
+import StorySetting from "../Store";
 import Button from "./Button";
 
 type ItemsDisplayProps = {

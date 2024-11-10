@@ -1,4 +1,5 @@
 {
+  "version": 1,
   "config": {
     "avatars": [
       {
@@ -66,89 +67,56 @@
         {
           "avatars": [
             {
-              "position": "center",
               "id": "heroine",
               "action": "idle",
-              "expression": "normal",
+              "expression": "angry",
               "attension": "true"
             }
           ],
-          "location": "自室",
+          "location": "公園",
           "bgm": "normal",
-          "background": "room",
-          "text": "最初のシナリオです"
+          "background": "park",
+          "text": ""
         },
         {
           "avatars": [
             {
-              "position": "center",
               "id": "heroine",
-              "action": "bow",
-              "expression": "sad"
-            },
-            {
-              "id": "friend_girl1",
               "action": "idle",
-              "expression": "normal",
+              "expression": "angry",
               "attension": "true"
             }
           ],
-          "location": "自室",
+          "location": "公園",
           "bgm": "normal",
-          "background": "room",
           "voice": "voice1",
-          "text": "2個目のセリフです"
-        },
-        {
-          "avatars": [
-            {
-              "id": "heroine",
-              "action": "greeting",
-              "expression": "happy",
-              "attension": "true"
-            },
-            {
-              "id": "friend_girl1",
-              "action": "idle",
-              "expression": "happy"
-            }
-          ],
-          "location": "公園",
-          "bgm": "normal",
           "background": "park",
-          "text": "3個目のセリフです"
+          "text": "ねぇ、ちょっと聞いてるの！"
         },
         {
           "avatars": [
             {
               "id": "heroine",
               "action": "idle",
-              "expression": "happy",
-              "attension": "true"
-            },
-            {
-              "id": "friend_girl1",
-              "action": "idle",
-              "expression": "happy",
+              "expression": "angry",
               "attension": "true"
             }
           ],
           "location": "公園",
           "bgm": "normal",
           "background": "park",
-          "text": "3個目のセリフです(2)",
-          "voice": "voice2",
+          "text": "",
           "items": [
             {
-              "text": "選択肢１",
+              "text": "え・・・なんだっけ？",
               "flg": "1"
             },
             {
-              "text": "選択肢2",
+              "text": "もちのろんだよ！",
               "flg": "2"
             },
             {
-              "text": "選択肢3",
+              "text": "ごめんなさい",
               "flg": "3"
             }
           ]
@@ -163,23 +131,43 @@
           ],
           "location": "公園",
           "bgm": "normal",
-          "voice": "voice3",
+          "voice": "voice2",
           "background": "park",
-          "text": "4個目のセリフです"
+          "text": "はぁ！もうぶっとばすわよっ！"
         },
         {
           "avatars": [
             {
               "id": "heroine",
-              "action": "punching",
-              "expression": "angry",
+              "action": "idle",
+              "expression": "sad",
               "attension": "true"
             }
           ],
           "location": "公園",
           "bgm": "normal",
           "background": "park",
-          "text": "4個目のセリフです(2)"
+          "voice": "voice3",
+          "text": "ほんとにもう・・・。しっかりしてよね。"
+        },
+        {
+          "avatars": [
+            {
+              "id": "heroine",
+              "action": "idle",
+              "expression": "sad",
+              "attension": "true"
+            },
+            {
+              "id": "friend_girl1",
+              "action": "idle",
+              "expression": "happy"
+            }
+          ],
+          "location": "部屋",
+          "bgm": "normal",
+          "background": "room",
+          "text": "テスト"
         }
       ]
     }

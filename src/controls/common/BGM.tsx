@@ -1,6 +1,6 @@
 import React, { useEffect, useRef, useState } from "react";
 import { useSnapshot } from "valtio";
-import store from "./Store";
+import store from "../Store";
 
 const BGM: React.FC = () => {
   const { chapters, messageIndex, chapterIndex, config } = useSnapshot(store);
@@ -19,7 +19,7 @@ const BGM: React.FC = () => {
     if (bgmUrl && audioRef.current) {
       if (audioRef.current.src !== bgmUrl) {
         audioRef.current.src = bgmUrl;
-        audioRef.current.volume = 0.7;
+        audioRef.current.volume = 0.3;
         if (isPlaying) {
           audioRef.current.play();
         }
