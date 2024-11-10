@@ -2,7 +2,6 @@ import React, { useEffect, useState } from "react";
 import { useFrame } from "@react-three/fiber";
 import { VRM } from "@pixiv/three-vrm";
 import { useThree } from "@react-three/fiber";
-import { FBXLoader } from "three/addons/loaders/FBXLoader.js";
 import * as THREE from "three";
 import { gsap } from "gsap";
 import { useSnapshot } from "valtio";
