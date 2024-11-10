@@ -5,19 +5,17 @@ import StorySetting, { Chapter } from "../controls/Store";
 import BGM from "../controls/common/BGM";
 import ItemsDisplay from "../controls/common/Items";
 import Loading from "../controls/common/Loading";
+import LoadingOverlay from "../controls/common/LoadingOverlay";
 
 const StoryStage: React.FC = () => {
+  const [isLoading, setIsLoading] = useState(false);
   const [location, setLocation] = useState(
     StorySetting.chapters[StorySetting.chapterIndex].scenes[
       StorySetting.messageIndex
     ].location
   );
 
-  const next = () => {
-    const { scenes } = StorySetting.chapters[StorySetting.chapterIndex];
-    if (StorySetting.messageIndex < scenes.length - 1) {
-      StorySetting.messageIndex += 1;
-    }
+  const updateLocation = () => {
     if (
       location !=
       StorySetting.chapters[StorySetting.chapterIndex].scenes[
@@ -30,6 +28,28 @@ const StoryStage: React.FC = () => {
         ].location
       );
     }
+  };
+
+  const next = () => {
+    const { scenes } = StorySetting.chapters[StorySetting.chapterIndex];
+    if (StorySetting.messageIndex < scenes.length - 1) {
+      if (
+        location !=
+        StorySetting.chapters[StorySetting.chapterIndex].scenes[
+          StorySetting.messageIndex + 1
+        ].location
+      ) {
+        setIsLoading(true);
+        setTimeout(() => {
+          StorySetting.messageIndex += 1;
+          updateLocation();
+        }, 1000);
+        return;
+      } else {
+        StorySetting.messageIndex += 1;
+      }
+    }
+    updateLocation();
   };
 
   const handleClick = () => {
@@ -47,6 +67,10 @@ const StoryStage: React.FC = () => {
     next();
   };
 
+  function handleLoadingClose(): void {
+    setIsLoading(false);
+  }
+
   return (
     <Suspense fallback={<Loading />}>
       <div style={{ width: "100vw", height: "100vh", position: "relative" }}>
@@ -62,6 +86,7 @@ const StoryStage: React.FC = () => {
         </div>
         <div className="fixed left-0 bottom-0 right-0 h-8 bg-black"></div>
       </div>
+      {isLoading && <LoadingOverlay onClose={handleLoadingClose} />}
     </Suspense>
   );
 };
