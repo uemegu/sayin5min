@@ -1,9 +1,10 @@
 import React, { useEffect, useRef, useState } from "react";
 import { useSnapshot } from "valtio";
-import store from "../Store";
+import { gamgeConfig, gameStatus } from "../Store";
 
 const BGM: React.FC = () => {
-  const { chapters, messageIndex, chapterIndex, config } = useSnapshot(store);
+  const { chapters, config } = useSnapshot(gamgeConfig);
+  const { messageIndex, chapterIndex } = useSnapshot(gameStatus);
   const audioRef = useRef<HTMLAudioElement | null>(null);
   const audioRef2 = useRef<HTMLAudioElement | null>(null);
   const currentScene = chapters[chapterIndex].scenes[messageIndex];

@@ -4,7 +4,7 @@ import { EffectComposer, Bloom } from "@react-three/postprocessing";
 import Avatar from "./Avatar";
 import * as THREE from "three";
 import { useSnapshot } from "valtio";
-import StorySetting, { imangeCache } from "./Store";
+import { gameStatus, gamgeConfig, imangeCache } from "./Store";
 
 const Background: React.FC<{ url: string }> = ({ url }) => {
   const { camera } = useThree();
@@ -37,8 +37,8 @@ const Background: React.FC<{ url: string }> = ({ url }) => {
 };
 
 const CanvasComponent: React.FC<{ onClick: () => void }> = ({ onClick }) => {
-  const { chapters, messageIndex, chapterIndex, config } =
-    useSnapshot(StorySetting);
+  const { messageIndex, chapterIndex } = useSnapshot(gameStatus);
+  const { chapters, config } = useSnapshot(gamgeConfig);
   const currentScene = chapters[chapterIndex].scenes[messageIndex];
   const backgroundConfig = config.backgrounds.find(
     (bg) => bg.key === currentScene?.background

@@ -5,7 +5,8 @@ import { useThree } from "@react-three/fiber";
 import * as THREE from "three";
 import { gsap } from "gsap";
 import { useSnapshot } from "valtio";
-import StorySetting, {
+import {
+  gameStatus,
   animationCache,
   animationClipCache,
   avatarCache,
@@ -19,7 +20,7 @@ const Avatar: React.FC<{
   attention?: boolean;
 }> = ({ url, animationUrl, expression, index, attention }) => {
   const { scene, camera } = useThree();
-  const { cameraDirection } = useSnapshot(StorySetting);
+  const { cameraDirection } = useSnapshot(gameStatus);
   const gltf = avatarCache.find((r) => r.key === url)!.value!;
   const [avatar, setAvatar] = useState<VRM | null>(null);
   const [mixer, setMixer] = useState<THREE.AnimationMixer | null>(null);
@@ -58,14 +59,14 @@ const Avatar: React.FC<{
           camera.lookAt(new THREE.Vector3(target.x / 1000, target.y, target.z));
         },
         onComplete: () => {
-          StorySetting.cameraDirection = facePosition;
+          gameStatus.cameraDirection = facePosition;
         },
       });
     } else {
       camera.lookAt(
         new THREE.Vector3(facePosition.x, facePosition.y, facePosition.z)
       );
-      StorySetting.cameraDirection = facePosition;
+      gameStatus.cameraDirection = facePosition;
     }
   };
 

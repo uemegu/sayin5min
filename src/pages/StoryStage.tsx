@@ -1,7 +1,7 @@
-import React, { useEffect, useState, Suspense, useMemo } from "react";
+import React, { useState, Suspense } from "react";
 import CanvasComponent from "../controls/Canvas";
 import MessageWindow from "../controls/MessageWindow";
-import StorySetting, { Chapter } from "../controls/Store";
+import { gamgeConfig, gameStatus } from "../controls/Store";
 import BGM from "../controls/common/BGM";
 import ItemsDisplay from "../controls/common/Items";
 import Loading from "../controls/common/Loading";
@@ -10,43 +10,43 @@ import LoadingOverlay from "../controls/common/LoadingOverlay";
 const StoryStage: React.FC = () => {
   const [isLoading, setIsLoading] = useState(false);
   const [location, setLocation] = useState(
-    StorySetting.chapters[StorySetting.chapterIndex].scenes[
-      StorySetting.messageIndex
+    gamgeConfig.chapters[gameStatus.chapterIndex].scenes[
+      gameStatus.messageIndex
     ].location
   );
 
   const updateLocation = () => {
     if (
       location !=
-      StorySetting.chapters[StorySetting.chapterIndex].scenes[
-        StorySetting.messageIndex
+      gamgeConfig.chapters[gameStatus.chapterIndex].scenes[
+        gameStatus.messageIndex
       ].location
     ) {
       setLocation(
-        StorySetting.chapters[StorySetting.chapterIndex].scenes[
-          StorySetting.messageIndex
+        gamgeConfig.chapters[gameStatus.chapterIndex].scenes[
+          gameStatus.messageIndex
         ].location
       );
     }
   };
 
   const next = () => {
-    const { scenes } = StorySetting.chapters[StorySetting.chapterIndex];
-    if (StorySetting.messageIndex < scenes.length - 1) {
+    const { scenes } = gamgeConfig.chapters[gameStatus.chapterIndex];
+    if (gameStatus.messageIndex < scenes.length - 1) {
       if (
         location !=
-        StorySetting.chapters[StorySetting.chapterIndex].scenes[
-          StorySetting.messageIndex + 1
+        gamgeConfig.chapters[gameStatus.chapterIndex].scenes[
+          gameStatus.messageIndex + 1
         ].location
       ) {
         setIsLoading(true);
         setTimeout(() => {
-          StorySetting.messageIndex += 1;
+          gameStatus.messageIndex += 1;
           updateLocation();
         }, 1000);
         return;
       } else {
-        StorySetting.messageIndex += 1;
+        gameStatus.messageIndex += 1;
       }
     }
     updateLocation();
@@ -54,8 +54,8 @@ const StoryStage: React.FC = () => {
 
   const handleClick = () => {
     if (
-      StorySetting.chapters[StorySetting.chapterIndex].scenes[
-        StorySetting.messageIndex
+      gamgeConfig.chapters[gameStatus.chapterIndex].scenes[
+        gameStatus.messageIndex
       ].items
     ) {
       return;

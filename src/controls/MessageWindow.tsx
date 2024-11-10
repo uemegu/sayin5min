@@ -1,10 +1,11 @@
 import React, { useState, useEffect } from "react";
 import next from "../assets/icon/next.svg";
 import { useSnapshot } from "valtio";
-import StorySetting from "./Store";
+import { gamgeConfig, gameStatus } from "./Store";
 
 const MessageWindow: React.FC = () => {
-  const { chapters, messageIndex, chapterIndex } = useSnapshot(StorySetting);
+  const { chapters } = useSnapshot(gamgeConfig);
+  const { messageIndex, chapterIndex } = useSnapshot(gameStatus);
   const [currentMessage, setCurrentMessage] = useState("");
   const [charIndex, setCharIndex] = useState(0);
 

@@ -1,5 +1,7 @@
 import { useEffect, useMemo } from "react";
-import StorySetting, {
+import {
+  gameStatus,
+  gamgeConfig,
   animationCache,
   avatarCache,
   imangeCache,
@@ -14,7 +16,7 @@ import * as THREE from "three";
 const AssetLoader: React.FC<{ onLoadComplete: () => void }> = ({
   onLoadComplete,
 }) => {
-  const { chapterIndex } = useSnapshot(StorySetting);
+  const { chapterIndex } = useSnapshot(gameStatus);
 
   const assets = useMemo(() => {
     const gltfPaths: string[] = [];
@@ -26,7 +28,7 @@ const AssetLoader: React.FC<{ onLoadComplete: () => void }> = ({
     const audioKeySet = new Set<string>();
     const imageKeySet = new Set<string>();
 
-    StorySetting.chapters[chapterIndex]?.scenes.forEach((s) => {
+    gamgeConfig.chapters[chapterIndex]?.scenes.forEach((s) => {
       s.avatars?.forEach((a) => {
         avatarKeySet.add(a.id);
         actionKeySet.add(a.action);
@@ -37,7 +39,7 @@ const AssetLoader: React.FC<{ onLoadComplete: () => void }> = ({
     });
 
     avatarKeySet.forEach((key) => {
-      const avatarConfig = StorySetting.config.avatars.find(
+      const avatarConfig = gamgeConfig.config.avatars.find(
         (av) => av.key === key
       );
       if (avatarConfig) {
@@ -47,7 +49,7 @@ const AssetLoader: React.FC<{ onLoadComplete: () => void }> = ({
     });
 
     actionKeySet.forEach((key) => {
-      const animationConfig = StorySetting.config.animations.find(
+      const animationConfig = gamgeConfig.config.animations.find(
         (av) => av.key === key
       );
       if (animationConfig) {
@@ -57,7 +59,7 @@ const AssetLoader: React.FC<{ onLoadComplete: () => void }> = ({
     });
 
     imageKeySet.forEach((key) => {
-      const imageConfig = StorySetting.config.backgrounds.find(
+      const imageConfig = gamgeConfig.config.backgrounds.find(
         (bg) => bg.key === key
       );
       if (imageConfig) imagePaths.push(imageConfig.value);

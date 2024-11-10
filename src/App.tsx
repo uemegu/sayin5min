@@ -1,7 +1,7 @@
 import { useEffect, useState, Suspense } from "react";
 import "./App.css";
 import StoryStage from "./pages/StoryStage";
-import StorySetting, { Chapter } from "./controls/Store";
+import { gamgeConfig, gameStatus, Chapter } from "./controls/Store";
 import Loading from "./controls/common/Loading";
 import json from "./assets/Story.json";
 import AssetLoader from "./utils/AssetLoader";
@@ -14,9 +14,9 @@ function App() {
   const [isLoading, setIsLoading] = useState(false);
 
   useEffect(() => {
-    StorySetting.chapters = json.chapters as Chapter[];
-    StorySetting.config = json.config;
-    StorySetting.chapterIndex = 0;
+    gamgeConfig.chapters = json.chapters as Chapter[];
+    gamgeConfig.config = json.config;
+    gameStatus.chapterIndex = 0;
   }, []);
 
   const handleLoadComplete = () => {
@@ -24,7 +24,7 @@ function App() {
   };
 
   const handleStart = () => {
-    StorySetting.chapterIndex = 0;
+    gameStatus.chapterIndex = 0;
     setIsLoading(true);
     setTimeout(() => {
       setShowTopMenu(false);

@@ -48,14 +48,17 @@ export interface Chapter {
 export interface Store {
   config: Config;
   chapters: Chapter[];
-  messageIndex: number;
-  chapterIndex: number;
-  cameraDirection: Vector3 | null;
-  flags: string[];
   version: number;
 }
 
-const store = proxy<Store>({
+export interface GameStatus {
+  cameraDirection: Vector3 | null;
+  messageIndex: number;
+  chapterIndex: number;
+  flags: string[];
+}
+
+export const gamgeConfig = proxy<Store>({
   config: {
     avatars: [],
     animations: [],
@@ -69,11 +72,14 @@ const store = proxy<Store>({
       scenes: [],
     },
   ],
+  version: 1,
+});
+
+export const gameStatus = proxy<GameStatus>({
+  cameraDirection: null,
   messageIndex: 0,
   chapterIndex: -1,
-  cameraDirection: null,
   flags: [],
-  version: 1,
 });
 
 export const avatarCache: Array<{ key: string; value: GLTF | null }> = [];
@@ -87,5 +93,3 @@ export const animationClipCache: Array<{
 }> = [];
 export const imangeCache: Array<{ key: string; value: THREE.Texture | null }> =
   [];
-
-export default store;
