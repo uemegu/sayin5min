@@ -8,7 +8,11 @@ import Loading from "../controls/common/Loading";
 import LoadingOverlay from "../controls/common/LoadingOverlay";
 import Save from "../controls/common/Save";
 
-const StoryStage: React.FC = () => {
+interface StoryStageProps {
+  onExit: () => void;
+}
+
+const StoryStage: React.FC<StoryStageProps> = ({ onExit }) => {
   const [isLoading, setIsLoading] = useState(false);
   const [location, setLocation] = useState(
     gamgeConfig.chapters[gameStatus.chapterIndex].scenes[
@@ -68,9 +72,13 @@ const StoryStage: React.FC = () => {
     next();
   };
 
-  function handleLoadingClose(): void {
+  const handleLoadingClose = () => {
     setIsLoading(false);
-  }
+  };
+
+  const handleExit = () => {
+    onExit();
+  };
 
   return (
     <Suspense fallback={<Loading />}>
@@ -81,6 +89,12 @@ const StoryStage: React.FC = () => {
         <div className="fixed left-0 top-0 right-0 h-8 bg-black"></div>
         <BGM />
         <Save />
+        <button
+          className="absolute text-sm top-0 h-8 right-0 p-2 text-white hover:underline"
+          onClick={handleExit}
+        >
+          終了する
+        </button>
         <div className="fixed left-0 top-10">
           <span className="absolute left-0 top-0 p-2 pl-4 text-2xl text-white w-56 text-left bg-gradient-to-r from-pink-700/90 via-pink-700/70 to-pink-700/0">
             {location}

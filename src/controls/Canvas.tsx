@@ -1,6 +1,11 @@
 import React, { useEffect, useRef } from "react";
 import { Canvas, useFrame, useThree } from "@react-three/fiber";
-import { EffectComposer, Bloom } from "@react-three/postprocessing";
+import {
+  EffectComposer,
+  Bloom,
+  BrightnessContrast,
+  HueSaturation,
+} from "@react-three/postprocessing";
 import Avatar from "./Avatar";
 import * as THREE from "three";
 import { useSnapshot } from "valtio";
@@ -58,8 +63,8 @@ const CanvasComponent: React.FC<{ onClick: () => void }> = ({ onClick }) => {
       onClick={onClick}
     >
       {backgroundUrl && <Background url={backgroundUrl} />}
-      <ambientLight color={0xff4444} intensity={1} />
-      <directionalLight position={[0.5, 2, 2]} intensity={2} />
+      <ambientLight color={0xff4444} intensity={1.2} />
+      <directionalLight position={[0.5, 2, 2]} intensity={2.2} />
       {currentScene?.avatars?.map((avatar, index) => {
         const avatarConfig = config.avatars.find((av) => av.key === avatar.id);
         const animationConfig = config.animations.find(
@@ -77,7 +82,8 @@ const CanvasComponent: React.FC<{ onClick: () => void }> = ({ onClick }) => {
         );
       })}
       <EffectComposer>
-        <Bloom luminanceThreshold={0} luminanceSmoothing={0.9} height={300} />
+        <Bloom luminanceThreshold={0} luminanceSmoothing={1.4} height={300} />
+        <HueSaturation saturation={0.2} />
       </EffectComposer>
     </Canvas>
   );

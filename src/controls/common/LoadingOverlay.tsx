@@ -16,13 +16,30 @@ const LoadingOverlay: React.FC<LoadingOverlayProps> = ({ onClose }) => {
   }, [onClose]);
 
   return (
-    <div
-      className={`fixed z-50 inset-0 flex items-center justify-center bg-white transition-transform duration-500 ${
-        isActive ? "translate-x-0" : "translate-x-full"
-      }`}
-    >
-      <img className="w-52" src="./images/title.png" alt="Title Logo" />
-    </div>
+    <>
+      <div
+        className={`fixed z-50 inset-x-0 top-0 h-1/4 bg-pink-200 flex items-center justify-center transition-transform duration-500 ${
+          isActive ? "translate-x-0" : "translate-x-full"
+        }`}
+      ></div>
+      <div
+        className={`fixed z-50 inset-x-0 top-1/4 h-1/4 bg-pink-50 flex items-center justify-center transition-transform duration-500 ${
+          isActive ? "translate-x-0" : "-translate-x-full"
+        }`}
+      >
+        <img className="w-52" src="./images/title.png" alt="Title Logo" />
+      </div>
+      <div
+        className={`fixed z-50 inset-x-0 bottom-1/4 h-1/4 bg-pink-100 flex items-center justify-center transition-transform duration-500 ${
+          isActive ? "translate-x-0" : "translate-x-full"
+        }`}
+      ></div>
+      <div
+        className={`fixed z-50 inset-x-0 bottom-0 h-1/4 bg-pink-300 flex items-center justify-center transition-transform duration-500 ${
+          isActive ? "translate-x-0" : "-translate-x-full"
+        }`}
+      ></div>
+    </>
   );
 };
 

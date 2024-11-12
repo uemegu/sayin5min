@@ -55,7 +55,7 @@ const BGM: React.FC = () => {
       <audio ref={audioRef} loop />
       <audio ref={audioRef2} />
       <button
-        className="absolute text-sm top-0 h-8 right-0 p-2 text-white hover:underline"
+        className="absolute text-sm top-0 h-8 right-48 p-2 text-white hover:underline"
         onClick={handleToggleBGM}
       >
         {isPlaying ? "BGMをOFFにする" : "BGMをONにする"}

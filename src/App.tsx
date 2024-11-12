@@ -45,9 +45,19 @@ function App() {
     }, 1000);
   };
 
-  function handleLoadingClose(): void {
+  const handleLoadingClose = () => {
+    gameStatus.chapterIndex = 0;
+    gameStatus.messageIndex = 0;
+    gameStatus.flags = [];
     setIsLoading(false);
-  }
+  };
+
+  const handleExit = () => {
+    setIsLoading(true);
+    setTimeout(() => {
+      setShowTopMenu(true);
+    }, 1000);
+  };
 
   return (
     <ToastProvider>
@@ -58,7 +68,7 @@ function App() {
         <Top onStart={handleStart} onContinue={handleContinue} />
       ) : (
         <>
-          <StoryStage />
+          <StoryStage onExit={handleExit} />
         </>
       )}
       {isLoading && <LoadingOverlay onClose={handleLoadingClose} />}

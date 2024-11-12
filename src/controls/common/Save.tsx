@@ -49,7 +49,7 @@ const Save: React.FC = () => {
   return (
     <>
       <button
-        className="absolute text-sm top-0 h-8 right-32 p-2 text-white hover:underline"
+        className="absolute text-sm top-0 h-8 right-24 p-2 text-white hover:underline"
         onClick={handleSave}
       >
         保存する
