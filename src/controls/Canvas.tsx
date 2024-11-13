@@ -3,7 +3,6 @@ import { Canvas, useFrame, useThree } from "@react-three/fiber";
 import {
   EffectComposer,
   Bloom,
-  BrightnessContrast,
   HueSaturation,
 } from "@react-three/postprocessing";
 import Avatar from "./Avatar";

@@ -8,7 +8,6 @@ import AssetLoader from "./utils/AssetLoader";
 import Top from "./pages/Top";
 import LoadingOverlay from "./controls/common/LoadingOverlay";
 import { ToastProvider } from "./controls/common/Toast";
-import { saveData } from "./controls/common/LocalStorage";
 
 function App() {
   const [isStoryLoaded, setIsStoryLoaded] = useState(false);
