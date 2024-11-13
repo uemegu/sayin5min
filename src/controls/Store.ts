@@ -31,6 +31,8 @@ export interface Item {
 }
 
 export interface Scene {
+  id?: string;
+  conditions?: string[];
   avatars?: Avatar[];
   bgm?: string;
   voice?: string;
@@ -38,9 +40,12 @@ export interface Scene {
   text: string;
   items?: Item[];
   location: string;
+  goto?: string;
 }
 
 export interface Chapter {
+  id: string;
+  conditions?: string[];
   title: string;
   scenes: Scene[];
 }
@@ -69,6 +74,7 @@ export const gamgeConfig = proxy<Store>({
   },
   chapters: [
     {
+      id: "",
       title: "",
       scenes: [],
     },

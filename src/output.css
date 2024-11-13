@@ -615,8 +615,12 @@ video {
   right: 4rem;
 }
 
-.right-32 {
-  right: 8rem;
+.right-24 {
+  right: 6rem;
+}
+
+.right-48 {
+  right: 12rem;
 }
 
 .right-8 {
@@ -645,22 +649,6 @@ video {
 
 .top-10 {
   top: 2.5rem;
-}
-
-.right-48 {
-  right: 12rem;
-}
-
-.right-52 {
-  right: 13rem;
-}
-
-.right-28 {
-  right: 7rem;
-}
-
-.right-24 {
-  right: 6rem;
 }
 
 .z-30 {

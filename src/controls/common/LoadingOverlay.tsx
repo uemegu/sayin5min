@@ -13,7 +13,7 @@ const LoadingOverlay: React.FC<LoadingOverlayProps> = ({ onClose }) => {
       setIsActive(false); // 2秒後にスライドアウト開始
       setTimeout(onClose, 500); // スライドアウトアニメーションが完了したらonCloseを呼び出し
     }, 2000);
-  }, [onClose]);
+  }, []);
 
   return (
     <>

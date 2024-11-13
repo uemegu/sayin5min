@@ -35,26 +35,57 @@ const StoryStage: React.FC<StoryStageProps> = ({ onExit }) => {
     }
   };
 
-  const next = () => {
+  const changeMessageIndex = (index: number) => {
+    if (
+      location !=
+      gamgeConfig.chapters[gameStatus.chapterIndex].scenes[index].location
+    ) {
+      setIsLoading(true);
+      setTimeout(() => {
+        gameStatus.messageIndex = index;
+        updateLocation();
+      }, 1000);
+    } else {
+      gameStatus.messageIndex = index;
+      updateLocation();
+    }
+  };
+
+  const next = (increment: number) => {
     const { scenes } = gamgeConfig.chapters[gameStatus.chapterIndex];
-    if (gameStatus.messageIndex < scenes.length - 1) {
+    if (gameStatus.messageIndex < scenes.length - increment) {
       if (
-        location !=
         gamgeConfig.chapters[gameStatus.chapterIndex].scenes[
-          gameStatus.messageIndex + 1
-        ].location
+          gameStatus.messageIndex + increment
+        ].goto
       ) {
-        setIsLoading(true);
-        setTimeout(() => {
-          gameStatus.messageIndex += 1;
-          updateLocation();
-        }, 1000);
-        return;
+        const targets =
+          gamgeConfig.chapters[gameStatus.chapterIndex].scenes[
+            gameStatus.messageIndex + increment
+          ].goto?.split(".");
+        const chapter = gamgeConfig.chapters.find((c) => c.id === targets![0])!;
+        const scene = chapter?.scenes.find((c) => c.id === targets![1])!;
+        gameStatus.chapterIndex = gamgeConfig.chapters.indexOf(chapter);
+        changeMessageIndex(chapter.scenes.indexOf(scene));
+      } else if (
+        gamgeConfig.chapters[gameStatus.chapterIndex].scenes[
+          gameStatus.messageIndex + increment
+        ].conditions
+      ) {
+        const allElementsExist = gamgeConfig.chapters[
+          gameStatus.chapterIndex
+        ].scenes[gameStatus.messageIndex + increment].conditions!.every(
+          (element) => gameStatus.flags.includes(element)
+        );
+        if (allElementsExist) {
+          changeMessageIndex(gameStatus.messageIndex + increment);
+        } else {
+          next(increment + 1);
+        }
       } else {
-        gameStatus.messageIndex += 1;
+        changeMessageIndex(gameStatus.messageIndex + increment);
       }
     }
-    updateLocation();
   };
 
   const handleClick = () => {
@@ -65,11 +96,11 @@ const StoryStage: React.FC<StoryStageProps> = ({ onExit }) => {
     ) {
       return;
     }
-    next();
+    next(1);
   };
 
   const itemSelected = () => {
-    next();
+    next(1);
   };
 
   const handleLoadingClose = () => {

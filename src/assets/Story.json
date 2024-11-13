@@ -62,9 +62,11 @@
   },
   "chapters": [
     {
+      "id": "1st_Chapter",
       "title": "はじまりのチャプター",
       "scenes": [
         {
+          "id": "test",
           "avatars": [
             {
               "id": "heroine",
@@ -151,6 +153,7 @@
           "text": "ほんとにもう・・・。しっかりしてよね。"
         },
         {
+          "conditions": ["1"],
           "avatars": [
             {
               "id": "heroine",
@@ -168,6 +171,29 @@
           "bgm": "normal",
           "background": "room",
           "text": "テスト"
+        },
+        {
+          "conditions": ["2"],
+          "avatars": [
+            {
+              "id": "heroine",
+              "action": "idle",
+              "expression": "sad",
+              "attension": "true"
+            },
+            {
+              "id": "friend_girl1",
+              "action": "idle",
+              "expression": "happy"
+            }
+          ],
+          "location": "公園",
+          "bgm": "normal",
+          "background": "park",
+          "text": "テスト2"
+        },
+        {
+          "goto": "1st_Chapter.test"
         }
       ]
     }
