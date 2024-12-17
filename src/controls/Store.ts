@@ -12,17 +12,21 @@ interface Config {
   avatars: ConfigItem[];
   animations: ConfigItem[];
   backgrounds: ConfigItem[];
+  textures: ConfigItem[];
   bgms: ConfigItem[];
   voices: ConfigItem[];
 }
 
-export type Expression = "normal" | "sad" | "angry" | "happy";
+export type Expression = "normal" | "sad" | "angry" | "happy" | "surprised";
+export type Face = "redface";
 
 export interface Avatar {
   id: string;
   action: string;
   expression?: Expression;
   attension?: boolean;
+  zoom?: boolean;
+  face?: Face;
 }
 
 export interface Item {
@@ -69,6 +73,7 @@ export const gamgeConfig = proxy<Store>({
     avatars: [],
     animations: [],
     backgrounds: [],
+    textures: [],
     bgms: [],
     voices: [],
   },

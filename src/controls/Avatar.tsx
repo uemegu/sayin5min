@@ -1,6 +1,6 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import { useFrame } from "@react-three/fiber";
-import { VRM } from "@pixiv/three-vrm";
+import { MToonMaterial, VRM } from "@pixiv/three-vrm";
 import { useThree } from "@react-three/fiber";
 import * as THREE from "three";
 import { gsap } from "gsap";
@@ -10,15 +10,17 @@ import {
   animationCache,
   animationClipCache,
   avatarCache,
+  imangeCache,
 } from "./Store";
 
 const Avatar: React.FC<{
   url: string;
   animationUrl: string;
   expression?: string;
+  faceUrl?: string;
   index: number;
   attention?: boolean;
-}> = ({ url, animationUrl, expression, index, attention }) => {
+}> = ({ url, animationUrl, expression, faceUrl, index, attention }) => {
   const { scene, camera } = useThree();
   const { cameraDirection } = useSnapshot(gameStatus);
   const gltf = avatarCache.find((r) => r.key === url)!.value!;
@@ -32,15 +34,64 @@ const Avatar: React.FC<{
       avatar.expressionManager!.setValue("happy", 0.0);
       avatar.expressionManager!.setValue("angry", 0.0);
       avatar.expressionManager!.setValue("sad", 0.0);
+      avatar.expressionManager!.setValue("surprised", 0.0);
       avatar.expressionManager!.setValue(expression, 1.0);
     }
+  };
+
+  const blinkTimer = useRef(0);
+  const blinkState = useRef(0); // 0: open, 1: closing, 2: closed, 3: opening
+  useFrame((_, delta) => {
+    if (!avatar || !avatar.expressionManager) return;
+    if (avatar.expressionManager!.getValue("happy") === 1.0) return;
+
+    blinkTimer.current -= delta;
+    if (blinkTimer.current < 0) {
+      blinkState.current = 1;
+      blinkTimer.current = getRandomBlinkInterval(5, 10);
+    }
+
+    // まばたきの状態管理
+    const expressionManager = avatar.expressionManager;
+    switch (blinkState.current) {
+      case 1: // 閉じる
+        avatar.expressionManager.setValue(
+          "blink",
+          Math.min(
+            1.0,
+            avatar.expressionManager.getValue("blink")! + delta * 10
+          )
+        );
+        if (avatar.expressionManager.getValue("blink")! >= 1.0)
+          blinkState.current = 2; // 完全に閉じた
+        break;
+      case 2: // 閉じた状態を保持
+        expressionManager.setValue("blink", 1.0);
+        blinkState.current = 3; // 開く準備
+        break;
+      case 3: // 開く
+        avatar.expressionManager.setValue(
+          "blink",
+          Math.max(
+            0.0,
+            avatar.expressionManager.getValue("blink")! - delta * 10
+          )
+        );
+        if (avatar.expressionManager.getValue("blink")! <= 0.0)
+          blinkState.current = 0; // 完全に開いた
+        break;
+    }
+  });
+
+  const getRandomBlinkInterval = (min: number, max: number): number => {
+    return Math.random() * (max - min) + min;
   };
 
   const lookMe = (avatar: VRM) => {
     const bbox = new THREE.Box3().setFromObject(avatar.scene);
     const facePosition = new THREE.Vector3(
       index * 0.7,
-      (bbox.max.y * 2) / 3,
+      (bbox.max.y * 2.5) / 3,
       0
     );
 
@@ -72,6 +123,7 @@ const Avatar: React.FC<{
 
   const loadAnimation = (avatar: VRM) => {
     const clip = loadMixamoAnimation(animationUrl, avatar);
+    /*
     for (let track of clip.tracks) {
       if (track.name.includes(".position")) {
         for (let i = 1; i < track.values.length; i += 3) {
@@ -79,12 +131,17 @@ const Avatar: React.FC<{
         }
       }
     }
+      */
 
     const mixer = new THREE.AnimationMixer(avatar.scene);
     setMixer(mixer);
     const action = mixer.clipAction(clip);
     if (currentAnimation) {
       action.crossFadeFrom(currentAnimation, 1, false);
+    }
+    if (animationUrl !== "./animations/Idle.fbx") {
+      action.setLoop(THREE.LoopOnce, 1); // 1回だけ再生
+      action.clampWhenFinished = true; // 最後のフレームで停止
     }
     action.play();
     setCurrentAnimation(action);
@@ -94,8 +151,8 @@ const Avatar: React.FC<{
     if (gltf.userData.vrm) {
       const vrm = gltf.userData.vrm as VRM;
       vrm.scene.position.set(index * 0.7, 0, 0);
-      vrm.scene.rotateY(Math.PI - (index * Math.PI) / 8);
       scene.add(vrm.scene);
+      setCurrentAnimation(null);
       setAvatar(vrm);
       if (attention) {
         lookMe(gltf.userData.vrm);
@@ -107,7 +164,43 @@ const Avatar: React.FC<{
         scene.remove(gltf.userData.vrm.scene);
       }
     };
-  }, [gltf, index, scene]);
+  }, [gltf, scene]);
+
+  // FIXME 変になる
+  useEffect(() => {
+    if (avatar && faceUrl) {
+      const texture = imangeCache.find((r) => r.key === faceUrl)!.value!;
+
+      // VRMモデルをロード済みと仮定
+      avatar.scene.traverse((object) => {
+        if (object instanceof THREE.Mesh) {
+          console.log(`Mesh found: ${object.name}`);
+
+          // オブジェクト名で対象を絞り込む
+          if (object.name === "Face_(merged)_2") {
+            const material = object.material;
+
+            if (Array.isArray(material) && material.length > 1) {
+              // マテリアルが単一の場合のみ
+              if (material[0] instanceof MToonMaterial) {
+                console.log("Editing material for:", object.name);
+
+                material[0].uniforms.map.value = texture;
+                material[0].uniformsNeedUpdate = true;
+              } else {
+                console.log(
+                  "Material is not a MeshStandardMaterial:",
+                  material
+                );
+              }
+            } else {
+              console.log("Material is an array, additional handling needed.");
+            }
+          }
+        }
+      });
+    }
+  }, [avatar, faceUrl]);
 
   useEffect(() => {
     if (attention && avatar) {

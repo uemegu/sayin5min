@@ -9,6 +9,7 @@ import Avatar from "./Avatar";
 import * as THREE from "three";
 import { useSnapshot } from "valtio";
 import { gameStatus, gamgeConfig, imangeCache } from "./Store";
+import { PerspectiveCamera } from "@react-three/drei/core/PerspectiveCamera";
 
 const Background: React.FC<{ url: string }> = ({ url }) => {
   const { camera } = useThree();
@@ -39,6 +40,24 @@ const Background: React.FC<{ url: string }> = ({ url }) => {
     </mesh>
   );
 };
+const CameraController: React.FC<{ isZoom: boolean }> = ({ isZoom }) => {
+  const cameraRef = useRef<any>();
+
+  useFrame(() => {
+    if (cameraRef.current) {
+      const targetZ = isZoom ? 0.9 : 1.5;
+      cameraRef.current.position.z +=
+        (targetZ - cameraRef.current.position.z) * 0.1;
+      const targetY = isZoom ? 1.2 : 1.2;
+      cameraRef.current.position.y +=
+        (targetY - cameraRef.current.position.y) * 0.1;
+    }
+  });
+
+  return (
+    <PerspectiveCamera ref={cameraRef} makeDefault position={[0, 1.2, 1.5]} />
+  );
+};
 
 const CanvasComponent: React.FC<{ onClick: () => void }> = ({ onClick }) => {
   const { messageIndex, chapterIndex } = useSnapshot(gameStatus);
@@ -48,20 +67,12 @@ const CanvasComponent: React.FC<{ onClick: () => void }> = ({ onClick }) => {
     (bg) => bg.key === currentScene?.background
   );
   const backgroundUrl = backgroundConfig ? backgroundConfig.value : "";
+  const isZoom = currentScene?.avatars?.find((a) => a.attension)?.zoom;
 
   return (
-    <Canvas
-      style={{ width: "100vw", height: "100vh" }}
-      camera={{
-        fov: 40,
-        aspect: window.innerWidth / window.innerHeight,
-        near: 0.1,
-        far: 80,
-        position: [0, 1, 2.5],
-      }}
-      onClick={onClick}
-    >
+    <Canvas style={{ width: "100vw", height: "100vh" }} onClick={onClick}>
       {backgroundUrl && <Background url={backgroundUrl} />}
+      <CameraController isZoom={!!isZoom} />
       <ambientLight color={0xff4444} intensity={1.2} />
       <directionalLight position={[0.5, 2, 2]} intensity={2.2} />
       {currentScene?.avatars?.map((avatar, index) => {
@@ -69,11 +80,15 @@ const CanvasComponent: React.FC<{ onClick: () => void }> = ({ onClick }) => {
         const animationConfig = config.animations.find(
           (anim) => anim.key === avatar.action
         );
+        const faceConfig = config.textures.find(
+          (texture) => texture.key === avatar.face
+        );
         return (
           <Avatar
             key={index}
             url={avatarConfig ? avatarConfig.value : ""}
             animationUrl={animationConfig ? animationConfig.value : ""}
+            faceUrl={faceConfig ? faceConfig.value : ""}
             expression={avatar.expression}
             index={index}
             attention={avatar.attension}

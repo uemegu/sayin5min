@@ -15,7 +15,7 @@ function App() {
   const [isLoading, setIsLoading] = useState(false);
 
   useEffect(() => {
-    gamgeConfig.chapters = json.chapters as Chapter[];
+    gamgeConfig.chapters = json.chapters as any as Chapter[];
     gamgeConfig.config = json.config;
     gameStatus.chapterIndex = 0;
   }, []);

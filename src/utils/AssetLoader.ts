@@ -25,6 +25,7 @@ const AssetLoader: React.FC<{ onLoadComplete: () => void }> = ({
 
     const avatarKeySet = new Set<string>();
     const actionKeySet = new Set<string>();
+    const faceKeySet = new Set<string>();
     const audioKeySet = new Set<string>();
     const imageKeySet = new Set<string>();
 
@@ -32,6 +33,7 @@ const AssetLoader: React.FC<{ onLoadComplete: () => void }> = ({
       s.avatars?.forEach((a) => {
         avatarKeySet.add(a.id);
         actionKeySet.add(a.action);
+        if (a.face) faceKeySet.add(a.face);
       });
       if (s.bgm) audioKeySet.add(s.bgm);
       if (s.voice) audioKeySet.add(s.voice);
@@ -55,6 +57,16 @@ const AssetLoader: React.FC<{ onLoadComplete: () => void }> = ({
       if (animationConfig) {
         if (animationCache.find((r) => r.key === animationConfig.value)) return;
         animationPaths.push(animationConfig.value);
+      }
+    });
+
+    faceKeySet.forEach((key) => {
+      const texureConfig = gamgeConfig.config.textures.find(
+        (av) => av.key === key
+      );
+      if (texureConfig) {
+        if (animationCache.find((r) => r.key === texureConfig.value)) return;
+        imagePaths.push(texureConfig.value);
       }
     });
 

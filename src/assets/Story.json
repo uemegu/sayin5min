@@ -4,11 +4,17 @@
     "avatars": [
       {
         "key": "heroine",
-        "value": "./models/sample_woman.vrm"
+        "value": "./models/hoshina-01.vrm"
       },
       {
-        "key": "friend_girl1",
-        "value": "./models/sample_woman2.vrm"
+        "key": "heroine_red",
+        "value": "./models/hoshina-02.vrm"
+      }
+    ],
+    "textures": [
+      {
+        "key": "redface",
+        "value": "./models/redface_surface.png"
       }
     ],
     "animations": [
@@ -27,6 +33,26 @@
       {
         "key": "greeting",
         "value": "./animations/Standing Greeting.fbx"
+      },
+      {
+        "key": "surprised",
+        "value": "./animations/Surprised.fbx"
+      },
+      {
+        "key": "angry",
+        "value": "./animations/Angry.fbx"
+      },
+      {
+        "key": "acknowledging",
+        "value": "./animations/Acknowledging.fbx"
+      },
+      {
+        "key": "clapping",
+        "value": "./animations/Clapping.fbx"
+      },
+      {
+        "key": "defeat",
+        "value": "./animations/defeat.fbx"
       }
     ],
     "backgrounds": [
@@ -42,21 +68,25 @@
     "bgms": [
       {
         "key": "normal",
-        "value": "./bgms/Normal.mp3"
+        "value": "./bgms/時空を超えた愛.mp3"
       }
     ],
     "voices": [
       {
-        "key": "voice1",
-        "value": "./voice/voice1.wav"
+        "key": "あもしかして",
+        "value": "./voice/voice_あもしかして_水瀬 玲奈.mp3"
       },
       {
-        "key": "voice2",
-        "value": "./voice/voice2.wav"
+        "key": "えぇぇぇ",
+        "value": "./voice/voice_えぇぇぇ_水瀬 玲奈.mp3"
       },
       {
-        "key": "voice3",
-        "value": "./voice/voice3.wav"
+        "key": "私たちさっき会ったばかりですよね",
+        "value": "./voice/voice_私たちさっき会ったばかりですよね・・・_水瀬 玲奈.mp3"
+      },
+      {
+        "key": "あはははは",
+        "value": "./voice/voice_あははははっ_水瀬 玲奈.mp3"
       }
     ]
   },
@@ -66,41 +96,11 @@
       "title": "はじまりのチャプター",
       "scenes": [
         {
-          "id": "test",
           "avatars": [
             {
               "id": "heroine",
               "action": "idle",
-              "expression": "angry",
-              "attension": "true"
-            }
-          ],
-          "location": "公園",
-          "bgm": "normal",
-          "background": "park",
-          "text": ""
-        },
-        {
-          "avatars": [
-            {
-              "id": "heroine",
-              "action": "idle",
-              "expression": "angry",
-              "attension": "true"
-            }
-          ],
-          "location": "公園",
-          "bgm": "normal",
-          "voice": "voice1",
-          "background": "park",
-          "text": "ねぇ、ちょっと聞いてるの！"
-        },
-        {
-          "avatars": [
-            {
-              "id": "heroine",
-              "action": "idle",
-              "expression": "angry",
+              "expression": "normal",
               "attension": "true"
             }
           ],
@@ -110,67 +110,181 @@
           "text": "",
           "items": [
             {
-              "text": "え・・・なんだっけ？",
-              "flg": "1"
+              "text": "出会った時から好きでした！"
             },
             {
-              "text": "もちのろんだよ！",
-              "flg": "2"
+              "text": "ずっと好きでした！"
             },
             {
-              "text": "ごめんなさい",
-              "flg": "3"
+              "text": "単刀直入に行って好きです！"
             }
           ]
         },
         {
           "avatars": [
             {
-              "id": "heroine",
-              "action": "punching",
-              "expression": "angry"
+              "id": "heroine_red",
+              "action": "surprised",
+              "expression": "surprised",
+              "attension": "true",
+              "zoom": true
             }
           ],
           "location": "公園",
           "bgm": "normal",
-          "voice": "voice2",
           "background": "park",
-          "text": "はぁ！もうぶっとばすわよっ！"
+          "text": "えっ・・・？",
+          "voice": "えぇぇぇ"
         },
         {
           "avatars": [
             {
-              "id": "heroine",
+              "id": "heroine_red",
               "action": "idle",
-              "expression": "sad",
+              "expression": "surprised",
               "attension": "true"
             }
           ],
           "location": "公園",
           "bgm": "normal",
           "background": "park",
-          "voice": "voice3",
-          "text": "ほんとにもう・・・。しっかりしてよね。"
+          "text": "私たち、さっき会ったばかりですよね・・・？",
+          "voice": "私たちさっき会ったばかりですよね"
         },
         {
-          "conditions": ["1"],
           "avatars": [
             {
-              "id": "heroine",
+              "id": "heroine_red",
               "action": "idle",
-              "expression": "sad",
+              "expression": "surprised",
               "attension": "true"
-            },
-            {
-              "id": "friend_girl1",
-              "action": "idle",
-              "expression": "happy"
             }
           ],
-          "location": "部屋",
+          "location": "公園",
           "bgm": "normal",
-          "background": "room",
-          "text": "テスト"
+          "background": "park",
+          "text": "",
+          "items": [
+            {
+              "text": "・・・"
+            }
+          ]
+        },
+        {
+          "avatars": [
+            {
+              "id": "heroine_red",
+              "action": "idle",
+              "expression": "normal",
+              "attension": "true"
+            }
+          ],
+          "location": "公園",
+          "bgm": "normal",
+          "background": "park",
+          "text": "どこかでお会いしてましたか・・・？"
+        },
+        {
+          "avatars": [
+            {
+              "id": "heroine_red",
+              "action": "idle",
+              "expression": "normal",
+              "attension": "true"
+            }
+          ],
+          "location": "公園",
+          "bgm": "normal",
+          "background": "park",
+          "text": "",
+          "items": [
+            {
+              "text": "・・・"
+            }
+          ]
+        },
+        {
+          "avatars": [
+            {
+              "id": "heroine_red",
+              "action": "bow",
+              "expression": "happy",
+              "attension": "true",
+              "zoom": true
+            }
+          ],
+          "location": "公園",
+          "bgm": "normal",
+          "background": "park",
+          "text": "あ、もしかして！",
+          "voice": "あもしかして"
+        },
+        {
+          "avatars": [
+            {
+              "id": "heroine_red",
+              "action": "idle",
+              "expression": "normal",
+              "attension": "true"
+            }
+          ],
+          "location": "公園",
+          "bgm": "normal",
+          "background": "park",
+          "text": "小さい頃あなたに助けられた・・・。ある雨の日、足を滑らした私は川に溺れて・・・。もうダメだと思っていたところ、あなたに力強く引っ張られた・・・。"
+        },
+        {
+          "avatars": [
+            {
+              "id": "heroine_red",
+              "action": "idle",
+              "expression": "normal",
+              "attension": "true"
+            }
+          ],
+          "location": "公園",
+          "bgm": "normal",
+          "background": "park",
+          "text": "",
+          "items": [
+            {
+              "text": "それなんて千尋？"
+            }
+          ]
+        },
+        {
+          "avatars": [
+            {
+              "id": "heroine_red",
+              "action": "acknowledging",
+              "expression": "normal",
+              "attension": "true"
+            }
+          ],
+          "location": "公園",
+          "bgm": "normal",
+          "background": "park",
+          "text": "あはは、あなたはハクだね。で、前に会ったことありました？",
+          "voice": "あはははは"
+        },
+        {
+          "avatars": [
+            {
+              "id": "heroine_red",
+              "action": "idle",
+              "expression": "normal",
+              "attension": "true"
+            }
+          ],
+          "location": "公園",
+          "bgm": "normal",
+          "background": "park",
+          "text": "",
+          "items": [
+            {
+              "text": "・・・いえ、初めてだと思います。"
+            }
+          ]
         },
         {
           "conditions": ["2"],
@@ -180,11 +294,6 @@
               "action": "idle",
               "expression": "sad",
               "attension": "true"
-            },
-            {
-              "id": "friend_girl1",
-              "action": "idle",
-              "expression": "happy"
             }
           ],
           "location": "公園",

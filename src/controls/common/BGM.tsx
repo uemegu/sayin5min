@@ -14,13 +14,13 @@ const BGM: React.FC = () => {
     (voice) => voice.key === currentScene?.voice
   );
   const voiceUrl = voiceConfig ? voiceConfig.value : "";
-  const [isPlaying, setIsPlaying] = useState(false);
+  const [isPlaying, setIsPlaying] = useState(true);
 
   useEffect(() => {
     if (bgmUrl && audioRef.current) {
       if (audioRef.current.src !== bgmUrl) {
         audioRef.current.src = bgmUrl;
-        audioRef.current.volume = 0.3;
+        audioRef.current.volume = 0.2;
         if (isPlaying) {
           audioRef.current.play();
         }
