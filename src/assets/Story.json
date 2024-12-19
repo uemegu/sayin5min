@@ -3,12 +3,28 @@
   "config": {
     "avatars": [
       {
-        "key": "heroine",
+        "key": "hoshina01",
         "value": "./models/hoshina-01.vrm"
       },
       {
-        "key": "heroine_red",
+        "key": "hoshina02",
         "value": "./models/hoshina-02.vrm"
+      },
+      {
+        "key": "aisa01",
+        "value": "./models/aisa-01.vrm.vrm"
+      },
+      {
+        "key": "naruse01",
+        "value": "./models/naruse-01.vrm"
+      },
+      {
+        "key": "shibukawa01",
+        "value": "./models/shibukawa-01.vrm"
+      },
+      {
+        "key": "sister01",
+        "value": "./models/sister-01.vrm"
       }
     ],
     "textures": [
@@ -63,49 +79,78 @@
       {
         "key": "room",
         "value": "./images/room.webp"
+      },
+      {
+        "key": "home",
+        "value": "./images/home.webp"
+      },
+      {
+        "key": "office",
+        "value": "./images/office.webp"
+      },
+      {
+        "key": "lobby",
+        "value": "./images/lobby.webp"
+      },
+      {
+        "key": "restaurant",
+        "value": "./images/restaurant.webp"
       }
     ],
     "bgms": [
       {
-        "key": "normal",
+        "key": "main",
         "value": "./bgms/時空を超えた愛.mp3"
+      },
+      {
+        "key": "normal",
+        "value": "./bgms/Playful Keys.mp3"
       }
     ],
     "voices": [
       {
-        "key": "あもしかして",
-        "value": "./voice/voice_あもしかして_水瀬 玲奈.mp3"
-      },
-      {
         "key": "えぇぇぇ",
-        "value": "./voice/voice_えぇぇぇ_水瀬 玲奈.mp3"
+        "value": "./voice/voice_hoshina_1.mp3"
       },
       {
         "key": "私たちさっき会ったばかりですよね",
-        "value": "./voice/voice_私たちさっき会ったばかりですよね・・・_水瀬 玲奈.mp3"
+        "value": "./voice/voice_hoshina_2.mp3"
+      },
+      {
+        "key": "あもしかして",
+        "value": "./voice/voice_hoshina_3.mp3"
       },
       {
         "key": "あはははは",
-        "value": "./voice/voice_あははははっ_水瀬 玲奈.mp3"
+        "value": "./voice/voice_hoshina_4.mp3"
+      },
+      {
+        "key": "えっと",
+        "value": "./voice/voice_hoshina_5.mp3"
+      },
+      {
+        "key": "おっす",
+        "value": "./voice/voice_naruse_1.mp3"
       }
     ]
   },
   "chapters": [
     {
-      "id": "1st_Chapter",
+      "id": "1st",
       "title": "はじまりのチャプター",
       "scenes": [
         {
           "avatars": [
             {
-              "id": "heroine",
+              "id": "hoshina01",
               "action": "idle",
               "expression": "normal",
               "attension": "true"
             }
           ],
+          "id": "test",
           "location": "公園",
-          "bgm": "normal",
+          "bgm": "main",
           "background": "park",
           "text": "",
           "items": [
@@ -123,7 +168,7 @@
         {
           "avatars": [
             {
-              "id": "heroine_red",
+              "id": "hoshina02",
               "action": "surprised",
               "expression": "surprised",
               "attension": "true",
@@ -131,7 +176,7 @@
             }
           ],
           "location": "公園",
-          "bgm": "normal",
+          "bgm": "main",
           "background": "park",
           "text": "えっ・・・？",
           "voice": "えぇぇぇ"
@@ -139,14 +184,14 @@
         {
           "avatars": [
             {
-              "id": "heroine_red",
+              "id": "hoshina02",
               "action": "idle",
               "expression": "surprised",
               "attension": "true"
             }
           ],
           "location": "公園",
-          "bgm": "normal",
+          "bgm": "main",
           "background": "park",
           "text": "私たち、さっき会ったばかりですよね・・・？",
           "voice": "私たちさっき会ったばかりですよね"
@@ -154,14 +199,14 @@
         {
           "avatars": [
             {
-              "id": "heroine_red",
+              "id": "hoshina02",
               "action": "idle",
               "expression": "surprised",
               "attension": "true"
             }
           ],
           "location": "公園",
-          "bgm": "normal",
+          "bgm": "main",
           "background": "park",
           "text": "",
           "items": [
@@ -173,28 +218,28 @@
         {
           "avatars": [
             {
-              "id": "heroine_red",
+              "id": "hoshina02",
               "action": "idle",
               "expression": "normal",
               "attension": "true"
             }
           ],
           "location": "公園",
-          "bgm": "normal",
+          "bgm": "main",
           "background": "park",
           "text": "どこかでお会いしてましたか・・・？"
         },
         {
           "avatars": [
             {
-              "id": "heroine_red",
+              "id": "hoshina02",
               "action": "idle",
               "expression": "normal",
               "attension": "true"
             }
           ],
           "location": "公園",
-          "bgm": "normal",
+          "bgm": "main",
           "background": "park",
           "text": "",
           "items": [
@@ -206,7 +251,7 @@
         {
           "avatars": [
             {
-              "id": "heroine_red",
+              "id": "hoshina02",
               "action": "bow",
               "expression": "happy",
               "attension": "true",
@@ -214,7 +259,7 @@
             }
           ],
           "location": "公園",
-          "bgm": "normal",
+          "bgm": "main",
           "background": "park",
           "text": "あ、もしかして！",
           "voice": "あもしかして"
@@ -222,28 +267,28 @@
         {
           "avatars": [
             {
-              "id": "heroine_red",
+              "id": "hoshina02",
               "action": "idle",
               "expression": "normal",
               "attension": "true"
             }
           ],
           "location": "公園",
-          "bgm": "normal",
+          "bgm": "main",
           "background": "park",
           "text": "小さい頃あなたに助けられた・・・。ある雨の日、足を滑らした私は川に溺れて・・・。もうダメだと思っていたところ、あなたに力強く引っ張られた・・・。"
         },
         {
           "avatars": [
             {
-              "id": "heroine_red",
+              "id": "hoshina02",
               "action": "idle",
               "expression": "normal",
               "attension": "true"
             }
           ],
           "location": "公園",
-          "bgm": "normal",
+          "bgm": "main",
           "background": "park",
           "text": "",
           "items": [
@@ -255,14 +300,14 @@
         {
           "avatars": [
             {
-              "id": "heroine_red",
-              "action": "acknowledging",
-              "expression": "normal",
+              "id": "hoshina02",
+              "action": "normal",
+              "expression": "happy",
               "attension": "true"
             }
           ],
           "location": "公園",
-          "bgm": "normal",
+          "bgm": "main",
           "background": "park",
           "text": "あはは、あなたはハクだね。で、前に会ったことありました？",
           "voice": "あはははは"
@@ -270,14 +315,14 @@
         {
           "avatars": [
             {
-              "id": "heroine_red",
+              "id": "hoshina02",
               "action": "idle",
               "expression": "normal",
               "attension": "true"
             }
           ],
           "location": "公園",
-          "bgm": "normal",
+          "bgm": "main",
           "background": "park",
           "text": "",
           "items": [
@@ -287,22 +332,356 @@
           ]
         },
         {
-          "conditions": ["2"],
           "avatars": [
             {
-              "id": "heroine",
+              "id": "hoshina02",
+              "action": "acknowledging",
+              "expression": "normal",
+              "attension": "true"
+            }
+          ],
+          "location": "公園",
+          "bgm": "main",
+          "background": "park",
+          "text": "えっと・・・一目惚れということでしょうか・・・？",
+          "voice": "えっと"
+        },
+        {
+          "avatars": [
+            {
+              "id": "hoshina02",
+              "action": "idle",
+              "expression": "normal",
+              "attension": "true"
+            }
+          ],
+          "location": "公園",
+          "bgm": "main",
+          "background": "park",
+          "text": "",
+          "items": [
+            {
+              "text": "そうかもしれません・・・"
+            }
+          ]
+        },
+        {
+          "avatars": [
+            {
+              "id": "hoshina02",
+              "action": "idle",
+              "expression": "normal",
+              "attension": "true"
+            }
+          ],
+          "location": "公園",
+          "bgm": "main",
+          "background": "park",
+          "text": "",
+          "items": [
+            {
+              "text": "本当にあなたのことが・・・す、好き・・・？"
+            }
+          ]
+        },
+        {
+          "avatars": [
+            {
+              "id": "hoshina02",
               "action": "idle",
               "expression": "sad",
               "attension": "true"
             }
           ],
           "location": "公園",
-          "bgm": "normal",
+          "bgm": "main",
           "background": "park",
-          "text": "テスト2"
+          "text": "なぜ疑問系・・・？"
         },
         {
-          "goto": "1st_Chapter.test"
+          "avatars": [
+            {
+              "id": "hoshina02",
+              "action": "acknowledging",
+              "expression": "happy",
+              "attension": "true"
+            }
+          ],
+          "location": "公園",
+          "bgm": "main",
+          "background": "park",
+          "text": "・・・突然でどうしたら良いのかわからないのですが、とりあえずお友達からで。"
+        },
+        {
+          "avatars": [
+            {
+              "id": "hoshina02",
+              "action": "idle",
+              "expression": "normal",
+              "attension": "true"
+            }
+          ],
+          "location": "公園",
+          "bgm": "main",
+          "background": "park",
+          "text": "",
+          "items": [
+            {
+              "text": "ありがとうございます！"
+            }
+          ]
+        },
+        {
+          "conditions": ["2"],
+          "avatars": [
+            {
+              "id": "hoshina02",
+              "action": "idle",
+              "expression": "sad",
+              "attension": "true"
+            }
+          ],
+          "location": "公園",
+          "bgm": "main",
+          "background": "park",
+          "text": "テスト2"
+        }
+      ]
+    },
+    {
+      "id": "2nd",
+      "title": "ラブストーリーは突然に",
+      "scenes": [
+        {
+          "avatars": [],
+          "location": "オフィス",
+          "bgm": "normal",
+          "background": "office",
+          "text": "碧川悠斗（あおかわ ゆうと）はIT会社で働くごく普通のサラリーマンである。趣味はネットと漫画、友達付き合いはそこそこ。恋人はいない。"
+        },
+        {
+          "avatars": [],
+          "location": "オフィス",
+          "bgm": "normal",
+          "background": "office",
+          "text": "学生時代の成績も悪くなく、スポーツは好きでも嫌いでもないという程度。社会人になって5年、任せられる仕事も増えてきて毎日仕事に忙殺される日々を送っていた。"
+        },
+        {
+          "avatars": [],
+          "location": "オフィス",
+          "bgm": "normal",
+          "background": "office",
+          "text": "そんなどこにでもいるようなサラリーマン人生を歩んできた。"
+        },
+        {
+          "avatars": [],
+          "location": "オフィス",
+          "bgm": "normal",
+          "background": "office",
+          "text": "そんなどこにでもいるようなサラリーマン人生を歩んできた。"
+        },
+        {
+          "avatars": [],
+          "location": "オフィス",
+          "bgm": "normal",
+          "background": "office",
+          "text": "碧川「一体、俺はどうしてしまったんだ？」"
+        },
+        {
+          "avatars": [],
+          "location": "オフィス",
+          "bgm": "normal",
+          "background": "office",
+          "text": "先ほどの行動に自分自身でも困惑していた。"
+        },
+        {
+          "avatars": [],
+          "location": "オフィス",
+          "bgm": "normal",
+          "background": "office",
+          "text": "今日も碧川は普通に仕事をしていた。業務の都合で移動をしている途中に立ち寄った公園内にあるコンビニの店員に一目惚れをしてしまった。"
+        },
+        {
+          "avatars": [],
+          "location": "オフィス",
+          "bgm": "normal",
+          "background": "office",
+          "text": "コンビニの店員、星奈は仕事が終わったので仕事仲間に挨拶をしながら店を出ようとしたときに碧川が店内にやって来た。"
+        },
+        {
+          "avatars": [],
+          "location": "オフィス",
+          "bgm": "normal",
+          "background": "office",
+          "text": "すれ違いざまに碧川は無意識のうちに声を発し、コンビニの前で告白をしていた。どちらかという控えめな性格だったので、これまでこんな行動はしたことがなかった。"
+        },
+        {
+          "avatars": [],
+          "location": "オフィス",
+          "bgm": "normal",
+          "background": "office",
+          "text": "本当に自然に体が動いてしまい、気がついたら告白をしていた。不幸中の幸いというか、星奈は碧川が悪い男ではないと思ってくれたらしく連絡先を交換してくれた。"
+        },
+        {
+          "avatars": [],
+          "location": "オフィス",
+          "bgm": "normal",
+          "background": "office",
+          "text": "碧川「こんな不審な男を拒絶しないなんて本当に奇跡だ。しかも、あんなに可愛い女性が・・・」"
+        },
+        {
+          "avatars": [],
+          "location": "オフィス",
+          "bgm": "normal",
+          "background": "office",
+          "text": "間違っても自分がイケメンだなんて勘違いはしない。碧川はそんな男だ。普段の碧川であれば、星奈は高嶺の花だと距離をとってしまうレベルで容姿が整っていた。"
+        },
+        {
+          "avatars": [],
+          "location": "オフィス",
+          "bgm": "normal",
+          "background": "office",
+          "text": "もちろん美人が嫌いなわけはない。ただ、それ以上に星奈のことを考えると不思議な感情が湧き上がってくる。"
+        },
+        {
+          "avatars": [],
+          "location": "オフィス",
+          "bgm": "normal",
+          "background": "office",
+          "text": "碧川「これが一目惚れなのか・・・」"
+        },
+        {
+          "avatars": [],
+          "location": "オフィス",
+          "bgm": "normal",
+          "background": "office",
+          "text": "自分でも戸惑っていたが徐々に冷静になり、そして今度は彼女にどう連絡を取れば良いかわからず悩み始めた。"
+        },
+        {
+          "avatars": [],
+          "location": "オフィス",
+          "bgm": "normal",
+          "background": "office",
+          "text": "こんな感じで始まった場合、いったい最初にどんなメッセージを送れば良いというのか・・・。"
+        },
+        {
+          "avatars": [],
+          "location": "オフィス",
+          "bgm": "normal",
+          "background": "office",
+          "text": "そう思っている間に職場にたどり着いたので、いったん悩みは脳の隅っこに追いやり、碧川は仕事に没頭するのであった。"
+        },
+        {
+          "avatars": [],
+          "location": "自室",
+          "bgm": "normal",
+          "background": "room",
+          "text": "碧川が帰宅した時には23時を回っていた。今日も目まぐるしく忙しかった。こんな日々がずっと続くのか、シャワーを浴びながら1日のことを振り返りながらふと気づく。"
+        },
+        {
+          "avatars": [],
+          "location": "自室",
+          "bgm": "normal",
+          "background": "room",
+          "text": "碧川「星奈さんに連絡をしていない！」"
+        },
+        {
+          "avatars": [],
+          "location": "自室",
+          "bgm": "normal",
+          "background": "room",
+          "text": "あんなことをしておきながら全く連絡を取らないなんて失礼過ぎる。冗談だったんだと思われてしまう。いそいそとシャワーをすませ、携帯を手に取り、そこでフリーズする。"
+        },
+        {
+          "avatars": [],
+          "location": "自室",
+          "bgm": "normal",
+          "background": "room",
+          "text": "何を送れば良いのかわからない。愛を伝えるのか、世間話をするのか、自己紹介をするのか、面白い話をしたら良いのか、いったい何が正解なのか・・・"
+        },
+        {
+          "avatars": [],
+          "location": "自室",
+          "bgm": "normal",
+          "background": "room",
+          "text": "かと言って、遅過ぎる時間にメッセージを送るわけにはいかない。碧川はだんだん焦ってきた。"
+        },
+        {
+          "avatars": [],
+          "location": "自室",
+          "bgm": "normal",
+          "background": "room",
+          "text": "そうしている間にもどんどん夜は更けていく・・・。ホウレンソウは社会人の基本だ。連絡が遅ければそれだけ事態は悪くなる。"
+        },
+        {
+          "avatars": [],
+          "location": "自室",
+          "bgm": "normal",
+          "background": "room",
+          "text": "こんなものが初めてになるなんて・・・。初回連絡ガッカリ男ランキングが存在するならランクインするのではないか？"
+        },
+        {
+          "avatars": [],
+          "location": "自室",
+          "bgm": "normal",
+          "background": "room",
+          "text": "そう思いながら碧川は星奈にメッセージを送った。"
+        },
+        {
+          "avatars": [],
+          "location": "自室",
+          "bgm": "normal",
+          "background": "room",
+          "text": "『本日は大変ご迷惑をおかけいたしました。本日はすでに遅い時間となってしまいましたので明日改めてご連絡を差し上げます』"
+        }
+      ]
+    },
+    {
+      "id": "3rd",
+      "title": "お互いのことを知りましょう",
+      "scenes": [
+        {
+          "avatars": [],
+          "location": "オフィス",
+          "bgm": "normal",
+          "background": "office",
+          "text": "碧川のコンディションは最悪だった。"
+        },
+        {
+          "avatars": [],
+          "location": "オフィス",
+          "bgm": "normal",
+          "background": "office",
+          "text": "星奈にメールを送ったあと、不甲斐ない自分への後悔とどうやって挽回するかを考えると眠れず、寝不足だった。なんとか仕事はこなすものの、疲れ切っているのは周りの目から見ても明らかだった。"
+        },
+        {
+          "avatars": [
+            {
+              "id": "naruse01",
+              "action": "greeting",
+              "expression": "normal",
+              "attension": "true"
+            }
+          ],
+          "location": "オフィス",
+          "bgm": "normal",
+          "background": "office",
+          "text": "「今日はどしたん？めっちゃ辛そうじゃん」",
+          "voice": "おっす"
+        },
+        {
+          "avatars": [
+            {
+              "id": "naruse01",
+              "action": "idle",
+              "expression": "normal",
+              "attension": "true"
+            }
+          ],
+          "location": "オフィス",
+          "bgm": "normal",
+          "background": "office",
+          "text": "同じプロジェクトに配属されている同期の同僚、成瀬陽介（なるせ ようすけ）が声をかけてきた。"
         }
       ]
     }

@@ -28,6 +28,7 @@ const Avatar: React.FC<{
   const [mixer, setMixer] = useState<THREE.AnimationMixer | null>(null);
   const [currentAnimation, setCurrentAnimation] =
     useState<THREE.AnimationAction | null>(null);
+  const positions = [0, 0.7, -0.7];
 
   const applyExpression = () => {
     if (avatar && expression) {
@@ -40,6 +41,7 @@ const Avatar: React.FC<{
   };
 
   const blinkTimer = useRef(0);
+  const lookAtTimer = useRef(0);
   const blinkState = useRef(0); // 0: open, 1: closing, 2: closed, 3: opening
   useFrame((_, delta) => {
     if (!avatar || !avatar.expressionManager) return;
@@ -49,6 +51,15 @@ const Avatar: React.FC<{
     if (blinkTimer.current < 0) {
       blinkState.current = 1;
       blinkTimer.current = getRandomBlinkInterval(5, 10);
+    }
+    lookAtTimer.current += delta;
+    if (lookAtTimer.current > 1) {
+      lookAtTimer.current = 0;
+      if (avatar.lookAt && camera) {
+        const targetPosition = new THREE.Vector3();
+        camera.getWorldPosition(targetPosition);
+        avatar.lookAt.lookAt(targetPosition);
+      }
     }
 
     // まばたきの状態管理
@@ -90,7 +101,7 @@ const Avatar: React.FC<{
   const lookMe = (avatar: VRM) => {
     const bbox = new THREE.Box3().setFromObject(avatar.scene);
     const facePosition = new THREE.Vector3(
-      index * 0.7,
+      positions[index] / 2,
       (bbox.max.y * 2.5) / 3,
       0
     );
@@ -108,6 +119,11 @@ const Avatar: React.FC<{
         z: facePosition.z,
         onUpdate: () => {
           camera.lookAt(new THREE.Vector3(target.x / 1000, target.y, target.z));
+          if (avatar.lookAt && camera) {
+            const targetPosition = new THREE.Vector3();
+            camera.getWorldPosition(targetPosition);
+            avatar.lookAt.lookAt(targetPosition);
+          }
         },
         onComplete: () => {
           gameStatus.cameraDirection = facePosition;
@@ -117,6 +133,11 @@ const Avatar: React.FC<{
       camera.lookAt(
         new THREE.Vector3(facePosition.x, facePosition.y, facePosition.z)
       );
+      if (avatar.lookAt && camera) {
+        const targetPosition = new THREE.Vector3();
+        camera.getWorldPosition(targetPosition);
+        avatar.lookAt.lookAt(targetPosition);
+      }
       gameStatus.cameraDirection = facePosition;
     }
   };
@@ -150,7 +171,7 @@ const Avatar: React.FC<{
   useEffect(() => {
     if (gltf.userData.vrm) {
       const vrm = gltf.userData.vrm as VRM;
-      vrm.scene.position.set(index * 0.7, 0, 0);
+      vrm.scene.position.set(positions[index], 0, 0);
       scene.add(vrm.scene);
       setCurrentAnimation(null);
       setAvatar(vrm);

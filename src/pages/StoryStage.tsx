@@ -85,6 +85,16 @@ const StoryStage: React.FC<StoryStageProps> = ({ onExit }) => {
       } else {
         changeMessageIndex(gameStatus.messageIndex + increment);
       }
+    } else {
+      if (gamgeConfig.chapters.length > gameStatus.chapterIndex + 1) {
+        setIsLoading(true);
+        setTimeout(() => {
+          gameStatus.chapterIndex++;
+          increment = 0;
+          gameStatus.messageIndex = 0;
+          next(increment);
+        }, 1000);
+      }
     }
   };
 

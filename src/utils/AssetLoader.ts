@@ -1,12 +1,10 @@
 import { useEffect, useMemo } from "react";
 import {
-  gameStatus,
   gamgeConfig,
   animationCache,
   avatarCache,
   imangeCache,
 } from "../controls/Store";
-import { useSnapshot } from "valtio";
 import { useLoader } from "@react-three/fiber";
 import { GLTFLoader } from "three/examples/jsm/loaders/GLTFLoader.js";
 import { VRMLoaderPlugin } from "@pixiv/three-vrm";
@@ -16,7 +14,7 @@ import * as THREE from "three";
 const AssetLoader: React.FC<{ onLoadComplete: () => void }> = ({
   onLoadComplete,
 }) => {
-  const { chapterIndex } = useSnapshot(gameStatus);
+  //const { chapterIndex } = useSnapshot(gameStatus);
 
   const assets = useMemo(() => {
     const gltfPaths: string[] = [];
@@ -29,16 +27,19 @@ const AssetLoader: React.FC<{ onLoadComplete: () => void }> = ({
     const audioKeySet = new Set<string>();
     const imageKeySet = new Set<string>();
 
-    gamgeConfig.chapters[chapterIndex]?.scenes.forEach((s) => {
-      s.avatars?.forEach((a) => {
-        avatarKeySet.add(a.id);
-        actionKeySet.add(a.action);
-        if (a.face) faceKeySet.add(a.face);
-      });
-      if (s.bgm) audioKeySet.add(s.bgm);
-      if (s.voice) audioKeySet.add(s.voice);
-      if (s.background) imageKeySet.add(s.background);
-    });
+    // FIXME 本当はチャプター単位でロードしたい
+    gamgeConfig.chapters.forEach((chapter) =>
+      chapter.scenes.forEach((s) => {
+        s.avatars?.forEach((a) => {
+          avatarKeySet.add(a.id);
+          actionKeySet.add(a.action);
+          if (a.face) faceKeySet.add(a.face);
+        });
+        if (s.bgm) audioKeySet.add(s.bgm);
+        if (s.voice) audioKeySet.add(s.voice);
+        if (s.background) imageKeySet.add(s.background);
+      })
+    );
 
     avatarKeySet.forEach((key) => {
       const avatarConfig = gamgeConfig.config.avatars.find(
@@ -78,7 +79,7 @@ const AssetLoader: React.FC<{ onLoadComplete: () => void }> = ({
     });
 
     return { gltfPaths, imagePaths, animationPaths };
-  }, [chapterIndex]);
+  }, []);
 
   const tasks: Array<Promise<any>> = [];
   assets.animationPaths.forEach((path) => {

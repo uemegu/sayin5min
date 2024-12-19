@@ -26,6 +26,8 @@ function App() {
 
   const handleStart = () => {
     gameStatus.chapterIndex = 0;
+    gameStatus.messageIndex = 0;
+    gameStatus.flags = [];
     setIsLoading(true);
     setTimeout(() => {
       setShowTopMenu(false);
@@ -45,9 +47,6 @@ function App() {
   };
 
   const handleLoadingClose = () => {
-    gameStatus.chapterIndex = 0;
-    gameStatus.messageIndex = 0;
-    gameStatus.flags = [];
     setIsLoading(false);
   };
 

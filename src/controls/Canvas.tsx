@@ -28,8 +28,8 @@ const Background: React.FC<{ url: string }> = ({ url }) => {
     if (planeRef.current) {
       // 背景の平面をカメラの位置に追従させる
       planeRef.current.position.copy(camera.position);
-      planeRef.current.position.z -= 23; // カメラの背後に配置
-      planeRef.current.position.y += 2; // カメラの背後に配置
+      planeRef.current.position.z -= 20; // カメラの背後に配置
+      planeRef.current.position.y += 8; // カメラの背後に配置
     }
   });
 
@@ -48,7 +48,7 @@ const CameraController: React.FC<{ isZoom: boolean }> = ({ isZoom }) => {
       const targetZ = isZoom ? 0.9 : 1.5;
       cameraRef.current.position.z +=
         (targetZ - cameraRef.current.position.z) * 0.1;
-      const targetY = isZoom ? 1.2 : 1.2;
+      const targetY = isZoom ? 1.2 : 1.0;
       cameraRef.current.position.y +=
         (targetY - cameraRef.current.position.y) * 0.1;
     }
