@@ -21,3 +21,9 @@
 .animation-delay-4 {
   animation-delay: 1s;
 }
+
+.kiwi-maru-regular {
+  font-family: "Kiwi Maru", serif;
+  font-weight: 400;
+  font-style: normal;
+}
