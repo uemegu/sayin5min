@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useRef } from "react";
+import { useState, useEffect, useRef } from "react";
 
 const GoodEnd = () => {
   // 表示内容のデータ
@@ -75,7 +75,7 @@ const GoodEnd = () => {
   }, [contents.length]);
 
   return (
-    <div className="flex items-center justify-between h-screen bg-black text-white">
+    <div className="flex flex-col md:flex-row items-center justify-between h-screen bg-black text-white">
       {/* 画像 */}
       <div className="flex flex-1 items-center justify-center">
         <img

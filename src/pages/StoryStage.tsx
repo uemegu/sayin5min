@@ -8,6 +8,7 @@ import Loading from "../controls/common/Loading";
 import LoadingOverlay from "../controls/common/LoadingOverlay";
 import Save from "../controls/common/Save";
 import GoodEnd from "../controls/GoodEnding";
+import SlideInImage from "../controls/common/SlideInImage";
 
 interface StoryStageProps {
   onExit: () => void;
@@ -15,6 +16,7 @@ interface StoryStageProps {
 
 const StoryStage: React.FC<StoryStageProps> = ({ onExit }) => {
   const [isLoading, setIsLoading] = useState(false);
+  const [showingImagePath, setShowingImagePath] = useState<string | null>(null);
   const [ending, setEnding] = useState<string | null>(null);
   const [location, setLocation] = useState(
     gamgeConfig.chapters[gameStatus.chapterIndex].scenes[
@@ -51,6 +53,13 @@ const StoryStage: React.FC<StoryStageProps> = ({ onExit }) => {
       gameStatus.messageIndex = index;
       updateLocation();
     }
+    if (gamgeConfig.chapters[gameStatus.chapterIndex].scenes[index].image) {
+      setShowingImagePath(
+        gamgeConfig.chapters[gameStatus.chapterIndex].scenes[index].image!
+      );
+    } else {
+      setShowingImagePath(null);
+    }
   };
 
   const next = (increment: number) => {
@@ -66,11 +75,14 @@ const StoryStage: React.FC<StoryStageProps> = ({ onExit }) => {
             gameStatus.messageIndex + increment
           ].goto === "good_end"
         ) {
-          setEnding(
-            gamgeConfig.chapters[gameStatus.chapterIndex].scenes[
-              gameStatus.messageIndex + increment
-            ].goto!
-          );
+          setIsLoading(true);
+          setTimeout(() => {
+            setEnding(
+              gamgeConfig.chapters[gameStatus.chapterIndex].scenes[
+                gameStatus.messageIndex + increment
+              ].goto!
+            );
+          }, 1000);
         } else {
           const targets =
             gamgeConfig.chapters[gameStatus.chapterIndex].scenes[
@@ -115,6 +127,7 @@ const StoryStage: React.FC<StoryStageProps> = ({ onExit }) => {
   };
 
   const handleClick = () => {
+    if (isLoading) return;
     if (
       gamgeConfig.chapters[gameStatus.chapterIndex].scenes[
         gameStatus.messageIndex
@@ -160,6 +173,16 @@ const StoryStage: React.FC<StoryStageProps> = ({ onExit }) => {
             <CanvasComponent onClick={handleClick} />
             <MessageWindow />
             <ItemsDisplay onClick={itemSelected} />
+            {showingImagePath && (
+              <>
+                <div className="fixed left-0 top-12 w-full flex items-center justify-center">
+                  <SlideInImage
+                    imageSrc={showingImagePath}
+                    altText="Sample Image"
+                  />
+                </div>
+              </>
+            )}
             <div className="fixed left-0 top-0 right-0 h-8 bg-black"></div>
             <BGM />
             <Save />

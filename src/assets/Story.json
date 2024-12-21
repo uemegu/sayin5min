@@ -416,6 +416,9 @@
           "items": [
             {
               "text": "・・・"
+            },
+            {
+              "text": "時空を超えた愛です！"
             }
           ]
         },
@@ -449,6 +452,9 @@
           "items": [
             {
               "text": "・・・"
+            },
+            {
+              "text": "5秒前には会ってましたが・・・"
             }
           ]
         },
@@ -497,11 +503,17 @@
           "text": "",
           "items": [
             {
-              "text": "それなんて千尋？"
+              "text": "それなんて千尋？",
+              "flg": "1"
+            },
+            {
+              "text": "え、そんなことが・・・！",
+              "flg": "2"
             }
           ]
         },
         {
+          "conditions": ["1"],
           "avatars": [
             {
               "id": "hoshina02",
@@ -515,6 +527,21 @@
           "background": "park",
           "text": "あはは、あなたはハクだね。で、前に会ったことありました？",
           "voice": "あはははは"
+        },
+        {
+          "conditions": ["2"],
+          "avatars": [
+            {
+              "id": "hoshina02",
+              "action": "normal",
+              "expression": "sad",
+              "attension": "true"
+            }
+          ],
+          "location": "公園",
+          "bgm": "main",
+          "background": "park",
+          "text": "すみません、嘘です・・・"
         },
         {
           "avatars": [
@@ -531,7 +558,7 @@
           "text": "",
           "items": [
             {
-              "text": "・・・いえ、初めてだと思います。"
+              "text": "・・・お会いしたのは初めてだと思います。"
             }
           ]
         },
@@ -566,6 +593,9 @@
           "items": [
             {
               "text": "そうかもしれません・・・"
+            },
+            {
+              "text": "わからないです・・・"
             }
           ]
         },
@@ -584,7 +614,7 @@
           "text": "",
           "items": [
             {
-              "text": "本当にあなたのことが・・・す、好き・・・？"
+              "text": "でも、あなたのことが・・・好き？"
             }
           ]
         },
@@ -634,21 +664,6 @@
               "text": "ありがとうございます！"
             }
           ]
-        },
-        {
-          "conditions": ["2"],
-          "avatars": [
-            {
-              "id": "hoshina02",
-              "action": "idle",
-              "expression": "sad",
-              "attension": "true"
-            }
-          ],
-          "location": "公園",
-          "bgm": "main",
-          "background": "park",
-          "text": "テスト2"
         }
       ]
     },
@@ -725,6 +740,21 @@
           "bgm": "normal",
           "background": "office",
           "text": "碧川「こんな不審な男を拒絶しないなんて本当に奇跡だ。しかも、あんなに可愛い女性が・・・」"
+        },
+        {
+          "avatars": [],
+          "location": "オフィス",
+          "bgm": "normal",
+          "background": "office",
+          "items": [
+            {
+              "text": "もしかして俺、イケメン？"
+            },
+            {
+              "text": "これが運命の選択だとでも言うのか"
+            }
+          ],
+          "text": ""
         },
         {
           "avatars": [],
@@ -814,6 +844,22 @@
           "bgm": "normal",
           "background": "room",
           "effect": "dark",
+          "items": [
+            {
+              "text": "もう適当に送っちゃうか？"
+            },
+            {
+              "text": "いや時間をかけてもしっかり仕上げるか？"
+            }
+          ],
+          "text": ""
+        },
+        {
+          "avatars": [],
+          "location": "自室",
+          "bgm": "normal",
+          "background": "room",
+          "effect": "dark",
           "text": "そうしている間にもどんどん夜は更けていく・・・。ホウレンソウは社会人の基本だ。連絡が遅ければそれだけ事態は悪くなる。"
         },
         {
@@ -822,7 +868,7 @@
           "bgm": "normal",
           "background": "room",
           "effect": "dark",
-          "text": "こんなものが初めてになるなんて・・・。初回連絡ガッカリ男ランキングが存在するならランクインするのではないか？"
+          "text": "こんなものが初めてになるなんて・・・。初手ガッカリ男ランキングが存在するならランクインするのではないか？"
         },
         {
           "avatars": [],
@@ -1490,7 +1536,15 @@
           "location": "食堂",
           "bgm": "normal",
           "background": "dining",
-          "text": "碧川「・・・3人で交際とは斬新だな」"
+          "items": [
+            {
+              "text": "・・・3人で交際とは斬新だな"
+            },
+            {
+              "text": "もしかして、狙いは俺か？？"
+            }
+          ],
+          "text": ""
         },
         {
           "avatars": [
@@ -2227,7 +2281,15 @@
           "location": "レストラン",
           "bgm": "normal2",
           "background": "restaurant",
-          "text": "碧川「その節はどうもご迷惑を・・・」"
+          "items": [
+            {
+              "text": "その節はどうもご迷惑を・・・"
+            },
+            {
+              "text": "あのときは自分でもよくわからず・・・"
+            }
+          ],
+          "text": ""
         },
         {
           "avatars": [
@@ -3000,7 +3062,15 @@
           "location": "公園",
           "bgm": "normal2",
           "background": "park",
-          "text": "『暴落しないことを祈っていてくれ』"
+          "items": [
+            {
+              "text": "『暴落しないことを祈っていてくれ』"
+            },
+            {
+              "text": "『神様にお礼を言っておいてくれ』"
+            }
+          ],
+          "text": ""
         }
       ]
     },
@@ -4205,7 +4275,15 @@
           "location": "ゲームセンター",
           "bgm": "normal2",
           "background": "gamecenter",
-          "text": "碧川「子供の頃、初めて取れた時はそんなもんだったと思うよ」"
+          "items": [
+            {
+              "text": "子供の頃、初めて取れた時はそんなもんだったと思うよ"
+            },
+            {
+              "text": "むしろご褒美です"
+            }
+          ],
+          "text": ""
         },
         {
           "avatars": [
@@ -4219,7 +4297,7 @@
           "location": "ゲームセンター",
           "bgm": "normal2",
           "background": "gamecenter",
-          "text": "言った後にフォローになってない気がした。星奈は大事そうに人形を手に持っていた。"
+          "text": "言った後にフォローになってない気がしたが、星奈は大事そうに人形を手に持っていた。"
         },
         {
           "avatars": [
@@ -5203,6 +5281,7 @@
           "location": "公園",
           "bgm": "dark",
           "background": "park",
+          "image": "./images/photo_1.jpg",
           "text": "妹は星奈と同じ服を着ていた。しかも、プレゼントしたブローチ付きだ。また妹の後ろにこの前取ったクレーンゲームと同じ人形がある。"
         },
         {
@@ -5210,6 +5289,7 @@
           "location": "公園",
           "bgm": "dark",
           "background": "park",
+          "image": "./images/photo_1.jpg",
           "text": "しかも、あきらかに状態として古いものだ。ここ数年ではなく子供の頃に持っていた人形のような古さを感じる。だがこのキャラクターが流行ったのは最近だ。そんなに昔からあるものではない。"
         },
         {
@@ -5638,6 +5718,7 @@
           "location": "実家",
           "bgm": "main2",
           "background": "home",
+          "image": "./images/photo_2.jpg",
           "text": "妹「あ、同じ服を着ている人がいる。綺麗な人だね」"
         },
         {
@@ -5652,6 +5733,7 @@
           "location": "実家",
           "bgm": "main2",
           "background": "home",
+          "image": "./images/photo_2.jpg",
           "text": "そこには、子供の碧川と葵紗、そして星奈が映っていた。星奈は子供ではなく、今と変わらぬ容姿をしている。"
         },
         {

@@ -46,6 +46,7 @@ export interface Scene {
   items?: Item[];
   location: string;
   effect?: Effect;
+  image?: string;
   goto?: string;
 }
 
