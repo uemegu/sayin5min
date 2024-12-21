@@ -171,7 +171,7 @@ const StoryStage: React.FC<StoryStageProps> = ({ onExit }) => {
         ) : (
           <>
             <CanvasComponent onClick={handleClick} />
-            <MessageWindow />
+            <MessageWindow onClick={handleClick} />
             <ItemsDisplay onClick={itemSelected} />
             {showingImagePath && (
               <>
