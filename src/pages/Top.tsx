@@ -46,6 +46,10 @@ const Top: React.FC<{
       >
         つづきから
       </button>
+      <div className="text-sm text-pink-600 mt-8">
+        スマートフォン、タブレットの場合は<br></br>
+        メモリ不足のため途中でエラーになる可能性があります
+      </div>
 
       {showSaveList && (
         <div className="fixed inset-0 bg-black bg-opacity-75 flex flex-col items-center justify-center z-30">

@@ -25,6 +25,7 @@ const Avatar: React.FC<{
   const { cameraDirection } = useSnapshot(gameStatus);
   const gltf = avatarCache.find((r) => r.key === url)!.value!;
   const [avatar, setAvatar] = useState<VRM | null>(null);
+  const [prevAnimationUrl, setPrevAnimationUrl] = useState<string | null>(null);
   const [mixer, setMixer] = useState<THREE.AnimationMixer | null>(null);
   const [currentAnimation, setCurrentAnimation] =
     useState<THREE.AnimationAction | null>(null);
@@ -145,19 +146,23 @@ const Avatar: React.FC<{
 
   const loadAnimation = (avatar: VRM) => {
     const clip = loadMixamoAnimation(animationUrl, avatar);
-    /*
-    for (let track of clip.tracks) {
-      if (track.name.includes(".position")) {
-        for (let i = 1; i < track.values.length; i += 3) {
-          track.values[i] += 0.043;
+
+    if (
+      prevAnimationUrl === "./animations/Standing Greeting.fbx" &&
+      animationUrl === "./animations/Idle.fbx"
+    ) {
+      for (let track of clip.tracks) {
+        if (track.name.includes(".position")) {
+          for (let i = 1; i < track.values.length; i += 3) {
+            track.values[i] += 0.043;
+          }
         }
       }
     }
-      */
 
-    const mixer = new THREE.AnimationMixer(avatar.scene);
-    setMixer(mixer);
-    const action = mixer.clipAction(clip);
+    const newMixer = new THREE.AnimationMixer(avatar.scene);
+    setMixer(newMixer);
+    const action = newMixer.clipAction(clip);
     if (currentAnimation) {
       action.crossFadeFrom(currentAnimation, 1, false);
     }
@@ -167,6 +172,7 @@ const Avatar: React.FC<{
     }
     action.play();
     setCurrentAnimation(action);
+    setPrevAnimationUrl(animationUrl);
   };
 
   useEffect(() => {

@@ -222,7 +222,7 @@
     "voices": [
       {
         "key": "携帯着信",
-        "value": "./voice/携帯電話バイブレーション1.mp3"
+        "value": "./voice/bibe.mp3"
       },
       {
         "key": "えぇぇぇ",
