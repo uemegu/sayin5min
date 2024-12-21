@@ -27,7 +27,11 @@ const LoadingOverlay: React.FC<LoadingOverlayProps> = ({ onClose }) => {
           isActive ? "translate-x-0" : "-translate-x-full"
         }`}
       >
-        <img className="w-52" src="./images/title.png" alt="Title Logo" />
+        <img
+          className="w-52 select-none"
+          src="./images/title.png"
+          alt="Title Logo"
+        />
       </div>
       <div
         className={`fixed z-50 inset-x-0 bottom-1/4 h-1/4 bg-pink-100 flex items-center justify-center transition-transform duration-500 ${

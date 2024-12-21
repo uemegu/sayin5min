@@ -29,6 +29,7 @@ const Avatar: React.FC<{
   const [currentAnimation, setCurrentAnimation] =
     useState<THREE.AnimationAction | null>(null);
   const positions = [0, 0.7, -0.7];
+  const rotation = [0, -30, 30];
 
   const applyExpression = () => {
     if (avatar && expression) {
@@ -173,6 +174,7 @@ const Avatar: React.FC<{
       const vrm = gltf.userData.vrm as VRM;
       vrm.scene.position.set(positions[index], 0, 0);
       scene.add(vrm.scene);
+      vrm.scene.rotation.y = THREE.MathUtils.degToRad(rotation[index]);
       setCurrentAnimation(null);
       setAvatar(vrm);
       if (attention) {

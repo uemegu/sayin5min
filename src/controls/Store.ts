@@ -19,6 +19,7 @@ interface Config {
 
 export type Expression = "normal" | "sad" | "angry" | "happy" | "surprised";
 export type Face = "redface";
+export type Effect = "light" | "dark";
 
 export interface Avatar {
   id: string;
@@ -44,6 +45,7 @@ export interface Scene {
   text: string;
   items?: Item[];
   location: string;
+  effect?: Effect;
   goto?: string;
 }
 

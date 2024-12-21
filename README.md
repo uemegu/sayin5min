@@ -1,30 +1,25 @@
-# React + TypeScript + Vite
+# これは何？
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+「5 秒で告白するゲーム」のリニューアル版です
+https://github.com/uemegu/ReactPractice
 
-Currently, two official plugins are available:
+新たにシナリオを書き起こし、ゲームを１から作り直しました。
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+# ライセンス
 
-## Expanding the ESLint configuration
+以下のサイトの生成物、素材を利用しています。
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+背景画像： Dalle-3（https://openai.com/ja-JP/）
+効果音：　https://www.springin.org/sound-stock/
+BGM: https://suno.com/
+音声：　にじボイス（https://nijivoice.com/）
 
-- Configure the top-level `parserOptions` property like this:
+また、アバターは VRoid Studio（https://vroid.com/studio）を使って制作しています。
 
-```js
-export default {
-  // other rules...
-  parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json'],
-    tsconfigRootDir: __dirname,
-  },
-}
-```
-
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+CV 詳細
+星奈：水瀬 玲奈
+成瀬：久咲 悠仁
+渋川：ベン・カーター
+妹：橘 すずか
+葵紗：若宮 紬
+葵紗の父：ヴィクター・D・アシュフォード

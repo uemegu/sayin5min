@@ -4,6 +4,7 @@ import {
   EffectComposer,
   Bloom,
   HueSaturation,
+  BrightnessContrast,
 } from "@react-three/postprocessing";
 import Avatar from "./Avatar";
 import * as THREE from "three";
@@ -70,7 +71,11 @@ const CanvasComponent: React.FC<{ onClick: () => void }> = ({ onClick }) => {
   const isZoom = currentScene?.avatars?.find((a) => a.attension)?.zoom;
 
   return (
-    <Canvas style={{ width: "100vw", height: "100vh" }} onClick={onClick}>
+    <Canvas
+      className="w-screen h-screen"
+      style={{ maxWidth: "1280px" }}
+      onClick={onClick}
+    >
       {backgroundUrl && <Background url={backgroundUrl} />}
       <CameraController isZoom={!!isZoom} />
       <ambientLight color={0xff4444} intensity={1.2} />
@@ -98,6 +103,16 @@ const CanvasComponent: React.FC<{ onClick: () => void }> = ({ onClick }) => {
       <EffectComposer>
         <Bloom luminanceThreshold={0} luminanceSmoothing={1.4} height={300} />
         <HueSaturation saturation={0.2} />
+        {currentScene.effect === "dark" ? (
+          <BrightnessContrast brightness={-0.2} contrast={0.1} />
+        ) : (
+          <></>
+        )}
+        {currentScene.effect === "light" ? (
+          <BrightnessContrast brightness={0.5} contrast={0.1} />
+        ) : (
+          <></>
+        )}
       </EffectComposer>
     </Canvas>
   );

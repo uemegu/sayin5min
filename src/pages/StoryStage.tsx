@@ -7,6 +7,7 @@ import ItemsDisplay from "../controls/common/Items";
 import Loading from "../controls/common/Loading";
 import LoadingOverlay from "../controls/common/LoadingOverlay";
 import Save from "../controls/common/Save";
+import GoodEnd from "../controls/GoodEnding";
 
 interface StoryStageProps {
   onExit: () => void;
@@ -14,6 +15,7 @@ interface StoryStageProps {
 
 const StoryStage: React.FC<StoryStageProps> = ({ onExit }) => {
   const [isLoading, setIsLoading] = useState(false);
+  const [ending, setEnding] = useState<string | null>(null);
   const [location, setLocation] = useState(
     gamgeConfig.chapters[gameStatus.chapterIndex].scenes[
       gameStatus.messageIndex
@@ -59,14 +61,28 @@ const StoryStage: React.FC<StoryStageProps> = ({ onExit }) => {
           gameStatus.messageIndex + increment
         ].goto
       ) {
-        const targets =
+        if (
           gamgeConfig.chapters[gameStatus.chapterIndex].scenes[
             gameStatus.messageIndex + increment
-          ].goto?.split(".");
-        const chapter = gamgeConfig.chapters.find((c) => c.id === targets![0])!;
-        const scene = chapter?.scenes.find((c) => c.id === targets![1])!;
-        gameStatus.chapterIndex = gamgeConfig.chapters.indexOf(chapter);
-        changeMessageIndex(chapter.scenes.indexOf(scene));
+          ].goto === "good_end"
+        ) {
+          setEnding(
+            gamgeConfig.chapters[gameStatus.chapterIndex].scenes[
+              gameStatus.messageIndex + increment
+            ].goto!
+          );
+        } else {
+          const targets =
+            gamgeConfig.chapters[gameStatus.chapterIndex].scenes[
+              gameStatus.messageIndex + increment
+            ].goto?.split(".");
+          const chapter = gamgeConfig.chapters.find(
+            (c) => c.id === targets![0]
+          )!;
+          const scene = chapter?.scenes.find((c) => c.id === targets![1])!;
+          gameStatus.chapterIndex = gamgeConfig.chapters.indexOf(chapter);
+          changeMessageIndex(chapter.scenes.indexOf(scene));
+        }
       } else if (
         gamgeConfig.chapters[gameStatus.chapterIndex].scenes[
           gameStatus.messageIndex + increment
@@ -121,27 +137,49 @@ const StoryStage: React.FC<StoryStageProps> = ({ onExit }) => {
     onExit();
   };
 
+  const locationLeftOffset =
+    document.body.clientWidth > 1280
+      ? (document.body.clientWidth - 1280) / 2
+      : 0;
+
   return (
     <Suspense fallback={<Loading />}>
-      <div style={{ width: "100vw", height: "100vh", position: "relative" }}>
-        <CanvasComponent onClick={handleClick} />
-        <MessageWindow />
-        <ItemsDisplay onClick={itemSelected} />
-        <div className="fixed left-0 top-0 right-0 h-8 bg-black"></div>
-        <BGM />
-        <Save />
-        <button
-          className="absolute text-sm top-0 h-8 right-0 p-2 text-white hover:underline"
-          onClick={handleExit}
-        >
-          終了する
-        </button>
-        <div className="fixed left-0 top-10">
-          <span className="absolute left-0 top-0 p-2 pl-4 text-2xl text-white w-56 text-left bg-gradient-to-r from-pink-700/90 via-pink-700/70 to-pink-700/0">
-            {location}
-          </span>
-        </div>
-        <div className="fixed left-0 bottom-0 right-0 h-8 bg-black"></div>
+      <div className="flex justify-center w-screen h-screen relative bg-black">
+        {ending === "good_end" ? (
+          <>
+            <GoodEnd />
+            <button
+              className="absolute text-sm top-0 h-8 right-0 p-2 text-white hover:underline"
+              onClick={handleExit}
+            >
+              終了する
+            </button>
+          </>
+        ) : (
+          <>
+            <CanvasComponent onClick={handleClick} />
+            <MessageWindow />
+            <ItemsDisplay onClick={itemSelected} />
+            <div className="fixed left-0 top-0 right-0 h-8 bg-black"></div>
+            <BGM />
+            <Save />
+            <button
+              className="absolute text-sm top-0 h-8 right-0 p-2 text-white hover:underline"
+              onClick={handleExit}
+            >
+              終了する
+            </button>
+            <div
+              className={`fixed top-10 w-screen left-[${locationLeftOffset}px] `}
+              style={{ maxWidth: "1280px" }}
+            >
+              <span className="absolute left-0 top-0 p-2 pl-4 text-2xl text-white w-56 text-left bg-gradient-to-r from-pink-700/90 via-pink-700/70 to-pink-700/0">
+                {location}
+              </span>
+            </div>
+            <div className="fixed left-0 bottom-0 right-0 h-8 bg-black"></div>
+          </>
+        )}
       </div>
       {isLoading && <LoadingOverlay onClose={handleLoadingClose} />}
     </Suspense>

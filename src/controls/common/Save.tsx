@@ -17,32 +17,37 @@ const Save: React.FC = () => {
         "canvas"
       ) as HTMLCanvasElement;
       if (canvasElement) {
-        captureElementScreenshot(canvasElement, (imageData) => {
-          const text =
-            gamgeConfig.chapters[gameStatus.chapterIndex].scenes[
-              gameStatus.messageIndex
-            ].text;
-          saveData({
-            gameStatus: {
-              cameraDirection: cameraDirection,
-              messageIndex: messageIndex,
-              chapterIndex: chapterIndex,
-              flags: [...flags],
-              version: version,
-            },
-            location:
+        captureElementScreenshot(
+          canvasElement,
+          (imageData) => {
+            const text =
               gamgeConfig.chapters[gameStatus.chapterIndex].scenes[
                 gameStatus.messageIndex
-              ].location,
-            screenShot: imageData,
-            savedData: new Date().toLocaleString(),
-            text: text.length > 15 ? text.substring(0, 15) + "..." : text,
-          });
-          showToast("ゲームの進行状況を保存しました。");
-        });
+              ].text;
+            saveData({
+              gameStatus: {
+                cameraDirection: cameraDirection,
+                messageIndex: messageIndex,
+                chapterIndex: chapterIndex,
+                flags: [...flags],
+                version: version,
+              },
+              location:
+                gamgeConfig.chapters[gameStatus.chapterIndex].scenes[
+                  gameStatus.messageIndex
+                ].location,
+              screenShot: imageData,
+              savedData: new Date().toLocaleString(),
+              text: text.length > 15 ? text.substring(0, 15) + "..." : text,
+            });
+            showToast("ゲームの進行状況を保存しました。");
+          },
+          "image/webp"
+        );
       }
     } catch (error) {
       console.error("save failed", error);
+      showToast("ゲームの進行状況を保存に失敗しました。");
     }
   };
 

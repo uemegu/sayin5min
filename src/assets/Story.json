@@ -93,6 +93,34 @@
       {
         "key": "defeat",
         "value": "./animations/Defeat.fbx"
+      },
+      {
+        "key": "cheering",
+        "value": "./animations/Cheering.fbx"
+      },
+      {
+        "key": "dismissing",
+        "value": "./animations/Dismissing Gesture.fbx"
+      },
+      {
+        "key": "injured",
+        "value": "./animations/Injured Idle.fbx"
+      },
+      {
+        "key": "jump",
+        "value": "./animations/Joyful Jump.fbx"
+      },
+      {
+        "key": "kiss",
+        "value": "./animations/Kiss.fbx"
+      },
+      {
+        "key": "laying",
+        "value": "./animations/Laying Idle.fbx"
+      },
+      {
+        "key": "death",
+        "value": "./animations/Standing Death Left 01.fbx"
       }
     ],
     "backgrounds": [
@@ -175,12 +203,16 @@
         "value": "./bgms/時空を超えた愛_v4.mp3"
       },
       {
+        "key": "main3",
+        "value": "./bgms/夢見る騎士.mp3"
+      },
+      {
         "key": "normal",
         "value": "./bgms/Playful Keys.mp3"
       },
       {
         "key": "normal2",
-        "value": "./bgms/夢見る騎士.mp3"
+        "value": "./bgms/Dance with the Night.mp3"
       },
       {
         "key": "dark",
@@ -188,6 +220,10 @@
       }
     ],
     "voices": [
+      {
+        "key": "携帯着信",
+        "value": "./voice/携帯電話バイブレーション1.mp3"
+      },
       {
         "key": "えぇぇぇ",
         "value": "./voice/voice_hoshina_1.mp3"
@@ -209,8 +245,96 @@
         "value": "./voice/voice_hoshina_5.mp3"
       },
       {
+        "key": "遅れました",
+        "value": "./voice/voice_hoshina_6.mp3"
+      },
+      {
+        "key": "お腹ぺこぺこ",
+        "value": "./voice/voice_hoshina_7.mp3"
+      },
+      {
+        "key": "すみません",
+        "value": "./voice/voice_hoshina_8.mp3"
+      },
+      {
+        "key": "わあ",
+        "value": "./voice/voice_hoshina_9.mp3"
+      },
+      {
+        "key": "やったー",
+        "value": "./voice/voice_hoshina_10.mp3"
+      },
+      {
+        "key": "告白してください",
+        "value": "./voice/voice_hoshina_11.mp3"
+      },
+      {
+        "key": "あら、それは",
+        "value": "./voice/voice_hoshina_12.mp3"
+      },
+      {
+        "key": "また会えたね",
+        "value": "./voice/voice_hoshina_13.mp3"
+      },
+      {
         "key": "おっす",
         "value": "./voice/voice_naruse_1.mp3"
+      },
+      {
+        "key": "ふむ",
+        "value": "./voice/voice_naruse_2.mp3"
+      },
+      {
+        "key": "親友としては",
+        "value": "./voice/voice_naruse_3.mp3"
+      },
+      {
+        "key": "うむ",
+        "value": "./voice/voice_shibukawa_1.mp3"
+      },
+      {
+        "key": "考え直すか",
+        "value": "./voice/voice_shibukawa_2.mp3"
+      },
+      {
+        "key": "なになに",
+        "value": "./voice/voice_sister_1.mp3"
+      },
+      {
+        "key": "おっかえりー",
+        "value": "./voice/voice_sister_2.mp3"
+      },
+      {
+        "key": "知ってる",
+        "value": "./voice/voice_aisa_1.mp3"
+      },
+      {
+        "key": "あなたのためじゃない",
+        "value": "./voice/voice_aisa_2.mp3"
+      },
+      {
+        "key": "もう持たないよ",
+        "value": "./voice/voice_aisa_3.mp3"
+      },
+      {
+        "key": "ごほん",
+        "value": "./voice/voice_aisa_4.mp3"
+      },
+      {
+        "key": "泥棒猫",
+        "value": "./voice/voice_aisa_5.mp3"
+      },
+      {
+        "key": "離れなさいよ",
+        "value": "./voice/voice_aisa_6.mp3"
+      },
+      {
+        "key": "久しぶりだね",
+        "value": "./voice/voice_aisa_father_1.mp3"
+      },
+      {
+        "key": "大丈夫ですか",
+        "value": "./voice/voice_aisa_father_2.mp3"
       }
     ]
   },
@@ -649,6 +773,7 @@
           "location": "自室",
           "bgm": "normal",
           "background": "room",
+          "effect": "dark",
           "text": "碧川が帰宅した時には23時を回っていた。今日も目まぐるしく忙しかった。こんな日々がずっと続くのか、シャワーを浴びながら1日のことを振り返りながらふと気づく。"
         },
         {
@@ -656,6 +781,7 @@
           "location": "自室",
           "bgm": "normal",
           "background": "room",
+          "effect": "dark",
           "text": "碧川「星奈さんに連絡をしていない！」"
         },
         {
@@ -663,6 +789,7 @@
           "location": "自室",
           "bgm": "normal",
           "background": "room",
+          "effect": "dark",
           "text": "あんなことをしておきながら全く連絡を取らないなんて失礼過ぎる。冗談だったんだと思われてしまう。いそいそとシャワーをすませ、携帯を手に取り、そこでフリーズする。"
         },
         {
@@ -670,6 +797,7 @@
           "location": "自室",
           "bgm": "normal",
           "background": "room",
+          "effect": "dark",
           "text": "何を送れば良いのかわからない。愛を伝えるのか、世間話をするのか、自己紹介をするのか、面白い話をしたら良いのか、いったい何が正解なのか・・・"
         },
         {
@@ -677,6 +805,7 @@
           "location": "自室",
           "bgm": "normal",
           "background": "room",
+          "effect": "dark",
           "text": "かと言って、遅過ぎる時間にメッセージを送るわけにはいかない。碧川はだんだん焦ってきた。"
         },
         {
@@ -684,6 +813,7 @@
           "location": "自室",
           "bgm": "normal",
           "background": "room",
+          "effect": "dark",
           "text": "そうしている間にもどんどん夜は更けていく・・・。ホウレンソウは社会人の基本だ。連絡が遅ければそれだけ事態は悪くなる。"
         },
         {
@@ -691,6 +821,7 @@
           "location": "自室",
           "bgm": "normal",
           "background": "room",
+          "effect": "dark",
           "text": "こんなものが初めてになるなんて・・・。初回連絡ガッカリ男ランキングが存在するならランクインするのではないか？"
         },
         {
@@ -698,6 +829,7 @@
           "location": "自室",
           "bgm": "normal",
           "background": "room",
+          "effect": "dark",
           "text": "そう思いながら碧川は星奈にメッセージを送った。"
         },
         {
@@ -705,6 +837,7 @@
           "location": "自室",
           "bgm": "normal",
           "background": "room",
+          "effect": "dark",
           "text": "『本日は大変ご迷惑をおかけいたしました。本日はすでに遅い時間となってしまいましたので明日改めてご連絡を差し上げます』"
         }
       ]
@@ -966,6 +1099,7 @@
           "location": "食堂",
           "bgm": "normal",
           "background": "dining",
+          "voice": "ふむ",
           "text": "成瀬「相手も突然だしな。とりあえず普通に自己紹介だろ。自分のことを知ってもらわないと」"
         },
         {
@@ -1028,7 +1162,7 @@
           "avatars": [
             {
               "id": "naruse01",
-              "action": "idle",
+              "action": "dismissing",
               "expression": "normal",
               "attension": "true"
             }
@@ -1155,6 +1289,7 @@
           "location": "オフィス",
           "bgm": "normal",
           "background": "dining",
+          "voice": "携帯着信",
           "text": "『また業務連絡来た笑』"
         },
         {
@@ -1268,6 +1403,7 @@
           "location": "食堂",
           "bgm": "normal",
           "background": "dining",
+          "voice": "ふむ",
           "text": "成瀬「そろそろ会う約束でもしたらどうだ？」"
         },
         {
@@ -1311,6 +1447,7 @@
           "location": "食堂",
           "bgm": "normal",
           "background": "dining",
+          "voice": "ふむ",
           "text": "成瀬「もっともだな」"
         },
         {
@@ -1455,7 +1592,7 @@
             }
           ],
           "location": "ホテルロビー",
-          "bgm": "normal",
+          "bgm": "normal2",
           "background": "lobby",
           "text": "星奈に会う日がやってきた。仕事は相変わらず多忙を極めていたが、今日のことを思うと頑張ってこれたし、時間があればどんなことを話そうか夢想していた。"
         },
@@ -1469,7 +1606,7 @@
             }
           ],
           "location": "ホテルロビー",
-          "bgm": "normal",
+          "bgm": "normal2",
           "background": "lobby",
           "text": "とはいえ、今日は2対2でランチをするだけだ。ここで自分のことを知ってもらえれば次は1対1で会えないか誘ってみよう。"
         },
@@ -1483,7 +1620,7 @@
             }
           ],
           "location": "ホテルロビー",
-          "bgm": "normal",
+          "bgm": "normal2",
           "background": "lobby",
           "text": "ホテルのレストランを予約しているため、ホテルのロビーで成瀬と一緒に星奈たちを待っている。レストランは高すぎず安すぎずというライン。もちろん成瀬チョイス。"
         },
@@ -1498,8 +1635,9 @@
             }
           ],
           "location": "ホテルロビー",
-          "bgm": "normal",
+          "bgm": "normal2",
           "background": "lobby",
+          "voice": "ふむ",
           "text": "成瀬「そんなに緊張はしてなさどうだな」"
         },
         {
@@ -1512,7 +1650,7 @@
             }
           ],
           "location": "ホテルロビー",
-          "bgm": "normal",
+          "bgm": "normal2",
           "background": "lobby",
           "text": "碧川「今日はサシじゃないしな。また会えるという喜びの方が勝ってるかも。あ・・・」"
         },
@@ -1526,7 +1664,7 @@
             }
           ],
           "location": "ホテルロビー",
-          "bgm": "normal",
+          "bgm": "normal2",
           "background": "lobby",
           "text": "碧川「星奈さん！」"
         },
@@ -1550,9 +1688,9 @@
             }
           ],
           "location": "ホテルロビー",
-          "bgm": "normal",
+          "bgm": "normal2",
           "background": "lobby",
-          "text": ""
+          "text": "星奈さんがやってきた。"
         },
         {
           "avatars": [
@@ -1574,7 +1712,7 @@
             }
           ],
           "location": "ホテルロビー",
-          "bgm": "normal",
+          "bgm": "normal2",
           "background": "lobby",
           "text": "ん・・・？"
         },
@@ -1598,7 +1736,7 @@
             }
           ],
           "location": "ホテルロビー",
-          "bgm": "normal",
+          "bgm": "normal2",
           "background": "lobby",
           "text": "もしかして星奈さんの連れはこのおっさん・・・？"
         },
@@ -1623,8 +1761,9 @@
             }
           ],
           "location": "ホテルロビー",
-          "bgm": "normal",
+          "bgm": "normal2",
           "background": "lobby",
+          "voice": "遅れました",
           "text": "星奈「碧川さん！遅れました！」"
         },
         {
@@ -1647,7 +1786,7 @@
             }
           ],
           "location": "ホテルロビー",
-          "bgm": "normal",
+          "bgm": "normal2",
           "background": "lobby",
           "text": "碧川「いえ、今来たところですよ。時間ぴったりですね」"
         },
@@ -1671,7 +1810,7 @@
             }
           ],
           "location": "ホテルロビー",
-          "bgm": "normal",
+          "bgm": "normal2",
           "background": "lobby",
           "text": "碧川「今日はわざわざありがとうございます。僕の同僚の成瀬です」"
         },
@@ -1695,7 +1834,7 @@
             }
           ],
           "location": "ホテルロビー",
-          "bgm": "normal",
+          "bgm": "normal2",
           "background": "lobby",
           "text": "星奈「いえ、初めてのお店なので楽しみです」"
         },
@@ -1719,9 +1858,9 @@
             }
           ],
           "location": "ホテルロビー",
-          "bgm": "normal",
+          "bgm": "normal2",
           "background": "lobby",
-          "text": "星奈「お店の店長の渋谷さんです」"
+          "text": "星奈「お店の店長の渋川さんです」"
         },
         {
           "avatars": [
@@ -1743,7 +1882,7 @@
             }
           ],
           "location": "ホテルロビー",
-          "bgm": "normal",
+          "bgm": "normal2",
           "background": "lobby",
           "text": "やたらゴツいおじさんはコンビニの店長だったのか・・・かなりこわもてなんだが・・・。やっぱり警戒されてる？"
         },
@@ -1767,9 +1906,9 @@
             }
           ],
           "location": "ホテルロビー",
-          "bgm": "normal",
+          "bgm": "normal2",
           "background": "lobby",
-          "text": "碧川「渋谷さんは体つきがかなりしっかりされてますね。何かされているんですか？」"
+          "text": "碧川「渋川さんは体つきがかなりしっかりされてますね。何かされているんですか？」"
         },
         {
           "avatars": [
@@ -1791,8 +1930,9 @@
             }
           ],
           "location": "ホテルロビー",
-          "bgm": "normal",
+          "bgm": "normal2",
           "background": "lobby",
+          "voice": "うむ",
           "text": "渋川「昔はいろいろやっていたが、今では趣味でトレーニングをしているだけだな」"
         },
         {
@@ -1816,7 +1956,7 @@
             }
           ],
           "location": "ホテルロビー",
-          "bgm": "normal",
+          "bgm": "normal2",
           "background": "lobby",
           "text": "星奈「傭兵で文字通り世界中を飛び回って回ってたそうですよ」"
         },
@@ -1840,7 +1980,7 @@
             }
           ],
           "location": "ホテルロビー",
-          "bgm": "normal",
+          "bgm": "normal2",
           "background": "lobby",
           "text": "たった1回の会話なのに情報が多い。初対面の会話ってこんなに大変なんだっけ？"
         },
@@ -1864,7 +2004,7 @@
             }
           ],
           "location": "ホテルロビー",
-          "bgm": "normal",
+          "bgm": "normal2",
           "background": "lobby",
           "text": "え、なに、今日悪いやつ認定されたら俺消されちゃうの？イケメン成瀬も笑顔が若干引きつっているのがわかる。"
         },
@@ -1888,7 +2028,7 @@
             }
           ],
           "location": "ホテルロビー",
-          "bgm": "normal",
+          "bgm": "normal2",
           "background": "lobby",
           "text": "碧川「非常に興味深いというか、興味深すぎて話が終わらなくなるのでとりあえずお店に行きましょうか」"
         },
@@ -1912,7 +2052,7 @@
             }
           ],
           "location": "ホテルロビー",
-          "bgm": "normal",
+          "bgm": "normal2",
           "background": "lobby",
           "text": "そう切り出し、お店に移動した。"
         },
@@ -1936,7 +2076,7 @@
             }
           ],
           "location": "レストラン",
-          "bgm": "normal",
+          "bgm": "normal2",
           "background": "restaurant",
           "text": "「乾杯！」"
         },
@@ -1960,7 +2100,7 @@
             }
           ],
           "location": "レストラン",
-          "bgm": "normal",
+          "bgm": "normal2",
           "background": "restaurant",
           "text": "お互いの自己紹介をしながら、ファーストドリンクが来たところで乾杯をした。"
         },
@@ -1985,8 +2125,9 @@
             }
           ],
           "location": "レストラン",
-          "bgm": "normal",
+          "bgm": "normal2",
           "background": "restaurant",
+          "voice": "えっと",
           "text": "星奈「成瀬さんは碧川さんと同期なんですか？」"
         },
         {
@@ -2009,7 +2150,7 @@
             }
           ],
           "location": "レストラン",
-          "bgm": "normal",
+          "bgm": "normal2",
           "background": "restaurant",
           "text": "碧川「そうですね。今は同じプロジェクトに配属されているので話す機会も多かったので今回のことも成瀬に相談していて」"
         },
@@ -2034,7 +2175,7 @@
             }
           ],
           "location": "レストラン",
-          "bgm": "normal",
+          "bgm": "normal2",
           "background": "restaurant",
           "text": "成瀬「碧川は真面目で色恋の話はまったく聞いたことなかったんで驚きましたよ。いきなり告白してきたんでしょ？」"
         },
@@ -2052,15 +2193,16 @@
             },
             {
               "id": "shibukawa01",
-              "action": "idle",
+              "action": "dismissing",
               "expression": "normal",
               "attension": "true",
               "zoom": true
             }
           ],
           "location": "レストラン",
-          "bgm": "normal",
+          "bgm": "normal2",
           "background": "restaurant",
+          "voice": "うむ",
           "text": "渋川「うむ、店の中から飛び出すべきか迷っていたぞ」"
         },
         {
@@ -2083,7 +2225,7 @@
             }
           ],
           "location": "レストラン",
-          "bgm": "normal",
+          "bgm": "normal2",
           "background": "restaurant",
           "text": "碧川「その節はどうもご迷惑を・・・」"
         },
@@ -2107,7 +2249,7 @@
             }
           ],
           "location": "レストラン",
-          "bgm": "normal",
+          "bgm": "normal2",
           "background": "restaurant",
           "text": "一歩間違えば俺の命はあの日潰えていたかもしれないのか・・・。一瞬体がぶるっとした。"
         },
@@ -2132,8 +2274,9 @@
             }
           ],
           "location": "レストラン",
-          "bgm": "normal",
+          "bgm": "normal2",
           "background": "restaurant",
+          "voice": "ふむ",
           "text": "成瀬「まあいきなりだと警戒しますよね。お前、生きてて良かったな。明日生きてるかは今日の結果次第だけど」"
         },
         {
@@ -2157,9 +2300,9 @@
             }
           ],
           "location": "レストラン",
-          "bgm": "normal",
+          "bgm": "normal2",
           "background": "restaurant",
-          "text": "星奈「あ、別にそういう目的で渋谷さんを連れてきたわけじゃなくて、友達があまりいないので今日は渋谷さんにお願いしたんです」"
+          "text": "星奈「あ、別にそういう目的で渋川さんを連れてきたわけじゃなくて、友達があまりいないので今日は渋川さんにお願いしたんです」"
         },
         {
           "avatars": [
@@ -2182,7 +2325,7 @@
             }
           ],
           "location": "レストラン",
-          "bgm": "normal",
+          "bgm": "normal2",
           "background": "restaurant",
           "text": "渋川「星奈くんの人の見る目は確かなので心配しておらん。今日は友人として参加させてもらっておる」"
         },
@@ -2207,9 +2350,9 @@
             }
           ],
           "location": "レストラン",
-          "bgm": "normal",
+          "bgm": "normal2",
           "background": "restaurant",
-          "text": "そう言いながら渋谷の目は笑っていない・・・"
+          "text": "そう言いながら渋川の目は笑っていない・・・"
         },
         {
           "avatars": [
@@ -2231,7 +2374,7 @@
             }
           ],
           "location": "レストラン",
-          "bgm": "normal",
+          "bgm": "normal2",
           "background": "restaurant",
           "text": "碧川「星奈さんは今のお仕事は長いんですか？」"
         },
@@ -2256,8 +2399,9 @@
             }
           ],
           "location": "レストラン",
-          "bgm": "normal",
+          "bgm": "normal2",
           "background": "restaurant",
+          "voice": "えっと",
           "text": "星奈「半年ぐらいですね」"
         },
         {
@@ -2274,14 +2418,14 @@
             },
             {
               "id": "shibukawa01",
-              "action": "idle",
+              "action": "angry",
               "expression": "normal",
               "attension": "true",
               "zoom": true
             }
           ],
           "location": "レストラン",
-          "bgm": "normal",
+          "bgm": "normal2",
           "background": "restaurant",
           "text": "渋川「星奈くんが来てから客が増えた気がするな。たまに悪い虫がいるので駆除しておるが」"
         },
@@ -2306,7 +2450,7 @@
             }
           ],
           "location": "レストラン",
-          "bgm": "normal",
+          "bgm": "normal2",
           "background": "restaurant",
           "text": "こっちを見ながら言うのは怖いのでやめてほしい・・・。"
         },
@@ -2331,9 +2475,9 @@
             }
           ],
           "location": "レストラン",
-          "bgm": "normal",
+          "bgm": "normal2",
           "background": "restaurant",
-          "text": "星奈「渋谷さんはモテるんですよ」"
+          "text": "星奈「渋川さんはモテるんですよ」"
         },
         {
           "avatars": [
@@ -2356,7 +2500,7 @@
             }
           ],
           "location": "レストラン",
-          "bgm": "normal",
+          "bgm": "normal2",
           "background": "restaurant",
           "text": "成瀬「やっぱり筋肉か・・・筋肉が全てなのか」"
         },
@@ -2381,8 +2525,9 @@
             }
           ],
           "location": "レストラン",
-          "bgm": "normal",
+          "bgm": "normal2",
           "background": "restaurant",
+          "voice": "うむ",
           "text": "渋川「確かに筋肉は嘘をつかんな」"
         },
         {
@@ -2405,7 +2550,7 @@
             }
           ],
           "location": "レストラン",
-          "bgm": "normal",
+          "bgm": "normal2",
           "background": "restaurant",
           "text": "碧川「お前がこれ以上イケメンになったら困るので筋肉は現状維持にしてくれ」"
         },
@@ -2430,7 +2575,7 @@
             }
           ],
           "location": "レストラン",
-          "bgm": "normal",
+          "bgm": "normal2",
           "background": "restaurant",
           "text": "成瀬「星奈さんはマッチョが好きですか？」"
         },
@@ -2455,7 +2600,7 @@
             }
           ],
           "location": "レストラン",
-          "bgm": "normal",
+          "bgm": "normal2",
           "background": "restaurant",
           "text": "星奈「私ですか？強いに越したことはないと思いますけど、あまり考えたことないですね。・・・あ、私に敬語はいらないですよ。年下ですし」"
         },
@@ -2479,7 +2624,7 @@
             }
           ],
           "location": "レストラン",
-          "bgm": "normal",
+          "bgm": "normal2",
           "background": "restaurant",
           "text": "碧川「そうですね。じゃあお互いタメ口にしよう」"
         },
@@ -2504,7 +2649,7 @@
             }
           ],
           "location": "レストラン",
-          "bgm": "normal",
+          "bgm": "normal2",
           "background": "restaurant",
           "text": "成瀬「というか、お前ずっと硬い口調でやり取り続けてたの？」"
         },
@@ -2529,7 +2674,7 @@
             }
           ],
           "location": "レストラン",
-          "bgm": "normal",
+          "bgm": "normal2",
           "background": "restaurant",
           "text": "碧川「いや、タイミングがわからず・・・」"
         },
@@ -2538,13 +2683,13 @@
             {
               "id": "hoshina01",
               "action": "idle",
-              "expression": "normal"
+              "expression": "normal",
+              "attension": "true"
             },
             {
               "id": "naruse02",
               "action": "idle",
-              "expression": "idle",
-              "attension": "true"
+              "expression": "idle"
             },
             {
               "id": "shibukawa01",
@@ -2553,22 +2698,22 @@
             }
           ],
           "location": "レストラン",
-          "bgm": "normal",
+          "bgm": "normal2",
           "background": "restaurant",
-          "text": "ここからは若者たちで会話が弾んだ。最初は渋谷さんから見定められている気がしていたが、今は完全に保護者ポジションで暖かく見守っている感じだ。"
+          "text": "ここからは若者たちで会話が弾んだ。最初は渋川さんから見定められている気がしていたが、今は完全に保護者ポジションで暖かく見守っている感じだ。"
         },
         {
           "avatars": [
             {
               "id": "hoshina01",
               "action": "idle",
-              "expression": "normal"
+              "expression": "normal",
+              "attension": "true"
             },
             {
               "id": "naruse02",
               "action": "idle",
-              "expression": "idle",
-              "attension": "true"
+              "expression": "idle"
             },
             {
               "id": "shibukawa01",
@@ -2577,7 +2722,7 @@
             }
           ],
           "location": "レストラン",
-          "bgm": "normal",
+          "bgm": "normal2",
           "background": "restaurant",
           "text": "もしかすると最初からそのつもりで、勝手にこっちが緊張しすぎていただけなのかもしれない。"
         },
@@ -2601,7 +2746,7 @@
             }
           ],
           "location": "ロビー",
-          "bgm": "normal",
+          "bgm": "normal2",
           "background": "lobby",
           "text": "「今日はありがとうございました」"
         },
@@ -2625,7 +2770,7 @@
             }
           ],
           "location": "ロビー",
-          "bgm": "normal",
+          "bgm": "normal2",
           "background": "lobby",
           "text": "あっという間に食事の時間は終わり、解散の時間となった。"
         },
@@ -2639,8 +2784,9 @@
             }
           ],
           "location": "ロビー",
-          "bgm": "normal",
+          "bgm": "normal2",
           "background": "lobby",
+          "voice": "ふむ",
           "text": "成瀬「星奈さん、めちゃ可愛いな」"
         },
         {
@@ -2653,7 +2799,7 @@
             }
           ],
           "location": "ロビー",
-          "bgm": "normal",
+          "bgm": "normal2",
           "background": "lobby",
           "text": "碧川「だろ。めちゃ可愛いんだよ」"
         },
@@ -2667,9 +2813,9 @@
             }
           ],
           "location": "ロビー",
-          "bgm": "normal",
+          "bgm": "normal2",
           "background": "lobby",
-          "text": "成瀬「渋谷さん、謎だな」"
+          "text": "成瀬「渋川さん、謎だな」"
         },
         {
           "avatars": [
@@ -2681,7 +2827,7 @@
             }
           ],
           "location": "ロビー",
-          "bgm": "normal",
+          "bgm": "normal2",
           "background": "lobby",
           "text": "碧川「キャラ強すぎるだろ・・・最初、俺はここで終わるんだと思ったよ」"
         },
@@ -2695,9 +2841,9 @@
             }
           ],
           "location": "ロビー",
-          "bgm": "normal",
+          "bgm": "normal2",
           "background": "lobby",
-          "text": "星奈さんの笑顔を反芻したいのに心の中には渋谷さんの筋肉が蘇る。"
+          "text": "星奈さんの笑顔を反芻したいのに心の中には渋川さんの筋肉が蘇る。"
         },
         {
           "avatars": [
@@ -2710,7 +2856,7 @@
             }
           ],
           "location": "ロビー",
-          "bgm": "normal",
+          "bgm": "normal2",
           "background": "lobby",
           "text": "成瀬「別に悪い印象はないだろうし、次は2人でのデートに誘ってみろよ」"
         },
@@ -2725,7 +2871,7 @@
             }
           ],
           "location": "ロビー",
-          "bgm": "normal",
+          "bgm": "normal2",
           "background": "lobby",
           "text": "碧川「そうだな、誘ってみる」"
         },
@@ -2739,7 +2885,7 @@
             }
           ],
           "location": "ロビー",
-          "bgm": "normal",
+          "bgm": "normal2",
           "background": "lobby",
           "text": "成瀬「じゃ、俺はここで。また会社でな」"
         },
@@ -2753,7 +2899,7 @@
             }
           ],
           "location": "ロビー",
-          "bgm": "normal",
+          "bgm": "normal2",
           "background": "lobby",
           "text": "碧川「おう、ありがとう」"
         },
@@ -2767,91 +2913,92 @@
             }
           ],
           "location": "ロビー",
-          "bgm": "normal",
+          "bgm": "normal2",
           "background": "lobby",
           "text": "そういうと成瀬とわかれた。"
         },
         {
           "avatars": [],
           "location": "公園",
-          "bgm": "normal",
+          "bgm": "normal2",
           "background": "park",
           "text": "まだ食後の昼下がり、空はだいぶ明るい。家に帰るのも早いなと思い、特に目的もなくブラブラして帰っている。"
         },
         {
           "avatars": [],
           "location": "公園",
-          "bgm": "normal",
+          "bgm": "normal2",
           "background": "park",
           "text": "・・・"
         },
         {
           "avatars": [],
           "location": "公園",
-          "bgm": "normal",
+          "bgm": "normal2",
           "background": "park",
+          "voice": "携帯着信",
           "text": "ふと、携帯が鳴る。もしや星奈さん？ドキドキしながら見ると、妹からだった。"
         },
         {
           "avatars": [],
           "location": "公園",
-          "bgm": "normal",
+          "bgm": "normal2",
           "background": "park",
           "text": "俺には大学生の妹がおり、地元の大学に通っている。仲は良く、たまに他愛もない連絡が来る。"
         },
         {
           "avatars": [],
           "location": "公園",
-          "bgm": "normal",
+          "bgm": "normal2",
           "background": "park",
           "text": "『くんくん・・・女の匂いがする・・・』"
         },
         {
           "avatars": [],
           "location": "公園",
-          "bgm": "normal",
+          "bgm": "normal2",
           "background": "park",
           "text": "え、なに、俺、監視されてるの？思わず周りを見回すが、もちろんいるわけはない。"
         },
         {
           "avatars": [],
           "location": "公園",
-          "bgm": "normal",
+          "bgm": "normal2",
           "background": "park",
           "text": "続きのメッセージが来る。"
         },
         {
           "avatars": [],
           "location": "公園",
-          "bgm": "normal",
+          "bgm": "normal2",
           "background": "park",
           "text": "『ゆーくんの恋愛運、爆上がりのストップ高らしいよ。今のうちに全力で信用買いするべしって神社のおみくじで出たよ』"
         },
         {
           "avatars": [],
           "location": "公園",
-          "bgm": "normal",
+          "bgm": "normal2",
           "background": "park",
           "text": "地元には神社があり、そこの子供が幼馴染だった。"
         },
         {
           "avatars": [],
           "location": "公園",
-          "bgm": "normal",
+          "bgm": "normal2",
           "background": "park",
           "text": "妹とも仲が良いので神社に会いに行くことがあり、そこでおみくじを買ったのだろう。いない人の分をなぜそこで買うのか不明だが。"
         },
         {
           "avatars": [],
           "location": "公園",
-          "bgm": "normal",
+          "bgm": "normal2",
           "background": "park",
           "text": "とはいえ、神様からも応援してもらえている気がして勇気がもらえた。"
         },
         {
           "avatars": [],
           "location": "公園",
-          "bgm": "normal",
+          "bgm": "normal2",
           "background": "park",
           "text": "『暴落しないことを祈っていてくれ』"
         }
@@ -2871,7 +3018,7 @@
             }
           ],
           "location": "オフィス",
-          "bgm": "normal2",
+          "bgm": "normal",
           "background": "office",
           "text": "成瀬「星奈さんとはちゃんと連絡とってるか？」"
         },
@@ -2885,7 +3032,7 @@
             }
           ],
           "location": "オフィス",
-          "bgm": "normal2",
+          "bgm": "normal",
           "background": "office",
           "text": "成瀬が会うなりニヤニヤして声をかけてくる。人のことより自分はどうなんだというのはこいつには無駄な心配だろう。"
         },
@@ -2899,7 +3046,7 @@
             }
           ],
           "location": "オフィス",
-          "bgm": "normal2",
+          "bgm": "normal",
           "background": "office",
           "text": "碧川「大丈夫。この前の食事の甲斐あって、雰囲気はすごく良くなった」"
         },
@@ -2913,7 +3060,7 @@
             }
           ],
           "location": "オフィス",
-          "bgm": "normal2",
+          "bgm": "normal",
           "background": "office",
           "text": "成瀬「良かった。じゃあデートはどこ行くかは決まった？」"
         },
@@ -2927,7 +3074,7 @@
             }
           ],
           "location": "オフィス",
-          "bgm": "normal2",
+          "bgm": "normal",
           "background": "office",
           "text": "碧川「いや、それは全く・・・」"
         },
@@ -2941,7 +3088,7 @@
             }
           ],
           "location": "オフィス",
-          "bgm": "normal2",
+          "bgm": "normal",
           "background": "office",
           "text": "碧川「あぁ・・・不安だ。デート失敗して次から会ってもらえなくなったらどうしよう」"
         },
@@ -2955,8 +3102,9 @@
             }
           ],
           "location": "オフィス",
-          "bgm": "normal2",
+          "bgm": "normal",
           "background": "office",
+          "voice": "ふむ",
           "text": "成瀬「お前は真面目だもんなぁ。いっそのことプロジェクトだと思って取り組めば？」"
         },
         {
@@ -2969,7 +3117,7 @@
             }
           ],
           "location": "オフィス",
-          "bgm": "normal2",
+          "bgm": "normal",
           "background": "office",
           "text": "碧川「プロジェクト・・・となると、1回目の稟議が通り、次は指摘事項を踏まえた精査された計画の稟議だな」"
         },
@@ -2983,7 +3131,7 @@
             }
           ],
           "location": "オフィス",
-          "bgm": "normal2",
+          "bgm": "normal",
           "background": "office",
           "text": "体制、計画とマイルストーン、見積りと類似プロジェクトとの比較、リスクと課題、などブツブツと言いながら集中する。"
         },
@@ -2998,7 +3146,7 @@
             }
           ],
           "location": "オフィス",
-          "bgm": "normal2",
+          "bgm": "normal",
           "background": "office",
           "text": "成瀬「いや、初デートの計画にそんなもんいらんだろ・・・そもそもお前、類似案件あんのか？」"
         },
@@ -3012,7 +3160,7 @@
             }
           ],
           "location": "オフィス",
-          "bgm": "normal2",
+          "bgm": "normal",
           "background": "office",
           "text": "碧川「・・・ゲームの中でなら・・・」"
         },
@@ -3026,7 +3174,7 @@
             }
           ],
           "location": "オフィス",
-          "bgm": "normal2",
+          "bgm": "normal",
           "background": "office",
           "text": "成瀬「ぜったい類似してねぇから、それ・・・」"
         },
@@ -3040,7 +3188,7 @@
             }
           ],
           "location": "オフィス",
-          "bgm": "normal2",
+          "bgm": "normal",
           "background": "office",
           "text": "碧川「ゲームの中では主人公の親友はヒロインの好感度を測れる仕様だったんだが」"
         },
@@ -3055,7 +3203,7 @@
             }
           ],
           "location": "オフィス",
-          "bgm": "normal2",
+          "bgm": "normal",
           "background": "office",
           "text": "成瀬「俺にそんな便利な機能はねぇ」"
         },
@@ -3069,63 +3217,64 @@
             }
           ],
           "location": "オフィス",
-          "bgm": "normal2",
+          "bgm": "normal",
           "background": "office",
           "text": "成瀬「どこ行くか決まったらレビューさせてくれ。じゃあな」"
         },
         {
           "avatars": [],
           "location": "オフィス",
-          "bgm": "normal2",
+          "bgm": "normal",
           "background": "office",
           "text": "成瀬はそういうと次の打ち合わせ場所へと向かった。相変わらずスマートだ。諜報部員かのように必要なサポートを手短に済ませていく。"
         },
         {
           "avatars": [],
           "location": "自宅",
-          "bgm": "normal2",
+          "bgm": "normal",
           "background": "room",
           "text": "碧川は会社からの帰宅後、自宅でデートプランを書き出していた。ここ最近の日課である。"
         },
         {
           "avatars": [],
           "location": "自宅",
-          "bgm": "normal2",
+          "bgm": "normal",
           "background": "room",
           "text": "各スポットのメリデメ、星奈が興味抱かないリスクとその場合のコンチプランを書き出していた。"
         },
         {
           "avatars": [],
           "location": "自宅",
-          "bgm": "normal2",
+          "bgm": "normal",
           "background": "room",
-          "text": "『今週末は流星群が観測される見込みです。日本でも天気が良ければ見えるかもしれません。』"
+          "text": "『今週末は流星群が観測される見込みです。日本でも天気が良ければ見えるかもしれません』"
         },
         {
           "avatars": [],
           "location": "自宅",
-          "bgm": "normal2",
+          "bgm": "normal",
           "background": "room",
           "text": "テレビで週末の天気予報が流れる。流星群か・・・都会じゃ無理だよな。"
         },
         {
           "avatars": [],
           "location": "自宅",
-          "bgm": "normal2",
+          "bgm": "normal",
           "background": "room",
+          "voice": "携帯着信",
           "text": "携帯が鳴る。もしや星奈さん？期待して携帯を見ると妹からだった。"
         },
         {
           "avatars": [],
           "location": "自宅",
-          "bgm": "normal2",
+          "bgm": "normal",
           "background": "room",
-          "text": "『極秘情報なんだけど・・・もうすぐ可愛い妹の誕生日らしい。』"
+          "text": "『極秘情報なんだけど・・・もうすぐ可愛い妹の誕生日らしい』"
         },
         {
           "avatars": [],
           "location": "自宅",
-          "bgm": "normal2",
+          "bgm": "normal",
           "background": "room",
           "text": "・・・プレゼントの催促か。デートプランのメリデメ表に[妹の誕生日プレゼント選び]を付け足した。"
         }
@@ -3147,7 +3296,8 @@
           "location": "繁華街",
           "bgm": "normal2",
           "background": "town",
-          "text": "星奈「お待たせしました」"
+          "voice": "遅れました",
+          "text": "星奈「遅れました」"
         },
         {
           "avatars": [
@@ -3217,7 +3367,7 @@
           "location": "繁華街",
           "bgm": "normal2",
           "background": "town",
-          "text": "星奈「新宿駅って迷路みたいで道を間違ったら大変だって渋谷さんに言われたので早めに来たんだけど、幸い道は間違わなかったみたい」"
+          "text": "星奈「新宿駅って迷路みたいで道を間違ったら大変だって渋川さんに言われたので早めに来たんだけど、幸い道は間違わなかったみたい」"
         },
         {
           "avatars": [
@@ -3287,7 +3437,7 @@
           "location": "繁華街",
           "bgm": "normal2",
           "background": "town",
-          "text": "しかし、渋谷さんにもデートプランを伝えているんだな。脳裏に屈強なおじさんが浮かぶ。遠くから監視されてたりしないよな・・・？"
+          "text": "しかし、渋川さんにもデートプランを伝えているんだな。脳裏に屈強なおじさんが浮かぶ。遠くから監視されてたりしないよな・・・？"
         },
         {
           "avatars": [
@@ -3301,6 +3451,7 @@
           "location": "レストラン",
           "bgm": "normal2",
           "background": "restaurant2",
+          "voice": "お腹ぺこぺこ",
           "text": "星奈「はぁもうお腹ペコペコ。朝も何も食べてないし」"
         },
         {
@@ -3357,6 +3508,7 @@
           "location": "レストラン",
           "bgm": "normal2",
           "background": "restaurant2",
+          "voice": "すみません",
           "text": "星奈「この前も出してもらったのに本当にすみません・・・」"
         },
         {
@@ -3414,6 +3566,7 @@
           "location": "レストラン",
           "bgm": "normal2",
           "background": "restaurant2",
+          "voice": "わあ",
           "text": "星奈「わぁ、美味しい！」"
         },
         {
@@ -3633,21 +3786,21 @@
             {
               "id": "hoshina01",
               "action": "idle",
-              "expression": "normal",
+              "expression": "sad",
               "attension": "true"
             }
           ],
           "location": "レストラン",
           "bgm": "normal2",
           "background": "restaurant2",
-          "text": "星奈「・・・余裕のある生活はしてないかな。たまたま渋谷さんと出会って働かせてもらって、それでなんとか」"
+          "text": "星奈「・・・余裕のある生活はしてないかな。たまたま渋川さんと出会って働かせてもらって、それでなんとか」"
         },
         {
           "avatars": [
             {
               "id": "hoshina01",
               "action": "idle",
-              "expression": "normal",
+              "expression": "sad",
               "attension": "true"
             }
           ],
@@ -3668,6 +3821,7 @@
           "location": "レストラン",
           "bgm": "normal2",
           "background": "restaurant2",
+          "voice": "えっと",
           "text": "星奈「うーん、そうね」"
         },
         {
@@ -3726,7 +3880,7 @@
           "location": "レストラン",
           "bgm": "normal2",
           "background": "restaurant2",
-          "text": "星奈「冗談。多分」"
+          "text": "星奈「冗談、多分」"
         },
         {
           "avatars": [
@@ -3838,6 +3992,7 @@
           "location": "ゲームセンター",
           "bgm": "normal2",
           "background": "gamecenter",
+          "voice": "すみません",
           "text": "星奈「あ、ごめんなさい。顔に出てたかな。やったことなくて興味がすごくあって・・・」"
         },
         {
@@ -3880,6 +4035,7 @@
           "location": "ゲームセンター",
           "bgm": "normal2",
           "background": "gamecenter",
+          "voice": "えっと",
           "text": "星奈「これが欲しいかな」"
         },
         {
@@ -3984,7 +4140,7 @@
           "avatars": [
             {
               "id": "hoshina01",
-              "action": "clapping",
+              "action": "jump",
               "expression": "happy",
               "attension": "true"
             }
@@ -3992,13 +4148,14 @@
           "location": "ゲームセンター",
           "bgm": "normal2",
           "background": "gamecenter",
-          "text": "星奈「きゃー取れた！」"
+          "voice": "やったー",
+          "text": "星奈「きゃーやったー！取れた！」"
         },
         {
           "avatars": [
             {
               "id": "hoshina02",
-              "action": "surprised",
+              "action": "defeat",
               "expression": "surprised",
               "attension": "true"
             }
@@ -4146,7 +4303,7 @@
           "location": "ショップ",
           "bgm": "normal2",
           "background": "shop",
-          "text": "星奈「あ。これなんかどうかな？」"
+          "text": "星奈「あ、これなんかどうかな？」"
         },
         {
           "avatars": [
@@ -4222,7 +4379,7 @@
           "avatars": [
             {
               "id": "hoshina01",
-              "action": "idle",
+              "action": "injured",
               "expression": "sad",
               "attension": "true"
             }
@@ -4236,7 +4393,7 @@
           "avatars": [
             {
               "id": "hoshina01",
-              "action": "idle",
+              "action": "injured",
               "expression": "sad",
               "attension": "true"
             }
@@ -4250,7 +4407,7 @@
           "avatars": [
             {
               "id": "hoshina01",
-              "action": "idle",
+              "action": "injured",
               "expression": "sad",
               "attension": "true"
             }
@@ -4264,7 +4421,7 @@
           "avatars": [
             {
               "id": "hoshina01",
-              "action": "idle",
+              "action": "injured",
               "expression": "sad",
               "attension": "true"
             }
@@ -4278,7 +4435,7 @@
           "avatars": [
             {
               "id": "hoshina01",
-              "action": "idle",
+              "action": "injured",
               "expression": "sad",
               "attension": "true"
             }
@@ -4292,7 +4449,7 @@
           "avatars": [
             {
               "id": "hoshina01",
-              "action": "idle",
+              "action": "injured",
               "expression": "sad",
               "attension": "true"
             }
@@ -4306,7 +4463,7 @@
           "avatars": [
             {
               "id": "hoshina01",
-              "action": "idle",
+              "action": "injured",
               "expression": "sad",
               "attension": "true"
             }
@@ -4314,13 +4471,14 @@
           "location": "ショップ",
           "bgm": "normal2",
           "background": "shop",
+          "voice": "すみません",
           "text": "星奈「本当にごめんなさい、今日はもう帰るね」"
         },
         {
           "avatars": [
             {
               "id": "hoshina01",
-              "action": "idle",
+              "action": "injured",
               "expression": "sad",
               "attension": "true"
             }
@@ -4328,13 +4486,13 @@
           "location": "ショップ",
           "bgm": "normal2",
           "background": "shop",
-          "text": "碧川「顔が真っ青だ。送るよ。あ、タクシー呼ぶよ」"
+          "text": "碧川「顔が真っ青だ、送るよ。あ、タクシー呼ぶよ」"
         },
         {
           "avatars": [
             {
               "id": "hoshina01",
-              "action": "idle",
+              "action": "injured",
               "expression": "sad",
               "attension": "true"
             }
@@ -4342,13 +4500,13 @@
           "location": "ショップ",
           "bgm": "normal2",
           "background": "shop",
-          "text": "星奈「・・・本当に大丈夫だから。じゃあ」"
+          "text": "星奈「・・・本当に大丈夫だから、じゃあ」"
         },
         {
           "avatars": [
             {
               "id": "hoshina01",
-              "action": "idle",
+              "action": "injured",
               "expression": "sad",
               "attension": "true"
             }
@@ -4356,13 +4514,13 @@
           "location": "ショップ",
           "bgm": "normal2",
           "background": "shop",
-          "text": "碧川「あ、待って。これ」"
+          "text": "碧川「あ、待って、これ」"
         },
         {
           "avatars": [
             {
               "id": "hoshina01",
-              "action": "idle",
+              "action": "injured",
               "expression": "sad",
               "attension": "true"
             }
@@ -4376,7 +4534,7 @@
           "avatars": [
             {
               "id": "hoshina01",
-              "action": "idle",
+              "action": "injured",
               "expression": "sad",
               "attension": "true"
             }
@@ -4384,13 +4542,13 @@
           "location": "ショップ",
           "bgm": "normal2",
           "background": "shop",
-          "text": "星奈「付き合ってもらったお礼。ありがとう」"
+          "text": "星奈「付き合ってもらったお礼、ありがとう」"
         },
         {
           "avatars": [
             {
               "id": "hoshina01",
-              "action": "idle",
+              "action": "injured",
               "expression": "sad",
               "attension": "true"
             }
@@ -4567,6 +4725,7 @@
           "location": "オフィス",
           "bgm": "dark",
           "background": "office",
+          "voice": "ふむ",
           "text": "成瀬「連絡取れないほど体調が悪い・・・？」"
         },
         {
@@ -4596,7 +4755,7 @@
           "location": "オフィス",
           "bgm": "dark",
           "background": "office",
-          "text": "碧川「・・・渋谷さんには聞いてみたか？」"
+          "text": "碧川「・・・渋川さんには聞いてみたか？」"
         },
         {
           "avatars": [
@@ -4610,7 +4769,7 @@
           "location": "オフィス",
           "bgm": "dark",
           "background": "office",
-          "text": "碧川「そうか、渋谷さんに聞いてみれば何かわかるかも。でもただ避けられているだけだったらどうしよう・・・」"
+          "text": "碧川「そうか、渋川さんに聞いてみれば何かわかるかも。でもただ避けられているだけだったらどうしよう・・・」"
         },
         {
           "avatars": [
@@ -4653,7 +4812,7 @@
           "location": "オフィス",
           "bgm": "dark",
           "background": "office",
-          "text": "成瀬「どうせ仕事も手がつかないんだろ。早退して渋谷さんのお店に行ってみたらどうだ」"
+          "text": "成瀬「どうせ仕事も手がつかないんだろ。早退して渋川さんのお店に行ってみたらどうだ」"
         },
         {
           "avatars": [
@@ -4681,14 +4840,14 @@
           "location": "コンビニ",
           "bgm": "dark",
           "background": "convinience",
-          "text": "俺は渋谷のコンビニにやってきていた。"
+          "text": "俺は渋川のコンビニにやってきていた。"
         },
         {
           "avatars": [],
           "location": "コンビニ",
           "bgm": "dark",
           "background": "convinience",
-          "text": "碧川「すみません、渋谷さんはいらっしゃいますか？」"
+          "text": "碧川「すみません、渋川さんはいらっしゃいますか？」"
         },
         {
           "avatars": [],
@@ -4716,14 +4875,14 @@
           "location": "コンビニ",
           "bgm": "dark",
           "background": "convinience",
-          "text": "ここの店員は全員体を鍛えているのだろうか・・・などと考えていると奥から渋谷がでてきた。"
+          "text": "ここの店員は全員体を鍛えているのだろうか・・・などと考えていると奥から渋川がでてきた。"
         },
         {
           "avatars": [],
           "location": "コンビニ",
           "bgm": "dark",
           "background": "convinience",
-          "text": ""
+          "text": "・・・"
         },
         {
           "avatars": [
@@ -4751,6 +4910,7 @@
           "location": "コンビニ",
           "bgm": "dark",
           "background": "convinience",
+          "voice": "うむ",
           "text": "渋川「ちょっと外に出ようか」"
         },
         {
@@ -4765,7 +4925,7 @@
           "location": "公園",
           "bgm": "dark",
           "background": "park",
-          "text": "店の外にでると、渋谷は近くにあった公園のベンチに座った。碧川は渋谷の前に立ち、渋谷の言葉を待った。"
+          "text": "店の外にでると、渋川は近くにあった公園のベンチに座った。碧川は渋川の前に立ち、渋川の言葉を待った。"
         },
         {
           "avatars": [
@@ -4878,6 +5038,7 @@
           "location": "公園",
           "bgm": "dark",
           "background": "park",
+          "voice": "うむ",
           "text": "渋川「そうか・・・」"
         },
         {
@@ -4955,20 +5116,21 @@
           "location": "公園",
           "bgm": "dark",
           "background": "park",
-          "text": "連絡先を交換したあと、また連絡するからと言って渋谷はお店に戻って行った。"
+          "text": "連絡先を交換したあと、また連絡するからと言って渋川はお店に戻って行った。"
         },
         {
           "avatars": [],
           "location": "公園",
           "bgm": "dark",
           "background": "park",
-          "text": "渋谷がいなくなったベンチに碧川は1人座った。"
+          "text": "渋川がいなくなったベンチに碧川は1人座った。"
         },
         {
           "avatars": [],
           "location": "公園",
           "bgm": "dark",
           "background": "park",
+          "voice": "携帯着信",
           "text": "星奈とのやりとりを見返そうと携帯を手に取ると携帯が鳴り始めた。成瀬だ。"
         },
         {
@@ -4976,7 +5138,7 @@
           "location": "公園",
           "bgm": "dark",
           "background": "park",
-          "text": "『渋谷さんに会ったか？どうだった？』"
+          "text": "『渋川さんに会ったか？どうだった？』"
         },
         {
           "avatars": [],
@@ -4990,6 +5152,7 @@
           "location": "公園",
           "bgm": "dark",
           "background": "park",
+          "voice": "携帯着信",
           "text": "特に情報を得られなかったことを返事する。また携帯が鳴った。成瀬かと思ったら今度は妹からだった。"
         },
         {
@@ -5011,6 +5174,7 @@
           "location": "公園",
           "bgm": "dark",
           "background": "park",
+          "voice": "携帯着信",
           "text": "また携帯が鳴る。"
         },
         {
@@ -5060,6 +5224,7 @@
           "location": "公園",
           "bgm": "dark",
           "background": "park",
+          "voice": "なになに",
           "text": "妹「なになにー？ぷりちーしすたーの声が聞きたくなった？」"
         },
         {
@@ -5116,7 +5281,7 @@
           "location": "公園",
           "bgm": "dark",
           "background": "park",
-          "text": "電話切る。"
+          "text": "電話を切る。"
         },
         {
           "avatars": [],
@@ -5164,6 +5329,7 @@
           "location": "実家",
           "bgm": "main2",
           "background": "home",
+          "voice": "おっかえりー",
           "text": "妹「おー、おかえりお兄ちゃん」"
         },
         {
@@ -5606,6 +5772,7 @@
           "location": "神社",
           "bgm": "main2",
           "background": "shrine_night",
+          "voice": "知ってる",
           "text": "葵紗「知ってる」"
         },
         {
@@ -5729,6 +5896,7 @@
           "location": "葵紗の家",
           "bgm": "main2",
           "background": "aisa_home",
+          "voice": "久しぶりだね",
           "text": "葵紗の父「碧川くん、久しぶりだね」"
         },
         {
@@ -6074,7 +6242,7 @@
           "location": "葵紗の家",
           "bgm": "main2",
           "background": "aisa_home",
-          "text": "想像の斜め上をいっている。ワンチャン、歳を取らない魔女で昔から変わらぬ姿で生きているとか考えていた。"
+          "text": "理解が追いつかない。"
         },
         {
           "avatars": [
@@ -6126,7 +6294,7 @@
             },
             {
               "id": "hoshina01",
-              "action": "idle",
+              "action": "injured",
               "expression": "sad"
             }
           ],
@@ -6145,7 +6313,7 @@
             },
             {
               "id": "hoshina01",
-              "action": "idle",
+              "action": "injured",
               "expression": "sad"
             }
           ],
@@ -6164,13 +6332,14 @@
             },
             {
               "id": "hoshina01",
-              "action": "idle",
+              "action": "injured",
               "expression": "sad"
             }
           ],
           "location": "25年前の神社",
           "bgm": "main2",
           "background": "shrine",
+          "voice": "大丈夫ですか",
           "text": "葵紗の父「大丈夫ですか？」"
         },
         {
@@ -6183,7 +6352,7 @@
             },
             {
               "id": "hoshina01",
-              "action": "idle",
+              "action": "injured",
               "expression": "sad"
             }
           ],
@@ -6202,7 +6371,7 @@
             },
             {
               "id": "hoshina01",
-              "action": "idle",
+              "action": "injured",
               "expression": "sad"
             }
           ],
@@ -6220,7 +6389,7 @@
             },
             {
               "id": "hoshina01",
-              "action": "idle",
+              "action": "injured",
               "expression": "normal",
               "attension": "true"
             }
@@ -6228,6 +6397,7 @@
           "location": "25年前の葵紗の家",
           "bgm": "main2",
           "background": "aisa_home",
+          "voice": "すみません",
           "text": "星奈「ありがとうございます、だいぶ体調は良くなりました」"
         },
         {
@@ -6240,7 +6410,7 @@
             },
             {
               "id": "hoshina01",
-              "action": "idle",
+              "action": "injured",
               "expression": "normal"
             }
           ],
@@ -7098,7 +7268,7 @@
         {
           "avatars": [],
           "location": "25年前の神社",
-          "bgm": "main2",
+          "bgm": "main3",
           "background": "shrine",
           "text": "碧川は5歳の頃はよく神社に来て、葵紗や職員と一緒に遊んでいた。5歳の碧川は神社のみんなが好きだったし、みんなからも好かれていた。"
         },
@@ -7111,7 +7281,7 @@
             }
           ],
           "location": "25年前の神社",
-          "bgm": "main2",
+          "bgm": "main3",
           "background": "shrine",
           "text": "5歳の葵紗「ゆうとくんはどんな子が好きなの？」"
         },
@@ -7124,7 +7294,7 @@
             }
           ],
           "location": "25年前の神社",
-          "bgm": "main2",
+          "bgm": "main3",
           "background": "shrine",
           "text": "碧川「うーん、くーるびゅーてぃーなお姉さん？」"
         },
@@ -7137,28 +7307,28 @@
             }
           ],
           "location": "25年前の神社",
-          "bgm": "main2",
+          "bgm": "main3",
           "background": "shrine",
           "text": "5歳の葵紗「わかった、くーるびゅーてぃーね！ちょっと体温下げてくる！」"
         },
         {
           "avatars": [],
           "location": "25年前の神社",
-          "bgm": "main2",
+          "bgm": "main3",
           "background": "shrine",
           "text": "葵紗は走ってどこかに行った。"
         },
         {
           "avatars": [],
           "location": "25年前の神社",
-          "bgm": "main2",
+          "bgm": "main3",
           "background": "shrine",
           "text": "碧川「葵紗は面白いなぁ」"
         },
         {
           "avatars": [],
           "location": "25年前の神社",
-          "bgm": "main2",
+          "bgm": "main3",
           "background": "shrine",
           "text": "近くにいたおじさんに話しかける。"
         },
@@ -7172,7 +7342,7 @@
             }
           ],
           "location": "25年前の神社",
-          "bgm": "main2",
+          "bgm": "main3",
           "background": "shrine",
           "text": "碧川「ねーねー、知ってる？今日、りゅーせーぐんが来るんだって」"
         },
@@ -7186,7 +7356,7 @@
             }
           ],
           "location": "25年前の神社",
-          "bgm": "main2",
+          "bgm": "main3",
           "background": "shrine",
           "text": "葵紗の父「そうなんだ。よく知ってるね」"
         },
@@ -7200,7 +7370,7 @@
             }
           ],
           "location": "25年前の神社",
-          "bgm": "main2",
+          "bgm": "main3",
           "background": "shrine",
           "text": "碧川「流れ星、たくさん見れるかなぁ」"
         },
@@ -7214,7 +7384,7 @@
             }
           ],
           "location": "25年前の神社",
-          "bgm": "main2",
+          "bgm": "main3",
           "background": "shrine",
           "text": "碧川「そうだ、みんなで流れ星を見ようよ！」"
         },
@@ -7233,7 +7403,7 @@
             }
           ],
           "location": "25年前の神社",
-          "bgm": "main2",
+          "bgm": "main3",
           "background": "shrine",
           "text": "葵紗「いいわね、みんなで見ましょう！」"
         },
@@ -7248,12 +7418,11 @@
               "id": "aisa03",
               "action": "idle",
               "expression": "normal",
-              "attension": "true",
-              "zoom": true
+              "attension": "true"
             }
           ],
           "location": "25年前の神社",
-          "bgm": "main2",
+          "bgm": "main3",
           "background": "shrine",
           "text": "葵紗「あ、せっかく冷蔵庫で冷やしてきたのに、走ったら暑くなってきた！」"
         },
@@ -7267,7 +7436,7 @@
             }
           ],
           "location": "25年前の神社",
-          "bgm": "main2",
+          "bgm": "main3",
           "background": "shrine",
           "text": "そう言うと、葵紗はまた走ってどこかに行った。"
         },
@@ -7282,7 +7451,7 @@
             }
           ],
           "location": "25年前の神社",
-          "bgm": "main2",
+          "bgm": "main3",
           "background": "shrine",
           "text": "葵紗の父「じゃあ流れ星を見るってお父さんとお母さんに連絡するね」"
         },
@@ -7296,56 +7465,56 @@
             }
           ],
           "location": "25年前の神社",
-          "bgm": "main2",
+          "bgm": "main3",
           "background": "shrine",
           "text": "碧川「ありがとう！」"
         },
         {
           "avatars": [],
           "location": "25年前の神社",
-          "bgm": "main2",
+          "bgm": "main3",
           "background": "shrine",
           "text": "そう言うと、おじさんは家に戻って行った。"
         },
         {
           "avatars": [],
           "location": "25年前の神社",
-          "bgm": "main2",
+          "bgm": "main3",
           "background": "shrine",
           "text": "碧川「楽しみだなぁ」"
         },
         {
           "avatars": [],
           "location": "25年前の神社（夜）",
-          "bgm": "main2",
+          "bgm": "main3",
           "background": "shrine_night",
           "text": "少し日が暮れてきて、あたりは暗くなってきた。もう流れ星が見えるんじゃないかと碧川は必死に空を見上げていた。"
         },
         {
           "avatars": [],
           "location": "25年前の神社（夜）",
-          "bgm": "main2",
+          "bgm": "main3",
           "background": "shrine_night",
           "text": "「もう見えた？」"
         },
         {
           "avatars": [],
           "location": "25年前の神社（夜）",
-          "bgm": "main2",
+          "bgm": "main3",
           "background": "shrine_night",
           "text": "巫女のお姉さんが声をかけてきた。"
         },
         {
           "avatars": [],
           "location": "25年前の神社（夜）",
-          "bgm": "main2",
+          "bgm": "main3",
           "background": "shrine_night",
           "text": "「まだ見えてない。そろそろ見えると思うんだけど・・・」"
         },
         {
           "avatars": [],
           "location": "25年前の神社（夜）",
-          "bgm": "main2",
+          "bgm": "main3",
           "background": "shrine_night",
           "text": "巫女のお姉さんは碧川の隣に立ち、一緒に空を見ていた。最近見かけるようになったお姉さんだが、そこは子供、あっという間に距離をつめ仲良くなっていた。"
         },
@@ -7364,7 +7533,7 @@
             }
           ],
           "location": "葵紗の家",
-          "bgm": "main2",
+          "bgm": "main3",
           "background": "aisa_home",
           "text": "碧川「思い出した・・・あの巫女は星奈さんだ」"
         },
@@ -7383,7 +7552,7 @@
             }
           ],
           "location": "葵紗の家",
-          "bgm": "main2",
+          "bgm": "main3",
           "background": "aisa_home",
           "text": "碧川は徐々に記憶が蘇ってきた。確かに5歳の時に星奈さんと出会っていた。"
         },
@@ -7398,12 +7567,11 @@
               "id": "aisa01",
               "action": "idle",
               "expression": "normal",
-              "attension": "true",
-              "zoom": true
+              "attension": "true"
             }
           ],
           "location": "葵紗の家",
-          "bgm": "main2",
+          "bgm": "main3",
           "background": "aisa_home",
           "text": "碧川「クールビューティー・・・」"
         },
@@ -7418,12 +7586,11 @@
               "id": "aisa01",
               "action": "surprised",
               "expression": "surprised",
-              "attension": "true",
-              "zoom": true
+              "attension": "true"
             }
           ],
           "location": "葵紗の家",
-          "bgm": "main2",
+          "bgm": "main3",
           "background": "aisa_home",
           "text": "葵紗「！？」"
         },
@@ -7438,13 +7605,13 @@
               "id": "aisa01",
               "action": "surprised",
               "expression": "angry",
-              "attension": "true",
-              "zoom": true
+              "attension": "true"
             }
           ],
           "location": "葵紗の家",
-          "bgm": "main2",
+          "bgm": "main3",
           "background": "aisa_home",
+          "voice": "あなたのためじゃない",
           "text": "葵紗「これが私の地。あなたのためじゃない」"
         },
         {
@@ -7463,7 +7630,7 @@
             }
           ],
           "location": "葵紗の家",
-          "bgm": "main2",
+          "bgm": "main3",
           "background": "aisa_home",
           "text": "碧川「クールビューティーはツンデレ属性付きか・・・」"
         },
@@ -7477,28 +7644,28 @@
             }
           ],
           "location": "葵紗の家",
-          "bgm": "main2",
+          "bgm": "main3",
           "background": "aisa_home",
           "text": "たまらず、葵紗は部屋を出て行った。冷蔵庫に行ったのだろうか。"
         },
         {
           "avatars": [],
           "location": "25年前の神社（夜）",
-          "bgm": "main2",
+          "bgm": "main3",
           "background": "shrine_night",
           "text": "碧川「あ、流れ星！」"
         },
         {
           "avatars": [],
           "location": "25年前の神社（夜）",
-          "bgm": "main2",
+          "bgm": "main3",
           "background": "shrine_night",
           "text": "ついに流れ星を見ることができ、思わず大きな声をあげていた。"
         },
         {
           "avatars": [],
           "location": "25年前の神社（夜）",
-          "bgm": "main2",
+          "bgm": "main3",
           "background": "shrine_night",
           "text": "ドサっ"
         },
@@ -7506,14 +7673,14 @@
           "avatars": [
             {
               "id": "hoshina03",
-              "action": "idle",
+              "action": "death",
               "expression": "sad",
               "attension": "true",
               "zoom": true
             }
           ],
           "location": "25年前の神社（夜）",
-          "bgm": "main2",
+          "bgm": "main3",
           "background": "shrine_night",
           "text": "碧川「え、お姉さんどうしたの？」"
         },
@@ -7521,14 +7688,14 @@
           "avatars": [
             {
               "id": "hoshina03",
-              "action": "idle",
+              "action": "death",
               "expression": "sad",
               "attension": "true",
               "zoom": true
             }
           ],
           "location": "25年前の神社（夜）",
-          "bgm": "main2",
+          "bgm": "main3",
           "background": "shrine_night",
           "text": "星奈「そうか・・・星の力と関係していたのか・・・」"
         },
@@ -7536,13 +7703,13 @@
           "avatars": [
             {
               "id": "hoshina03",
-              "action": "idle",
+              "action": "death",
               "expression": "sad",
               "attension": "true"
             }
           ],
           "location": "25年前の神社（夜）",
-          "bgm": "main2",
+          "bgm": "main3",
           "background": "shrine_night",
           "text": "碧川「お姉さん！お姉さん！」"
         },
@@ -7550,14 +7717,14 @@
           "avatars": [
             {
               "id": "hoshina03",
-              "action": "idle",
+              "action": "injured",
               "expression": "sad",
               "attension": "true",
               "zoom": true
             }
           ],
           "location": "25年前の神社（夜）",
-          "bgm": "main2",
+          "bgm": "main3",
           "background": "shrine_night",
           "text": "星奈「また時間を飛ぶのか・・・良いところだと良いのだが・・・」"
         },
@@ -7565,22 +7732,23 @@
           "avatars": [
             {
               "id": "hoshina03",
-              "action": "idle",
+              "action": "injured",
               "expression": "sad",
               "attension": "true",
               "zoom": true
             }
           ],
           "location": "25年前の神社（夜）",
-          "bgm": "main2",
+          "bgm": "main3",
           "background": "shrine_night",
+          "effect": "light",
           "text": "あたりが白い光に包まれている。星奈は上体を起こしたが、以前苦しそうな顔をしている。いったい何が起きているのか。"
         },
         {
           "avatars": [
             {
               "id": "hoshina03",
-              "action": "idle",
+              "action": "injured",
               "expression": "sad",
               "attension": "true"
             },
@@ -7596,7 +7764,7 @@
             }
           ],
           "location": "25年前の神社（夜）",
-          "bgm": "main2",
+          "bgm": "main3",
           "background": "shrine_night",
           "text": "「碧川くん！星奈くん！」「ゆーと！」"
         },
@@ -7604,7 +7772,7 @@
           "avatars": [
             {
               "id": "hoshina03",
-              "action": "idle",
+              "action": "injured",
               "expression": "surprised",
               "attension": "true",
               "zoom": true
@@ -7621,7 +7789,7 @@
             }
           ],
           "location": "25年前の神社（夜）",
-          "bgm": "main2",
+          "bgm": "main3",
           "background": "shrine_night",
           "text": "星奈「碧川・・・ゆーと・・・。君は碧川悠斗というの？」"
         },
@@ -7629,7 +7797,7 @@
           "avatars": [
             {
               "id": "hoshina03",
-              "action": "idle",
+              "action": "injured",
               "expression": "surprised",
               "attension": "true",
               "zoom": true
@@ -7646,7 +7814,7 @@
             }
           ],
           "location": "25年前の神社（夜）",
-          "bgm": "main2",
+          "bgm": "main3",
           "background": "shrine_night",
           "text": "碧川「え、そうだよ・・・」"
         },
@@ -7654,7 +7822,7 @@
           "avatars": [
             {
               "id": "hoshina03",
-              "action": "idle",
+              "action": "injured",
               "expression": "surprised",
               "attension": "true",
               "zoom": true
@@ -7671,7 +7839,7 @@
             }
           ],
           "location": "25年前の神社（夜）",
-          "bgm": "main2",
+          "bgm": "main3",
           "background": "shrine_night",
           "text": "星奈「なんという偶然か・・・いや、君からは神聖な力を感じる。必然なのかもしれない」"
         },
@@ -7679,7 +7847,7 @@
           "avatars": [
             {
               "id": "hoshina03",
-              "action": "idle",
+              "action": "injured",
               "expression": "sad"
             },
             {
@@ -7696,7 +7864,7 @@
             }
           ],
           "location": "25年前の神社（夜）",
-          "bgm": "main2",
+          "bgm": "main3",
           "background": "shrine_night",
           "text": "葵紗の父「止めてみせる！葵紗、手伝いなさい！」"
         },
@@ -7704,7 +7872,7 @@
           "avatars": [
             {
               "id": "hoshina03",
-              "action": "idle",
+              "action": "injured",
               "expression": "sad"
             },
             {
@@ -7720,15 +7888,16 @@
             }
           ],
           "location": "25年前の神社（夜）",
-          "bgm": "main2",
+          "bgm": "main3",
           "background": "shrine_night",
+          "effect": "light",
           "text": "おじさんと葵紗が手をかざし、何やらぶつぶつと唱えると彼らもまた白い光に包まれた。"
         },
         {
           "avatars": [
             {
               "id": "hoshina03",
-              "action": "idle",
+              "action": "injured",
               "expression": "sad"
             },
             {
@@ -7745,7 +7914,7 @@
             }
           ],
           "location": "25年前の神社（夜）",
-          "bgm": "main2",
+          "bgm": "main3",
           "background": "shrine_night",
           "text": "葵紗の父「く・・・これは手強いな・・・遅らせることで精一杯かもしれない」"
         },
@@ -7753,7 +7922,7 @@
           "avatars": [
             {
               "id": "hoshina03",
-              "action": "idle",
+              "action": "injured",
               "expression": "sad",
               "attension": "true",
               "zoom": true
@@ -7770,7 +7939,7 @@
             }
           ],
           "location": "25年前の神社（夜）",
-          "bgm": "main2",
+          "bgm": "main3",
           "background": "shrine_night",
           "text": "星奈「これは魔王の命をかけた呪い。それこそ神の力でも使わない限り無理だわ」"
         },
@@ -7778,7 +7947,7 @@
           "avatars": [
             {
               "id": "hoshina03",
-              "action": "idle",
+              "action": "injured",
               "expression": "sad"
             },
             {
@@ -7795,7 +7964,7 @@
             }
           ],
           "location": "25年前の神社（夜）",
-          "bgm": "main2",
+          "bgm": "main3",
           "background": "shrine_night",
           "text": "葵紗の父「そうか・・・碧川くん！星奈くんが無事なことを祈ってくれ！どこにも行かないようにと！」"
         },
@@ -7803,7 +7972,7 @@
           "avatars": [
             {
               "id": "hoshina03",
-              "action": "idle",
+              "action": "injured",
               "expression": "sad",
               "attension": "true",
               "zoom": true
@@ -7820,7 +7989,7 @@
             }
           ],
           "location": "25年前の神社（夜）",
-          "bgm": "main2",
+          "bgm": "main3",
           "background": "shrine_night",
           "text": "碧川「どこかに行っちゃうの？どこにも行かないで！」"
         },
@@ -7828,7 +7997,7 @@
           "avatars": [
             {
               "id": "hoshina03",
-              "action": "idle",
+              "action": "injured",
               "expression": "sad"
             },
             {
@@ -7845,7 +8014,7 @@
             }
           ],
           "location": "25年前の神社（夜）",
-          "bgm": "main2",
+          "bgm": "main3",
           "background": "shrine_night",
           "text": "葵紗の父「くっ・・・碧川くんの加護でも力が足りない」"
         },
@@ -7853,7 +8022,7 @@
           "avatars": [
             {
               "id": "hoshina03",
-              "action": "idle",
+              "action": "injured",
               "expression": "sad"
             },
             {
@@ -7870,15 +8039,16 @@
             }
           ],
           "location": "25年前の神社（夜）",
-          "bgm": "main2",
+          "bgm": "main3",
           "background": "shrine_night",
+          "voice": "もう持たないよ",
           "text": "葵紗「お父さん、もう持たないよ！」"
         },
         {
           "avatars": [
             {
               "id": "hoshina03",
-              "action": "idle",
+              "action": "injured",
               "expression": "sad",
               "attension": "true",
               "zoom": true
@@ -7895,7 +8065,7 @@
             }
           ],
           "location": "25年前の神社（夜）",
-          "bgm": "main2",
+          "bgm": "main3",
           "background": "shrine_night",
           "text": "星奈「加護・・・そうか、そういうことね。君が聞いていたあの子だったのね。それが碧川さんだったなんて・・・」"
         },
@@ -7903,7 +8073,7 @@
           "avatars": [
             {
               "id": "hoshina03",
-              "action": "idle",
+              "action": "injured",
               "expression": "sad"
             },
             {
@@ -7920,7 +8090,7 @@
             }
           ],
           "location": "25年前の神社（夜）",
-          "bgm": "main2",
+          "bgm": "main3",
           "background": "shrine_night",
           "text": "葵紗「もう無理！あと5秒が限界！」"
         },
@@ -7945,7 +8115,7 @@
             }
           ],
           "location": "25年前の神社（夜）",
-          "bgm": "main2",
+          "bgm": "main3",
           "background": "shrine_night",
           "text": "星奈「碧川悠斗」"
         },
@@ -7970,15 +8140,16 @@
             }
           ],
           "location": "25年前の神社（夜）",
-          "bgm": "main2",
+          "bgm": "main3",
           "background": "shrine_night",
-          "text": "星奈「25年後、私を見たらまた告白をしてください。そして、私はここであなたを待っています」"
+          "voice": "告白してください",
+          "text": "星奈「私を見たら告白をしてください。そして、私はここであなたを待っています」"
         },
         {
           "avatars": [
             {
               "id": "hoshina03",
-              "action": "acknowledging",
+              "action": "kiss",
               "expression": "happy",
               "attension": "true",
               "zoom": true
@@ -7995,7 +8166,7 @@
             }
           ],
           "location": "25年前の神社（夜）",
-          "bgm": "main2",
+          "bgm": "main3",
           "background": "shrine_night",
           "text": "そう言うと、星奈はキスをした。"
         },
@@ -8003,7 +8174,7 @@
           "avatars": [
             {
               "id": "hoshina03",
-              "action": "acknowledging",
+              "action": "kiss",
               "expression": "normal",
               "attension": "true",
               "zoom": true
@@ -8020,15 +8191,15 @@
             }
           ],
           "location": "25年前の神社（夜）",
-          "bgm": "main2",
+          "bgm": "main3",
           "background": "shrine_night",
-          "text": "星奈「今度会えたら返事をさせてください。それまで碧川さんの力、借ります」"
+          "text": "星奈「力、借ります」"
         },
         {
           "avatars": [
             {
               "id": "hoshina03",
-              "action": "acknowledging",
+              "action": "kiss",
               "expression": "normal",
               "attension": "true",
               "zoom": true
@@ -8045,7 +8216,7 @@
             }
           ],
           "location": "25年前の神社（夜）",
-          "bgm": "main2",
+          "bgm": "main3",
           "background": "shrine_night",
           "text": "自分の中の何かが星奈に渡ったのを本能的に感じていた。"
         },
@@ -8053,7 +8224,7 @@
           "avatars": [
             {
               "id": "hoshina03",
-              "action": "acknowledging",
+              "action": "kiss",
               "expression": "normal",
               "attension": "true",
               "zoom": true
@@ -8070,8 +8241,9 @@
             }
           ],
           "location": "25年前の神社（夜）",
-          "bgm": "main2",
+          "bgm": "main3",
           "background": "shrine_night",
+          "effect": "light",
           "text": "次の瞬間、あたりはさらに強い光に包まれ、何も見えなくなった。"
         },
         {
@@ -8089,7 +8261,7 @@
             }
           ],
           "location": "25年前の神社（夜）",
-          "bgm": "main2",
+          "bgm": "main3",
           "background": "shrine_night",
           "text": "そして、しばらくして光が消えると星奈はいなくなっていた。"
         },
@@ -8108,7 +8280,7 @@
             }
           ],
           "location": "25年前の神社（夜）",
-          "bgm": "main2",
+          "bgm": "main3",
           "background": "shrine_night",
           "text": "ドサッ。碧川はその場に倒れていた。"
         },
@@ -8122,7 +8294,7 @@
             }
           ],
           "location": "葵紗の家",
-          "bgm": "main2",
+          "bgm": "main3",
           "background": "aisa_home",
           "text": "次の日、気がついたら家にいたのだが前の日のことをあまり思い出せずにいたのだが、いますべてを思い出した。"
         },
@@ -8136,7 +8308,7 @@
             }
           ],
           "location": "葵紗の家",
-          "bgm": "main2",
+          "bgm": "main3",
           "background": "aisa_home",
           "text": "碧川「星奈さんはここで待っていると言ってた・・・」"
         },
@@ -8151,9 +8323,9 @@
             }
           ],
           "location": "葵紗の家",
-          "bgm": "main2",
+          "bgm": "main3",
           "background": "aisa_home",
-          "text": "「境内を見てみると良い」"
+          "text": "葵紗の父「境内を見てみると良い」"
         },
         {
           "avatars": [
@@ -8165,7 +8337,7 @@
             }
           ],
           "location": "葵紗の家",
-          "bgm": "main2",
+          "bgm": "main3",
           "background": "aisa_home",
           "text": "おじさんが言う。"
         },
@@ -8179,7 +8351,7 @@
             }
           ],
           "location": "葵紗の家",
-          "bgm": "main2",
+          "bgm": "main3",
           "background": "aisa_home",
           "text": "部屋の窓から外を見る。"
         },
@@ -8193,7 +8365,7 @@
             }
           ],
           "location": "葵紗の家",
-          "bgm": "main2",
+          "bgm": "main3",
           "background": "aisa_home",
           "text": "境内に女性が1人、立っている。"
         },
@@ -8207,7 +8379,7 @@
             }
           ],
           "location": "葵紗の家",
-          "bgm": "main2",
+          "bgm": "main3",
           "background": "aisa_home",
           "text": "碧川「星奈さん！」"
         },
@@ -8221,7 +8393,7 @@
             }
           ],
           "location": "葵紗の家",
-          "bgm": "main2",
+          "bgm": "main3",
           "background": "aisa_home",
           "text": "俺は部屋を飛び出した。"
         },
@@ -8252,6 +8424,7 @@
           "location": "神社",
           "bgm": "main",
           "background": "shrine_night",
+          "voice": "また会えたね",
           "text": "星奈「また会えたね」"
         },
         {
@@ -8282,6 +8455,7 @@
           "location": "神社",
           "bgm": "main",
           "background": "shrine_night",
+          "voice": "ごほん",
           "text": "ゴホンっ。"
         },
         {
@@ -8294,8 +8468,7 @@
               "id": "aisa02",
               "action": "idle",
               "expression": "normal",
-              "attension": "true",
-              "zoom": true
+              "attension": "true"
             }
           ],
           "location": "神社",
@@ -8313,8 +8486,7 @@
               "id": "aisa02",
               "action": "idle",
               "expression": "normal",
-              "attension": "true",
-              "zoom": true
+              "attension": "true"
             }
           ],
           "location": "神社",
@@ -8332,8 +8504,7 @@
               "id": "aisa02",
               "action": "idle",
               "expression": "normal",
-              "attension": "true",
-              "zoom": true
+              "attension": "true"
             }
           ],
           "location": "神社",
@@ -8352,8 +8523,7 @@
               "id": "aisa02",
               "action": "idle",
               "expression": "normal",
-              "attension": "true",
-              "zoom": true
+              "attension": "true"
             }
           ],
           "location": "神社",
@@ -8390,33 +8560,14 @@
             {
               "id": "aisa02",
               "action": "idle",
-              "attension": "true",
-              "expression": "normal"
-            }
-          ],
-          "location": "神社",
-          "bgm": "main",
-          "background": "shrine_night",
-          "text": "まだ自分の力がどんなものなのかいまいち理解ができていない。理解が追いつかず、ポカンとしている碧川を尻目に葵紗は星奈に声をかける。"
-        },
-        {
-          "avatars": [
-            {
-              "id": "hoshina01",
-              "action": "idle",
-              "expression": "normal"
-            },
-            {
-              "id": "aisa02",
-              "action": "idle",
               "expression": "angry",
-              "attension": "true",
-              "zoom": true
+              "attension": "true"
             }
           ],
           "location": "神社",
           "bgm": "main",
           "background": "shrine_night",
+          "voice": "泥棒猫",
           "text": "葵紗「さて、泥棒猫さん。持って行ったものを返してもらうわよ」"
         },
         {
@@ -8437,7 +8588,8 @@
           "location": "神社",
           "bgm": "main",
           "background": "shrine_night",
-          "text": "星奈「あら・・・それは碧川さんの力？それとも心の方？」"
+          "voice": "あら、それは",
+          "text": "星奈「あら・・・それは力の方？それとも心の方かしら？」"
         },
         {
           "avatars": [
@@ -8448,15 +8600,15 @@
             },
             {
               "id": "aisa02",
-              "action": "idle",
+              "action": "angry",
               "expression": "angry",
-              "attension": "true",
-              "zoom": true
+              "attension": "true"
             }
           ],
           "location": "神社",
           "bgm": "main",
           "background": "shrine_night",
+          "voice": "離れなさいよ",
           "text": "葵紗「全部よ！いい加減離れなさいよ！」"
         },
         {
@@ -8468,7 +8620,7 @@
             },
             {
               "id": "aisa02",
-              "action": "idle",
+              "action": "angry",
               "expression": "angry",
               "attension": "true"
             }
@@ -8490,6 +8642,7 @@
           "location": "???",
           "bgm": "main",
           "background": "unknown",
+          "effect": "dark",
           "text": "成瀬「こちらデルタ。ターゲットが出現した」"
         },
         {
@@ -8504,6 +8657,7 @@
           "location": "???",
           "bgm": "main",
           "background": "unknown",
+          "effect": "dark",
           "text": "「・・・」"
         },
         {
@@ -8518,6 +8672,7 @@
           "location": "???",
           "bgm": "main",
           "background": "unknown",
+          "effect": "dark",
           "text": "成瀬「了解。引き続き監視を続ける」"
         },
         {
@@ -8532,6 +8687,8 @@
           "location": "???",
           "bgm": "main",
           "background": "unknown",
+          "effect": "dark",
+          "voice": "親友としては",
           "text": "成瀬「親友としては恋を応援したいんだけどねぇ」"
         },
         {
@@ -8546,6 +8703,7 @@
           "location": "???",
           "bgm": "main",
           "background": "unknown",
+          "effect": "dark",
           "text": "そう言いながら、成瀬は双眼鏡で監視を続けた。"
         },
         {
@@ -8560,6 +8718,7 @@
           "location": "?????",
           "bgm": "main",
           "background": "unknown2",
+          "effect": "dark",
           "text": "-- 隊長、星奈さんです。"
         },
         {
@@ -8574,6 +8733,7 @@
           "location": "?????",
           "bgm": "main",
           "background": "unknown2",
+          "effect": "dark",
           "text": "渋川「そうか・・・戻ってきたか」"
         },
         {
@@ -8588,6 +8748,7 @@
           "location": "?????",
           "bgm": "main",
           "background": "unknown2",
+          "effect": "dark",
           "text": "-- それと他の特殊部隊も動いているようです。"
         },
         {
@@ -8602,6 +8763,7 @@
           "location": "?????",
           "bgm": "main",
           "background": "unknown2",
+          "effect": "dark",
           "text": "渋川「まあ当然だろうな」"
         },
         {
@@ -8616,6 +8778,7 @@
           "location": "?????",
           "bgm": "main",
           "background": "unknown2",
+          "effect": "dark",
           "text": "渋川「この場で動くバカはおらんだろう。適当に切り上げるぞ」"
         },
         {
@@ -8630,6 +8793,7 @@
           "location": "?????",
           "bgm": "main",
           "background": "unknown2",
+          "effect": "dark",
           "text": "-- イエス、サー！"
         },
         {
@@ -8644,7 +8808,12 @@
           "location": "?????",
           "bgm": "main",
           "background": "unknown2",
+          "effect": "dark",
+          "voice": "考え直すか",
           "text": "渋川「・・・帰ってコンビニのシフト表を考え直すかな」"
+        },
+        {
+          "goto": "good_end"
         }
       ]
     }
