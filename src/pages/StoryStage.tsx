@@ -175,7 +175,10 @@ const StoryStage: React.FC<StoryStageProps> = ({ onExit }) => {
             <ItemsDisplay onClick={itemSelected} />
             {showingImagePath && (
               <>
-                <div className="fixed left-0 top-12 w-full flex items-center justify-center">
+                <div
+                  className="fixed left-0 top-12 w-full flex items-center justify-center"
+                  onClick={handleClick}
+                >
                   <SlideInImage
                     imageSrc={showingImagePath}
                     altText="Sample Image"
