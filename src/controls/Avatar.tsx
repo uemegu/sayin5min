@@ -11,7 +11,12 @@ import {
   animationClipCache,
   avatarCache,
   imangeCache,
+  gamgeConfig,
 } from "./Store";
+
+const PHONEMES = ["aa", "ee", "ih", "oh", "ou"] as const;
+type Phoneme = (typeof PHONEMES)[number];
+const SMOOTHING = 0.2;
 
 const Avatar: React.FC<{
   url: string;
@@ -23,6 +28,7 @@ const Avatar: React.FC<{
 }> = ({ url, animationUrl, expression, faceUrl, index, attention }) => {
   const { scene, camera } = useThree();
   const { cameraDirection } = useSnapshot(gameStatus);
+  const { phoneme } = useSnapshot(gamgeConfig);
   const gltf = avatarCache.find((r) => r.key === url)!.value!;
   const [avatar, setAvatar] = useState<VRM | null>(null);
   const [prevAnimationUrl, setPrevAnimationUrl] = useState<string | null>(null);
@@ -247,8 +253,41 @@ const Avatar: React.FC<{
     applyExpression();
   }, [avatar, expression]);
 
+  const phonemeRef = useRef<Phoneme | "nn" | undefined>(undefined);
+  useEffect(() => {
+    phonemeRef.current = phoneme as Phoneme | "nn" | undefined;
+  }, [phoneme]);
+  const weightsRef = useRef<Record<Phoneme, number>>({
+    aa: 0,
+    ee: 0,
+    ih: 0,
+    oh: 0,
+    ou: 0,
+  });
+
   useFrame((_, delta) => {
     if (avatar) {
+      // 3-1) ターゲット重み決定
+      const target: Record<Phoneme, number> = {
+        aa: 0,
+        ee: 0,
+        ih: 0,
+        oh: 0,
+        ou: 0,
+      };
+      const detected = phonemeRef.current;
+      if (detected && detected !== "nn") {
+        target[detected] = 1;
+      }
+
+      // 3-2) 線形補間してセット
+      PHONEMES.forEach((p) => {
+        const cw = weightsRef.current[p];
+        const tw = target[p];
+        const nw = cw + SMOOTHING * (tw - cw);
+        weightsRef.current[p] = nw;
+        avatar.expressionManager!.setValue(p, nw * 0.8);
+      });
       avatar.update(delta);
     }
     if (mixer) mixer.update(delta);

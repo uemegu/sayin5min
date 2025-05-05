@@ -1,6 +1,7 @@
 import React, { useEffect, useRef, useState } from "react";
 import { useSnapshot } from "valtio";
 import { gamgeConfig, gameStatus } from "../Store";
+import AudioAnalyzer from "./AudioAnalyzer";
 
 const BGM: React.FC = () => {
   const { chapters, config } = useSnapshot(gamgeConfig);
@@ -38,6 +39,26 @@ const BGM: React.FC = () => {
       }
     }
   }, [voiceUrl]);
+
+  useEffect(() => {
+    if (audioRef2.current) {
+      try {
+        const audioContext = new AudioContext();
+        const sourceNode = audioContext.createMediaElementSource(
+          audioRef2.current
+        );
+        const dest = audioContext.createMediaStreamDestination();
+        sourceNode.connect(dest);
+        sourceNode.connect(audioContext.destination);
+        const mediaStream = dest.stream;
+        const analyzer = new AudioAnalyzer((p) => {
+          gamgeConfig.phoneme = p;
+          console.log(p);
+        });
+        analyzer.setAudioAnalyzerForMediaStream(mediaStream);
+      } catch {}
+    }
+  }, []);
 
   const handleToggleBGM = () => {
     if (audioRef.current) {

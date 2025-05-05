@@ -61,6 +61,7 @@ export interface Store {
   config: Config;
   chapters: Chapter[];
   version: number;
+  phoneme: string | undefined;
 }
 
 export interface GameStatus {
@@ -88,6 +89,7 @@ export const gamgeConfig = proxy<Store>({
     },
   ],
   version: 1,
+  phoneme: "",
 });
 
 export const gameStatus = proxy<GameStatus>({
