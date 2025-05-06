@@ -25,7 +25,16 @@ const Avatar: React.FC<{
   faceUrl?: string;
   index: number;
   attention?: boolean;
-}> = ({ url, animationUrl, expression, faceUrl, index, attention }) => {
+  isTalking: boolean;
+}> = ({
+  url,
+  animationUrl,
+  expression,
+  faceUrl,
+  index,
+  attention,
+  isTalking,
+}) => {
   const { scene, camera } = useThree();
   const { cameraDirection } = useSnapshot(gameStatus);
   const { phoneme } = useSnapshot(gamgeConfig);
@@ -185,8 +194,10 @@ const Avatar: React.FC<{
     if (gltf.userData.vrm) {
       const vrm = gltf.userData.vrm as VRM;
       vrm.scene.position.set(positions[index], 0, 0);
+      vrm.scene.layers.set(1);
       scene.add(vrm.scene);
       vrm.scene.rotation.y = THREE.MathUtils.degToRad(rotation[index]);
+      console.log(vrm.scene.layers.mask.toString(2));
       setCurrentAnimation(null);
       setAvatar(vrm);
       if (attention) {
@@ -255,7 +266,9 @@ const Avatar: React.FC<{
 
   const phonemeRef = useRef<Phoneme | "nn" | undefined>(undefined);
   useEffect(() => {
-    phonemeRef.current = phoneme as Phoneme | "nn" | undefined;
+    if (isTalking) {
+      phonemeRef.current = phoneme as Phoneme | "nn" | undefined;
+    }
   }, [phoneme]);
   const weightsRef = useRef<Record<Phoneme, number>>({
     aa: 0,
@@ -332,7 +345,7 @@ export function loadMixamoAnimation(url: string, vrm: any) {
   const vrmHipsHeight = Math.abs(vrmHipsY - vrmRootY);
   const hipsPositionScale = vrmHipsHeight / motionHipsHeight;
 
-  clip.tracks.forEach((track) => {
+  clip!.tracks.forEach((track) => {
     // Convert each tracks for VRM use, and push to `tracks`
     const trackSplitted = track.name.split(".");
     const mixamoRigName = trackSplitted[0];
@@ -423,14 +436,14 @@ export function loadMixamoAnimation(url: string, vrm: any) {
         tracks.push(
           new THREE.QuaternionKeyframeTrack(
             `${vrmNodeName}.${propertyName}`,
-            track.times,
-            track.values.map((v, i) =>
+            Array.from(track.times),
+            Array.from(track.values).map((v, i) =>
               vrm.meta?.metaVersion === "0" && i % 2 === 0 ? -v : v
             )
           )
         );
       } else if (track instanceof THREE.VectorKeyframeTrack) {
-        const value = track.values.map(
+        const value = Array.from(track.values).map(
           (v, i) =>
             (vrm.meta?.metaVersion === "0" && i % 3 !== 1 ? -v : v) *
             hipsPositionScale
@@ -438,7 +451,7 @@ export function loadMixamoAnimation(url: string, vrm: any) {
         tracks.push(
           new THREE.VectorKeyframeTrack(
             `${vrmNodeName}.${propertyName}`,
-            track.times,
+            Array.from(track.times),
             value
           )
         );
@@ -446,7 +459,11 @@ export function loadMixamoAnimation(url: string, vrm: any) {
     }
   });
 
-  const result = new THREE.AnimationClip("vrmAnimation", clip.duration, tracks);
+  const result = new THREE.AnimationClip(
+    "vrmAnimation",
+    clip!.duration,
+    tracks
+  );
   animationClipCache.push({ key: url, value: result });
   return result;
 }

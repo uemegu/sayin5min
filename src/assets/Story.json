@@ -4,51 +4,63 @@
     "avatars": [
       {
         "key": "hoshina01",
-        "value": "./models/hoshina-01.vrm"
+        "value": "./models/hoshina-01.vrm",
+        "option": "星奈"
       },
       {
         "key": "hoshina02",
-        "value": "./models/hoshina-02.vrm"
+        "value": "./models/hoshina-02.vrm",
+        "option": "星奈"
       },
       {
         "key": "hoshina03",
-        "value": "./models/hoshina-03.vrm"
+        "value": "./models/hoshina-03.vrm",
+        "option": "星奈"
       },
       {
         "key": "aisa01",
-        "value": "./models/aisa-01.vrm"
+        "value": "./models/aisa-01.vrm",
+        "option": "葵紗"
       },
       {
         "key": "aisa02",
-        "value": "./models/aisa-02.vrm"
+        "value": "./models/aisa-02.vrm",
+        "option": "葵紗"
       },
       {
         "key": "aisa03",
-        "value": "./models/aisa-03.vrm"
+        "value": "./models/aisa-03.vrm",
+        "option": "5歳の葵紗"
       },
       {
         "key": "naruse01",
-        "value": "./models/naruse-01.vrm"
+        "value": "./models/naruse-01.vrm",
+        "option": "成瀬"
       },
       {
         "key": "naruse02",
-        "value": "./models/naruse-02.vrm"
+        "value": "./models/naruse-02.vrm",
+        "option": "成瀬"
       },
       {
         "key": "naruse03",
-        "value": "./models/naruse-03.vrm"
+        "value": "./models/naruse-03.vrm",
+        "option": "成瀬"
       },
       {
         "key": "shibukawa01",
-        "value": "./models/shibukawa-01.vrm"
+        "value": "./models/shibukawa-01.vrm",
+        "option": "渋川"
       },
       {
         "key": "sister01",
-        "value": "./models/sister-01.vrm"
+        "value": "./models/sister-01.vrm",
+        "option": "妹"
       },
       {
         "key": "aisa_futher-01",
-        "value": "./models/aisa_futher-01.vrm"
+        "value": "./models/aisa_futher-01.vrm",
+        "option": "葵紗の父"
       }
     ],
     "textures": [
@@ -225,116 +237,780 @@
         "value": "./voice/bibe.mp3"
       },
       {
-        "key": "えぇぇぇ",
-        "value": "./voice/voice_hoshina_1.mp3"
+        "key": "あ_いえいえ_いろんな場所を知れて楽しいです",
+        "value": "./voice/hoshina/hoshina_voice_1.wav"
       },
       {
-        "key": "私たちさっき会ったばかりですよね",
-        "value": "./voice/voice_hoshina_2.mp3"
+        "key": "あ_これなんかどうかな",
+        "value": "./voice/hoshina/hoshina_voice_2.wav"
       },
       {
-        "key": "あもしかして",
-        "value": "./voice/voice_hoshina_3.mp3"
+        "key": "あ_ごめんなさい",
+        "value": "./voice/hoshina/hoshina_voice_3.wav"
       },
       {
-        "key": "あはははは",
-        "value": "./voice/voice_hoshina_4.mp3"
+        "key": "あ_ごめんなさい_顔に出てたかな_やったことなくて興味がすごくあって",
+        "value": "./voice/hoshina/hoshina_voice_4.wav"
       },
       {
-        "key": "えっと",
-        "value": "./voice/voice_hoshina_5.mp3"
+        "key": "あ_もしかして",
+        "value": "./voice/hoshina/hoshina_voice_5.wav"
       },
       {
-        "key": "遅れました",
-        "value": "./voice/voice_hoshina_6.mp3"
+        "key": "あ_別にそういう目的で渋川さんを連れてきたわけじゃなくて_友達があまりいないので今日は渋川さんにお願",
+        "value": "./voice/hoshina/hoshina_voice_6.wav"
       },
       {
-        "key": "お腹ぺこぺこ",
-        "value": "./voice/voice_hoshina_7.mp3"
+        "key": "あはは_あなたはハクだね_で_前に会ったことありました",
+        "value": "./voice/hoshina/hoshina_voice_7.wav"
       },
       {
-        "key": "すみません",
-        "value": "./voice/voice_hoshina_8.mp3"
+        "key": "あまりお金がないので節約してて",
+        "value": "./voice/hoshina/hoshina_voice_8.wav"
       },
       {
-        "key": "わあ",
-        "value": "./voice/voice_hoshina_9.mp3"
+        "key": "あら____それは力の方_それとも心のほうかしら",
+        "value": "./voice/hoshina/hoshina_voice_9.wav"
       },
       {
-        "key": "やったー",
-        "value": "./voice/voice_hoshina_10.mp3"
+        "key": "ありがとう_よーしっ",
+        "value": "./voice/hoshina/hoshina_voice_10.wav"
       },
       {
-        "key": "告白してください",
-        "value": "./voice/voice_hoshina_11.mp3"
+        "key": "ありがとう_今日はとっても楽しかった_こんなの久しぶりで嬉しかったよ",
+        "value": "./voice/hoshina/hoshina_voice_11.wav"
       },
       {
-        "key": "あら、それは",
-        "value": "./voice/voice_hoshina_12.mp3"
+        "key": "ありがとうございます_だいぶ体調は良くなりました",
+        "value": "./voice/hoshina/hoshina_voice_12.wav"
+      },
+      {
+        "key": "いえ_初めてのお店なので楽しみです",
+        "value": "./voice/hoshina/hoshina_voice_13.wav"
+      },
+      {
+        "key": "うーん_そうね",
+        "value": "./voice/hoshina/hoshina_voice_14.wav"
+      },
+      {
+        "key": "えぇ____これでこの世界に来て２回目の時間移動です",
+        "value": "./voice/hoshina/hoshina_voice_15.wav"
+      },
+      {
+        "key": "えっ",
+        "value": "./voice/hoshina/hoshina_voice_16.wav"
+      },
+      {
+        "key": "えっと___一目惚れということでしょうか",
+        "value": "./voice/hoshina/hoshina_voice_17.wav"
+      },
+      {
+        "key": "お店の店長の渋川さんです",
+        "value": "./voice/hoshina/hoshina_voice_18.wav"
+      },
+      {
+        "key": "きゃーやったー_取れた",
+        "value": "./voice/hoshina/hoshina_voice_19.wav"
+      },
+      {
+        "key": "こういうところにはあまり来ないの",
+        "value": "./voice/hoshina/hoshina_voice_20.wav"
+      },
+      {
+        "key": "ここは神社ですか",
+        "value": "./voice/hoshina/hoshina_voice_21.wav"
+      },
+      {
+        "key": "この世界にもマナを感じれる人がいたのですね____はい_私は異世界から来ました",
+        "value": "./voice/hoshina/hoshina_voice_22.wav"
+      },
+      {
+        "key": "この前も出してもらったのに本当にすみません",
+        "value": "./voice/hoshina/hoshina_voice_23.wav"
+      },
+      {
+        "key": "これが欲しいかな",
+        "value": "./voice/hoshina/hoshina_voice_24.wav"
+      },
+      {
+        "key": "これは魔王の命をかけた呪い_それこそ神の力でも使わない限り無理だわ",
+        "value": "./voice/hoshina/hoshina_voice_25.wav"
+      },
+      {
+        "key": "ごめんなさい",
+        "value": "./voice/hoshina/hoshina_voice_26.wav"
+      },
+      {
+        "key": "すみません_嘘です",
+        "value": "./voice/hoshina/hoshina_voice_27.wav"
+      },
+      {
+        "key": "そうか____星の力と関係していたのか",
+        "value": "./voice/hoshina/hoshina_voice_28.wav"
+      },
+      {
+        "key": "そうですね_私もあなたからは近いものを感じます",
+        "value": "./voice/hoshina/hoshina_voice_29.wav"
+      },
+      {
+        "key": "その呪いにより私の中で魔力制御の暴走がたまに発生し_時間移動が発生するようになったようです",
+        "value": "./voice/hoshina/hoshina_voice_30.wav"
+      },
+      {
+        "key": "それだけではないのです_魔王は死ぬ間際に呪いを放ちました_そして私は運悪くその呪いを受けることになっ",
+        "value": "./voice/hoshina/hoshina_voice_31.wav"
+      },
+      {
+        "key": "どうしよう_どこか休める場所を探そう",
+        "value": "./voice/hoshina/hoshina_voice_32.wav"
+      },
+      {
+        "key": "どこかでお会いしてましたか",
+        "value": "./voice/hoshina/hoshina_voice_33.wav"
+      },
+      {
+        "key": "なぜ疑問系",
+        "value": "./voice/hoshina/hoshina_voice_34.wav"
+      },
+      {
+        "key": "なんという偶然か____いや_君からは神聖な力を感じる_必然なのかもしれない",
+        "value": "./voice/hoshina/hoshina_voice_35.wav"
+      },
+      {
+        "key": "はぁもうお腹ペコペコ_朝も何も食べてないし",
+        "value": "./voice/hoshina/hoshina_voice_36.wav"
+      },
+      {
+        "key": "ふぐぅ",
+        "value": "./voice/hoshina/hoshina_voice_37.wav"
       },
       {
         "key": "また会えたね",
-        "value": "./voice/voice_hoshina_13.mp3"
+        "value": "./voice/hoshina/hoshina_voice_38.wav"
       },
       {
-        "key": "おっす",
-        "value": "./voice/voice_naruse_1.mp3"
+        "key": "また時間を飛ぶのか___良いところだと良いのだが",
+        "value": "./voice/hoshina/hoshina_voice_39.wav"
       },
       {
-        "key": "ふむ",
-        "value": "./voice/voice_naruse_2.mp3"
+        "key": "やっほー_テストだよ",
+        "value": "./voice/hoshina/hoshina_voice_40.wav"
       },
       {
-        "key": "親友としては",
-        "value": "./voice/voice_naruse_3.mp3"
+        "key": "わぁ_美味しい",
+        "value": "./voice/hoshina/hoshina_voice_41.wav"
       },
       {
-        "key": "うむ",
-        "value": "./voice/voice_shibukawa_1.mp3"
+        "key": "わかりました___私の本当の名前はユア_ステラリア_この世界では星奈結愛と名乗っています",
+        "value": "./voice/hoshina/hoshina_voice_42.wav"
       },
       {
-        "key": "考え直すか",
-        "value": "./voice/voice_shibukawa_2.mp3"
+        "key": "アイティー会社って大変なのね",
+        "value": "./voice/hoshina/hoshina_voice_43.wav"
       },
       {
-        "key": "なになに",
-        "value": "./voice/voice_sister_1.mp3"
+        "key": "ストレス発散も大事だけど_ちゃんと計画的に使わないと",
+        "value": "./voice/hoshina/hoshina_voice_44.wav"
       },
       {
-        "key": "おっかえりー",
-        "value": "./voice/voice_sister_2.mp3"
+        "key": "今は西暦何年ですか",
+        "value": "./voice/hoshina/hoshina_voice_45.wav"
+      },
+      {
+        "key": "付き合ってもらったお礼_ありがとう",
+        "value": "./voice/hoshina/hoshina_voice_46.wav"
+      },
+      {
+        "key": "余裕のある生活はしてないかな_たまたま渋川さんと出会って働かせてもらって_それでなんとか",
+        "value": "./voice/hoshina/hoshina_voice_47.wav"
+      },
+      {
+        "key": "使い道に困ったらいつでもどうぞ",
+        "value": "./voice/hoshina/hoshina_voice_48.wav"
+      },
+      {
+        "key": "傭兵で文字通り世界中を飛び回って回ってたそうですよ",
+        "value": "./voice/hoshina/hoshina_voice_49.wav"
+      },
+      {
+        "key": "冗談_多分",
+        "value": "./voice/hoshina/hoshina_voice_50.wav"
+      },
+      {
+        "key": "力_借ります",
+        "value": "./voice/hoshina/hoshina_voice_51.wav"
+      },
+      {
+        "key": "加護____そうか_そういうことね_君が聞いていたあの子だったのね_それがあお川さんだったなんて",
+        "value": "./voice/hoshina/hoshina_voice_52.wav"
+      },
+      {
+        "key": "半年ぐらいですね",
+        "value": "./voice/hoshina/hoshina_voice_53.wav"
+      },
+      {
+        "key": "小さい頃あなたに助けられた____ある雨の日_足を滑らした私は川に溺れて____もうダメだと思ってい",
+        "value": "./voice/hoshina/hoshina_voice_54.wav"
+      },
+      {
+        "key": "年甲斐もなくはしゃいですみません",
+        "value": "./voice/hoshina/hoshina_voice_55.wav"
+      },
+      {
+        "key": "成瀬さんは_碧川さんと同期なんですか",
+        "value": "./voice/hoshina/hoshina_voice_56.wav"
+      },
+      {
+        "key": "新宿駅って迷路みたいで道を間違ったら大変だって渋川さんに言われたので早めに来たんだけど_幸い道は間違",
+        "value": "./voice/hoshina/hoshina_voice_57.wav"
+      },
+      {
+        "key": "本当にごめんなさい_今日はもう帰るね",
+        "value": "./voice/hoshina/hoshina_voice_58.wav"
+      },
+      {
+        "key": "本当に大丈夫だから_じゃあ",
+        "value": "./voice/hoshina/hoshina_voice_59.wav"
+      },
+      {
+        "key": "欲しいけど_お金に余裕がなくて",
+        "value": "./voice/hoshina/hoshina_voice_60.wav"
+      },
+      {
+        "key": "渋川さんはモテるんですよ",
+        "value": "./voice/hoshina/hoshina_voice_61.wav"
+      },
+      {
+        "key": "知ってる_一キロ以上離れると銃声より先に銃弾が来るらしいよ",
+        "value": "./voice/hoshina/hoshina_voice_62.wav"
+      },
+      {
+        "key": "私たち_さっき会ったばかりですよね",
+        "value": "./voice/hoshina/hoshina_voice_63.wav"
+      },
+      {
+        "key": "私たちは長い旅を経て_仲間たちと共に魔王を討伐できました_しかし_魔王の消滅間際に放出された強い魔力",
+        "value": "./voice/hoshina/hoshina_voice_64.wav"
+      },
+      {
+        "key": "私ですか_つよいに越したことはないと思いますけど_あまり考えたことないですね____あ_私に敬語はい",
+        "value": "./voice/hoshina/hoshina_voice_65.wav"
+      },
+      {
+        "key": "私はこことは異なる世界で神官をしていました_この身を神に捧げ_そして魔王を討伐するために勇者と行動を",
+        "value": "./voice/hoshina/hoshina_voice_66.wav"
+      },
+      {
+        "key": "私を見たら告白をしてください_そして_私はここであなたを待っています",
+        "value": "./voice/hoshina/hoshina_voice_67.wav"
+      },
+      {
+        "key": "突然でどうしたら良いのかわからないのですが_とりあえずお友達からで",
+        "value": "./voice/hoshina/hoshina_voice_68.wav"
+      },
+      {
+        "key": "遅れました",
+        "value": "./voice/hoshina/hoshina_voice_69.wav"
+      },
+      {
+        "key": "碧川___ゆーと____君は_碧川悠斗というの",
+        "value": "./voice/hoshina/hoshina_voice_70.wav"
+      },
+      {
+        "key": "碧川悠斗",
+        "value": "./voice/hoshina/hoshina_voice_71.wav"
+      },
+      {
+        "key": "いや_初デートの計画にそんなもんいらんだろ___そもそもお前_類似案件あんのか",
+        "value": "./voice/naruse/naruse_voice_1.wav"
+      },
+      {
+        "key": "お前がそんなに面白い奴だとは思わなかった",
+        "value": "./voice/naruse/naruse_voice_2.wav"
+      },
+      {
+        "key": "お前は真面目だもんなぁ_いっそのことプロジェクトだと思って取り組めば",
+        "value": "./voice/naruse/naruse_voice_3.wav"
+      },
+      {
+        "key": "お疲れさん_ところで_今日は進捗定例があるが準備大丈夫か",
+        "value": "./voice/naruse/naruse_voice_4.wav"
+      },
+      {
+        "key": "こちらデルタ_ターゲットが出現した",
+        "value": "./voice/naruse/naruse_voice_5.wav"
+      },
+      {
+        "key": "じゃ_俺はここで_また会社でな",
+        "value": "./voice/naruse/naruse_voice_6.wav"
+      },
+      {
+        "key": "ぜったい類似してねぇから_それ",
+        "value": "./voice/naruse/naruse_voice_7.wav"
+      },
+      {
+        "key": "そいつはプロジェクトリスクだな_ひる飯一緒に食おうぜ",
+        "value": "./voice/naruse/naruse_voice_8.wav"
+      },
+      {
+        "key": "それならそれで安否がわかって良いだろ",
+        "value": "./voice/naruse/naruse_voice_9.wav"
+      },
+      {
+        "key": "そろそろ会う約束でもしたらどうだ",
+        "value": "./voice/naruse/naruse_voice_10.wav"
+      },
+      {
+        "key": "そんなに緊張はしてなさどうだな",
+        "value": "./voice/naruse/naruse_voice_11.wav"
+      },
+      {
+        "key": "てへぺろっ",
+        "value": "./voice/naruse/naruse_voice_12.wav"
+      },
+      {
+        "key": "というか_お前ずっと硬い口調でやり取り続けてたの",
+        "value": "./voice/naruse/naruse_voice_13.wav"
+      },
+      {
+        "key": "どうした_デートでやらかしたのか",
+        "value": "./voice/naruse/naruse_voice_14.wav"
+      },
+      {
+        "key": "どうせ仕事も手がつかないんだろ_早退して渋川さんのお店に行ってみたらどうだ",
+        "value": "./voice/naruse/naruse_voice_15.wav"
+      },
+      {
+        "key": "どこ行くか決まったらレビューさせてくれ_じゃあな",
+        "value": "./voice/naruse/naruse_voice_16.wav"
+      },
+      {
+        "key": "まあいきなりだと警戒しますよね_お前_生きてて良かったな_明日生きてるかは今日の結果次第だけど",
+        "value": "./voice/naruse/naruse_voice_17.wav"
+      },
+      {
+        "key": "まあ恋愛関係は独特の雰囲気ってものがあるのさ_俺じゃなきゃ見逃しちゃうけどね",
+        "value": "./voice/naruse/naruse_voice_18.wav"
+      },
+      {
+        "key": "もっともだな",
+        "value": "./voice/naruse/naruse_voice_19.wav"
+      },
+      {
+        "key": "やっぱり筋肉か____筋肉が全てなのか",
+        "value": "./voice/naruse/naruse_voice_20.wav"
+      },
+      {
+        "key": "アホか_お互い友達を連れてきた方が会いやすいだろ_お前が一目惚れした人がどんな人か気になるしな",
+        "value": "./voice/naruse/naruse_voice_21.wav"
+      },
+      {
+        "key": "タイムリープじゃないぞ",
+        "value": "./voice/naruse/naruse_voice_22.wav"
+      },
+      {
+        "key": "了解_引き続き監視を続ける",
+        "value": "./voice/naruse/naruse_voice_23.wav"
+      },
+      {
+        "key": "今日はどしたん_めっちゃ辛そうじゃん",
+        "value": "./voice/naruse/naruse_voice_24.wav"
+      },
+      {
+        "key": "俺にそんな便利な機能はねぇ",
+        "value": "./voice/naruse/naruse_voice_25.wav"
+      },
+      {
+        "key": "俺も付き合うから",
+        "value": "./voice/naruse/naruse_voice_26.wav"
+      },
+      {
+        "key": "別に悪い印象はないだろうし_次は二人でのデートに誘ってみろよ",
+        "value": "./voice/naruse/naruse_voice_27.wav"
+      },
+      {
+        "key": "別に悪くないから_送っちまえ",
+        "value": "./voice/naruse/naruse_voice_28.wav"
+      },
+      {
+        "key": "卑屈すぎるだろ",
+        "value": "./voice/naruse/naruse_voice_29.wav"
+      },
+      {
+        "key": "恋の悩みか",
+        "value": "./voice/naruse/naruse_voice_30.wav"
+      },
+      {
+        "key": "星奈さん_めちゃ可愛いな",
+        "value": "./voice/naruse/naruse_voice_31.wav"
+      },
+      {
+        "key": "星奈さんとはちゃんと連絡とってるか",
+        "value": "./voice/naruse/naruse_voice_32.wav"
+      },
+      {
+        "key": "星奈さんはマッチョが好きですか",
+        "value": "./voice/naruse/naruse_voice_33.wav"
+      },
+      {
+        "key": "渋川さん_謎だな",
+        "value": "./voice/naruse/naruse_voice_34.wav"
+      },
+      {
+        "key": "相手は見ず知らずのお前に付き合ってくれるんだ_相手が会話に疲れないようにしろ_無難な話題_質問から初",
+        "value": "./voice/naruse/naruse_voice_35.wav"
+      },
+      {
+        "key": "相手も突然だしな_とりあえず普通に自己紹介だろ_自分のことを知ってもらわないと",
+        "value": "./voice/naruse/naruse_voice_36.wav"
+      },
+      {
+        "key": "碧川は真面目で色恋の話はまったく聞いたことなかったんで驚きましたよ_いきなり告白してきたんでしょ",
+        "value": "./voice/naruse/naruse_voice_37.wav"
+      },
+      {
+        "key": "良かった_じゃあデートはどこ行くかは決まった",
+        "value": "./voice/naruse/naruse_voice_38.wav"
+      },
+      {
+        "key": "色々突っ込む点はあるが_とりあえずその子に連絡しなきゃな_今のままじゃ業務連絡をしただけだ",
+        "value": "./voice/naruse/naruse_voice_39.wav"
+      },
+      {
+        "key": "親友としては恋を応援したいんだけどねぇ",
+        "value": "./voice/naruse/naruse_voice_40.wav"
+      },
+      {
+        "key": "連絡取れないほど体調が悪い",
+        "value": "./voice/naruse/naruse_voice_41.wav"
+      },
+      {
+        "key": "渋川さんには聞いてみたか",
+        "value": "./voice/naruse/naruse_voice_42.wav"
+      },
+      {
+        "key": "うむ_店の中から飛び出すべきか迷っていたぞ",
+        "value": "./voice/shibukawa/shibukawa_voice_1.wav"
+      },
+      {
+        "key": "この場で動くバカはおらんだろう_適当に切り上げるぞ",
+        "value": "./voice/shibukawa/shibukawa_voice_2.wav"
+      },
+      {
+        "key": "そうか",
+        "value": "./voice/shibukawa/shibukawa_voice_3.wav"
+      },
+      {
+        "key": "そうか___戻ってきたか",
+        "value": "./voice/shibukawa/shibukawa_voice_4.wav"
+      },
+      {
+        "key": "ちょっと外に出ようか",
+        "value": "./voice/shibukawa/shibukawa_voice_5.wav"
+      },
+      {
+        "key": "まあ当然だろうな",
+        "value": "./voice/shibukawa/shibukawa_voice_6.wav"
+      },
+      {
+        "key": "何かわかったら君にも連絡する_連絡先を交換しておこう",
+        "value": "./voice/shibukawa/shibukawa_voice_7.wav"
+      },
+      {
+        "key": "俺も星奈くんとは連絡は取れない_今日も出勤予定だったが来ていない",
+        "value": "./voice/shibukawa/shibukawa_voice_8.wav"
+      },
+      {
+        "key": "帰ってコンビニのシフト表を考え直すかな",
+        "value": "./voice/shibukawa/shibukawa_voice_9.wav"
+      },
+      {
+        "key": "急にいなくなるかもしれないというは星奈くんからは言われていた",
+        "value": "./voice/shibukawa/shibukawa_voice_10.wav"
+      },
+      {
+        "key": "教えてはくれなかったな",
+        "value": "./voice/shibukawa/shibukawa_voice_11.wav"
+      },
+      {
+        "key": "昔はいろいろやっていたが_今では趣味でトレーニングをしているだけだな",
+        "value": "./voice/shibukawa/shibukawa_voice_12.wav"
+      },
+      {
+        "key": "星奈くんが来てから客が増えた気がするな_たまに悪い虫がいるので駆除しておるが",
+        "value": "./voice/shibukawa/shibukawa_voice_13.wav"
+      },
+      {
+        "key": "星奈くんの人の見る目は確かなので心配しておらん_今日は友人として参加させてもらっておる",
+        "value": "./voice/shibukawa/shibukawa_voice_14.wav"
+      },
+      {
+        "key": "星奈くんはどんな様子だった_会ってたんだろ",
+        "value": "./voice/shibukawa/shibukawa_voice_15.wav"
+      },
+      {
+        "key": "確かに筋肉は嘘をつかんな",
+        "value": "./voice/shibukawa/shibukawa_voice_16.wav"
+      },
+      {
+        "key": "あ_同じ服を着ている人がいる_綺麗な人だね",
+        "value": "./voice/sister/sister_voice_1.wav"
+      },
+      {
+        "key": "あー_あれはアオサちゃんの家にあったやつ_昔_アオサちゃんのところにいた巫女さんのお古なんだって",
+        "value": "./voice/sister/sister_voice_2.wav"
+      },
+      {
+        "key": "うひょー_ありがとう_ふむふむ____おー_お兄ちゃんセンスいいじゃん",
+        "value": "./voice/sister/sister_voice_3.wav"
+      },
+      {
+        "key": "え_ちょっと",
+        "value": "./voice/sister/sister_voice_4.wav"
+      },
+      {
+        "key": "えー_これ_これはアオサちゃんのだよー_いまアオサちゃんの部屋にいるのー",
+        "value": "./voice/sister/sister_voice_5.wav"
+      },
+      {
+        "key": "おー_おかえりお兄ちゃん",
+        "value": "./voice/sister/sister_voice_6.wav"
+      },
+      {
+        "key": "お兄ちゃん_アオサちゃんと結構仲良かったんだね_いっぱい写真がある",
+        "value": "./voice/sister/sister_voice_7.wav"
+      },
+      {
+        "key": "じゃあ____なんで帰ってきたの",
+        "value": "./voice/sister/sister_voice_8.wav"
+      },
+      {
+        "key": "そういやそうだね_お兄ちゃんも会ったことある人だって言ってたよ",
+        "value": "./voice/sister/sister_voice_9.wav"
+      },
+      {
+        "key": "なになにー_ぷりちーしすたーの声が聞きたくなった",
+        "value": "./voice/sister/sister_voice_10.wav"
+      },
+      {
+        "key": "ほーい____嫌だって",
+        "value": "./voice/sister/sister_voice_11.wav"
+      },
+      {
+        "key": "んで_アルバム見たら写真あるかもってアオサちゃん言ってたからアルバム漁って見てたんだよねー",
+        "value": "./voice/sister/sister_voice_12.wav"
+      },
+      {
+        "key": "んー_大学帰りにばったり会って_久しぶりーってなってアオサちゃんの家にお邪魔してた",
+        "value": "./voice/sister/sister_voice_13.wav"
+      },
+      {
+        "key": "プレゼントは",
+        "value": "./voice/sister/sister_voice_14.wav"
+      },
+      {
+        "key": "聞きたいことがあれば会いに来たらー_というか_プレゼント買ってくれた",
+        "value": "./voice/sister/sister_voice_15.wav"
+      },
+      {
+        "key": "あなたはこの世界の住人ではないですね",
+        "value": "./voice/chichi/chichi_voice_1.wav"
+      },
+      {
+        "key": "うん_そうだろうね",
+        "value": "./voice/chichi/chichi_voice_2.wav"
+      },
+      {
+        "key": "お話を伺っても",
+        "value": "./voice/chichi/chichi_voice_3.wav"
+      },
+      {
+        "key": "く____これは手強いな____遅らせることで精一杯かもしれない",
+        "value": "./voice/chichi/chichi_voice_4.wav"
+      },
+      {
+        "key": "くっ____青川くんの加護でも力が足りない",
+        "value": "./voice/chichi/chichi_voice_5.wav"
+      },
+      {
+        "key": "ここまでが私が星奈くんと出会ったときのこと_次は青川くんのことだ",
+        "value": "./voice/chichi/chichi_voice_6.wav"
+      },
+      {
+        "key": "じゃあ流れ星を見るってお父さんとお母さんに連絡するね",
+        "value": "./voice/chichi/chichi_voice_7.wav"
+      },
+      {
+        "key": "そうか____青川くん_星奈くんが無事なことを祈ってくれ_どこにも行かないようにと",
+        "value": "./voice/chichi/chichi_voice_8.wav"
+      },
+      {
+        "key": "そうなるようになっていたからね",
+        "value": "./voice/chichi/chichi_voice_9.wav"
+      },
+      {
+        "key": "そうなんだ_よく知ってるね",
+        "value": "./voice/chichi/chichi_voice_10.wav"
+      },
+      {
+        "key": "その言葉通り_あなたは世界改変ができるほど強力な加護を持っていた",
+        "value": "./voice/chichi/chichi_voice_11.wav"
+      },
+      {
+        "key": "それはよかった_どうぞゆっくりしていってください",
+        "value": "./voice/chichi/chichi_voice_12.wav"
+      },
+      {
+        "key": "なるほど_あなたも神職だったのですね_どおりで私と近いものを感じると思いました",
+        "value": "./voice/chichi/chichi_voice_13.wav"
+      },
+      {
+        "key": "なんと_それでこの世界に",
+        "value": "./voice/chichi/chichi_voice_14.wav"
+      },
+      {
+        "key": "はい_そうです",
+        "value": "./voice/chichi/chichi_voice_15.wav"
+      },
+      {
+        "key": "まあ神様もいろいろだよ____だが君の力は強く_願ったことが叶う力を持っていた",
+        "value": "./voice/chichi/chichi_voice_16.wav"
+      },
+      {
+        "key": "君はきっと前世でとっても素晴らしいことをしたんだろうね_君には神が宿っている",
+        "value": "./voice/chichi/chichi_voice_17.wav"
+      },
+      {
+        "key": "君自身は神ではないよ_普通の人間だ_だが君には神の加護がついている_正確にはこのあたりの土地神さまだ",
+        "value": "./voice/chichi/chichi_voice_18.wav"
+      },
+      {
+        "key": "告白したかい",
+        "value": "./voice/chichi/chichi_voice_19.wav"
+      },
+      {
+        "key": "境内を見てみると良い",
+        "value": "./voice/chichi/chichi_voice_20.wav"
+      },
+      {
+        "key": "大丈夫ですか",
+        "value": "./voice/chichi/chichi_voice_21.wav"
+      },
+      {
+        "key": "星奈くんに会ったんだよね",
+        "value": "./voice/chichi/chichi_voice_22.wav"
+      },
+      {
+        "key": "星奈くんのことを知りたいんだよね",
+        "value": "./voice/chichi/chichi_voice_23.wav"
+      },
+      {
+        "key": "星奈くんは異世界から来た住人だ_そして時間移動をしている",
+        "value": "./voice/chichi/chichi_voice_24.wav"
+      },
+      {
+        "key": "止めてみせる_アオサ_手伝いなさい",
+        "value": "./voice/chichi/chichi_voice_25.wav"
+      },
+      {
+        "key": "無事_フラグは回収されたようだし_説明をしよう",
+        "value": "./voice/chichi/chichi_voice_26.wav"
+      },
+      {
+        "key": "異世界に来るだけでもお辛いのに_さらに時間まで変わる___ということはすでに何度か",
+        "value": "./voice/chichi/chichi_voice_27.wav"
+      },
+      {
+        "key": "神様もやりすぎたと後で思ったのかね_我々にお願いしてきたというわけだ",
+        "value": "./voice/chichi/chichi_voice_28.wav"
+      },
+      {
+        "key": "私は神に使える身_いろいろと経験がありまして____あなたからはこの世界の人とは違う力を感じる",
+        "value": "./voice/chichi/chichi_voice_29.wav"
+      },
+      {
+        "key": "私もアオサも_あるとき神託を受けてね_この神社は君のためにあるといっても過言ではない",
+        "value": "./voice/chichi/chichi_voice_30.wav"
+      },
+      {
+        "key": "青川くん_久しぶりだね",
+        "value": "./voice/chichi/chichi_voice_31.wav"
+      },
+      {
+        "key": "青川くん_君には神が宿っている",
+        "value": "./voice/chichi/chichi_voice_32.wav"
+      },
+      {
+        "key": "順を追って説明しよう",
+        "value": "./voice/chichi/chichi_voice_33.wav"
+      },
+      {
+        "key": "あ_せっかく冷蔵庫で冷やしてきたのに_走ったら暑くなってきた",
+        "value": "./voice/aosa/aosa_voice_1.wav"
+      },
+      {
+        "key": "あなたの加護は強すぎた_あなたが望めば世界はその通りになる",
+        "value": "./voice/aosa/aosa_voice_2.wav"
+      },
+      {
+        "key": "いいわね_みんなで見ましょう",
+        "value": "./voice/aosa/aosa_voice_3.wav"
+      },
+      {
+        "key": "お父さん_もう持たないよ",
+        "value": "./voice/aosa/aosa_voice_4.wav"
+      },
+      {
+        "key": "これが私の地_あなたのためじゃない",
+        "value": "./voice/aosa/aosa_voice_5.wav"
+      },
+      {
+        "key": "さて_泥棒猫さん_持って行ったものを返してもらうわよ",
+        "value": "./voice/aosa/aosa_voice_6.wav"
+      },
+      {
+        "key": "そう",
+        "value": "./voice/aosa/aosa_voice_7.wav"
+      },
+      {
+        "key": "だが強すぎる力は災いを呼ぶ_私たちはあなたを災いから守るためにいる",
+        "value": "./voice/aosa/aosa_voice_8.wav"
+      },
+      {
+        "key": "もう無理_あと５秒が限界",
+        "value": "./voice/aosa/aosa_voice_9.wav"
+      },
+      {
+        "key": "今はその力は弱くなっている_それが星奈さんとの繋がり",
+        "value": "./voice/aosa/aosa_voice_10.wav"
+      },
+      {
+        "key": "全部よ_いい加減離れなさいよ",
+        "value": "./voice/aosa/aosa_voice_11.wav"
+      },
+      {
+        "key": "君に星奈さんがここにいると確信されるため_力は弱まっているとはいえ_ゼロにはなっていない",
+        "value": "./voice/aosa/aosa_voice_12.wav"
+      },
+      {
+        "key": "彼女は２５年前_ここで働いていた",
+        "value": "./voice/aosa/aosa_voice_13.wav"
       },
       {
         "key": "知ってる",
-        "value": "./voice/voice_aisa_1.mp3"
+        "value": "./voice/aosa/aosa_voice_14.wav"
       },
       {
-        "key": "あなたのためじゃない",
-        "value": "./voice/voice_aisa_2.mp3"
+        "key": "ゆうとくんはどんな子が好きなの",
+        "value": "./voice/aosa/aosa_voice_15.wav"
       },
       {
-        "key": "もう持たないよ",
-        "value": "./voice/voice_aisa_3.mp3"
+        "key": "わかった、くーるびゅーてぃーね！ちょっと体温下げてくる！",
+        "value": "./voice/aosa/aosa_voice_16.wav"
       },
       {
         "key": "ごほん",
-        "value": "./voice/voice_aisa_4.mp3"
-      },
-      {
-        "key": "泥棒猫",
-        "value": "./voice/voice_aisa_5.mp3"
-      },
-      {
-        "key": "離れなさいよ",
-        "value": "./voice/voice_aisa_6.mp3"
-      },
-      {
-        "key": "久しぶりだね",
-        "value": "./voice/voice_aisa_father_1.mp3"
-      },
-      {
-        "key": "大丈夫ですか",
-        "value": "./voice/voice_aisa_father_2.mp3"
+        "value": "./voice/aosa/aosa_voice_17.wav"
       }
     ]
   },
@@ -382,8 +1058,8 @@
           "location": "公園",
           "bgm": "main",
           "background": "park",
-          "text": "えっ・・・？",
-          "voice": "えぇぇぇ"
+          "text": "「えっ・・・？」",
+          "voice": "えっ"
         },
         {
           "avatars": [
@@ -397,8 +1073,8 @@
           "location": "公園",
           "bgm": "main",
           "background": "park",
-          "text": "私たち、さっき会ったばかりですよね・・・？",
-          "voice": "私たちさっき会ったばかりですよね"
+          "text": "「私たち、さっき会ったばかりですよね・・・？」",
+          "voice": "私たち_さっき会ったばかりですよね"
         },
         {
           "avatars": [
@@ -434,7 +1110,8 @@
           "location": "公園",
           "bgm": "main",
           "background": "park",
-          "text": "どこかでお会いしてましたか・・・？"
+          "text": "「どこかでお会いしてましたか・・・？」",
+          "voice": "どこかでお会いしてましたか"
         },
         {
           "avatars": [
@@ -471,8 +1148,8 @@
           "location": "公園",
           "bgm": "main",
           "background": "park",
-          "text": "あ、もしかして！",
-          "voice": "あもしかして"
+          "text": "「あ、もしかして！」",
+          "voice": "あ_もしかして"
         },
         {
           "avatars": [
@@ -486,7 +1163,8 @@
           "location": "公園",
           "bgm": "main",
           "background": "park",
-          "text": "小さい頃あなたに助けられた・・・。ある雨の日、足を滑らした私は川に溺れて・・・。もうダメだと思っていたところ、あなたに力強く引っ張られた・・・。"
+          "text": "「小さい頃あなたに助けられた・・・。ある雨の日、足を滑らした私は川に溺れて・・・。もうダメだと思っていたところ、あなたに力強く引っ張られた・・・。」",
+          "voice": "小さい頃あなたに助けられた____ある雨の日_足を滑らした私は川に溺れて____もうダメだと思ってい"
         },
         {
           "avatars": [
@@ -525,8 +1203,8 @@
           "location": "公園",
           "bgm": "main",
           "background": "park",
-          "text": "あはは、あなたはハクだね。で、前に会ったことありました？",
-          "voice": "あはははは"
+          "text": "「あはは、あなたはハクだね。で、前に会ったことありました？」",
+          "voice": "あはは_あなたはハクだね_で_前に会ったことありました"
         },
         {
           "conditions": ["2"],
@@ -541,7 +1219,8 @@
           "location": "公園",
           "bgm": "main",
           "background": "park",
-          "text": "すみません、嘘です・・・"
+          "text": "「すみません、嘘です・・・」",
+          "voice": "すみません_嘘です"
         },
         {
           "avatars": [
@@ -574,8 +1253,8 @@
           "location": "公園",
           "bgm": "main",
           "background": "park",
-          "text": "えっと・・・一目惚れということでしょうか・・・？",
-          "voice": "えっと"
+          "text": "「えっと・・・一目惚れということでしょうか・・・？」",
+          "voice": "えっと___一目惚れということでしょうか"
         },
         {
           "avatars": [
@@ -630,7 +1309,8 @@
           "location": "公園",
           "bgm": "main",
           "background": "park",
-          "text": "なぜ疑問系・・・？"
+          "text": "「なぜ疑問系・・・？」",
+          "voice": "なぜ疑問系"
         },
         {
           "avatars": [
@@ -644,7 +1324,8 @@
           "location": "公園",
           "bgm": "main",
           "background": "park",
-          "text": "・・・突然でどうしたら良いのかわからないのですが、とりあえずお友達からで。"
+          "text": "「・・・突然でどうしたら良いのかわからないのですが、とりあえずお友達からで。」",
+          "voice": "突然でどうしたら良いのかわからないのですが_とりあえずお友達からで"
         },
         {
           "avatars": [
@@ -919,7 +1600,7 @@
           "bgm": "normal",
           "background": "office",
           "text": "「今日はどしたん？めっちゃ辛そうじゃん」",
-          "voice": "おっす"
+          "voice": "今日はどしたん_めっちゃ辛そうじゃん"
         },
         {
           "avatars": [
@@ -975,7 +1656,8 @@
           "location": "オフィス",
           "bgm": "normal",
           "background": "office",
-          "text": "成瀬「恋の悩みか？」"
+          "text": "成瀬「恋の悩みか？」",
+          "voice": "恋の悩みか"
         },
         {
           "avatars": [
@@ -1018,7 +1700,8 @@
           "location": "オフィス",
           "bgm": "normal",
           "background": "office",
-          "text": "成瀬「てへぺろっ」"
+          "text": "成瀬「てへぺろっ」",
+          "voice": "てへぺろっ"
         },
         {
           "avatars": [
@@ -1033,7 +1716,8 @@
           "location": "オフィス",
           "bgm": "normal",
           "background": "office",
-          "text": "成瀬「まあ恋愛関係は独特の雰囲気ってものがあるのさ。俺じゃなきゃ見逃しちゃうけどね」"
+          "text": "成瀬「まあ恋愛関係は独特の雰囲気ってものがあるのさ。俺じゃなきゃ見逃しちゃうけどね」",
+          "voice": "まあ恋愛関係は独特の雰囲気ってものがあるのさ_俺じゃなきゃ見逃しちゃうけどね"
         },
         {
           "avatars": [
@@ -1061,7 +1745,8 @@
           "location": "オフィス",
           "bgm": "normal",
           "background": "office",
-          "text": "成瀬「そいつはプロジェクトリスクだな。昼飯一緒に食おうぜ」"
+          "text": "成瀬「そいつはプロジェクトリスクだな。昼飯一緒に食おうぜ」",
+          "voice": "そいつはプロジェクトリスクだな_ひる飯一緒に食おうぜ"
         },
         {
           "avatars": [
@@ -1089,7 +1774,8 @@
           "location": "食堂",
           "bgm": "normal",
           "background": "dining",
-          "text": "成瀬「お前がそんなに面白い奴だとは思わなかった」"
+          "text": "成瀬「お前がそんなに面白い奴だとは思わなかった」",
+          "voice": "お前がそんなに面白い奴だとは思わなかった"
         },
         {
           "avatars": [
@@ -1103,7 +1789,8 @@
           "location": "食堂",
           "bgm": "normal",
           "background": "dining",
-          "text": "成瀬「色々突っ込む点はあるが、とりあえずその子に連絡しなきゃな。今のままじゃ業務連絡をしただけだ」"
+          "text": "成瀬「色々突っ込む点はあるが、とりあえずその子に連絡しなきゃな。今のままじゃ業務連絡をしただけだ」",
+          "voice": "色々突っ込む点はあるが_とりあえずその子に連絡しなきゃな_今のままじゃ業務連絡をしただけだ"
         },
         {
           "avatars": [
@@ -1145,7 +1832,7 @@
           "location": "食堂",
           "bgm": "normal",
           "background": "dining",
-          "voice": "ふむ",
+          "voice": "相手も突然だしな_とりあえず普通に自己紹介だろ_自分のことを知ってもらわないと",
           "text": "成瀬「相手も突然だしな。とりあえず普通に自己紹介だろ。自分のことを知ってもらわないと」"
         },
         {
@@ -1174,6 +1861,7 @@
           "location": "食堂",
           "bgm": "normal",
           "background": "dining",
+          "voice": "相手は見ず知らずのお前に付き合ってくれるんだ_相手が会話に疲れないようにしろ_無難な話題_質問から初",
           "text": "成瀬「相手は見ず知らずのお前に付き合ってくれるんだ。相手が会話に疲れないようにしろ。無難な話題、質問から初めて興味のある話題を探せ」"
         },
         {
@@ -1216,6 +1904,7 @@
           "location": "食堂",
           "bgm": "normal",
           "background": "dining",
+          "voice": "別に悪くないから_送っちまえ",
           "text": "成瀬「別に悪くないから、送っちまえ」"
         },
         {
@@ -1272,6 +1961,7 @@
           "location": "食堂",
           "bgm": "normal",
           "background": "dining",
+          "voice": "お疲れさん_ところで_今日は進捗定例があるが準備大丈夫か",
           "text": "成瀬「お疲れさん。ところで、今日は進捗定例があるが準備大丈夫か？」"
         },
         {
@@ -1449,7 +2139,7 @@
           "location": "食堂",
           "bgm": "normal",
           "background": "dining",
-          "voice": "ふむ",
+          "voice": "そろそろ会う約束でもしたらどうだ",
           "text": "成瀬「そろそろ会う約束でもしたらどうだ？」"
         },
         {
@@ -1493,7 +2183,7 @@
           "location": "食堂",
           "bgm": "normal",
           "background": "dining",
-          "voice": "ふむ",
+          "voice": "もっともだな",
           "text": "成瀬「もっともだな」"
         },
         {
@@ -1522,6 +2212,7 @@
           "location": "食堂",
           "bgm": "normal",
           "background": "dining",
+          "voice": "俺も付き合うから",
           "text": "成瀬「俺も付き合うから」"
         },
         {
@@ -1558,6 +2249,7 @@
           "location": "食堂",
           "bgm": "normal",
           "background": "dining",
+          "voice": "アホか_お互い友達を連れてきた方が会いやすいだろ_お前が一目惚れした人がどんな人か気になるしな",
           "text": "成瀬「アホか！お互い友達を連れてきた方が会いやすいだろ。お前が一目惚れした人がどんな人か気になるしな」"
         },
         {
@@ -1586,6 +2278,7 @@
           "location": "食堂",
           "bgm": "normal",
           "background": "dining",
+          "voice": "卑屈すぎるだろ",
           "text": "成瀬「卑屈すぎるだろ・・・」"
         },
         {
@@ -1691,7 +2384,7 @@
           "location": "ホテルロビー",
           "bgm": "normal2",
           "background": "lobby",
-          "voice": "ふむ",
+          "voice": "そんなに緊張はしてなさどうだな",
           "text": "成瀬「そんなに緊張はしてなさどうだな」"
         },
         {
@@ -1890,6 +2583,7 @@
           "location": "ホテルロビー",
           "bgm": "normal2",
           "background": "lobby",
+          "voice": "いえ_初めてのお店なので楽しみです",
           "text": "星奈「いえ、初めてのお店なので楽しみです」"
         },
         {
@@ -1914,6 +2608,7 @@
           "location": "ホテルロビー",
           "bgm": "normal2",
           "background": "lobby",
+          "voice": "お店の店長の渋川さんです",
           "text": "星奈「お店の店長の渋川さんです」"
         },
         {
@@ -1986,7 +2681,7 @@
           "location": "ホテルロビー",
           "bgm": "normal2",
           "background": "lobby",
-          "voice": "うむ",
+          "voice": "昔はいろいろやっていたが_今では趣味でトレーニングをしているだけだな",
           "text": "渋川「昔はいろいろやっていたが、今では趣味でトレーニングをしているだけだな」"
         },
         {
@@ -2012,6 +2707,7 @@
           "location": "ホテルロビー",
           "bgm": "normal2",
           "background": "lobby",
+          "voice": "傭兵で文字通り世界中を飛び回って回ってたそうですよ",
           "text": "星奈「傭兵で文字通り世界中を飛び回って回ってたそうですよ」"
         },
         {
@@ -2181,7 +2877,7 @@
           "location": "レストラン",
           "bgm": "normal2",
           "background": "restaurant",
-          "voice": "えっと",
+          "voice": "成瀬さんは_碧川さんと同期なんですか",
           "text": "星奈「成瀬さんは碧川さんと同期なんですか？」"
         },
         {
@@ -2231,6 +2927,7 @@
           "location": "レストラン",
           "bgm": "normal2",
           "background": "restaurant",
+          "voice": "碧川は真面目で色恋の話はまったく聞いたことなかったんで驚きましたよ_いきなり告白してきたんでしょ",
           "text": "成瀬「碧川は真面目で色恋の話はまったく聞いたことなかったんで驚きましたよ。いきなり告白してきたんでしょ？」"
         },
         {
@@ -2256,7 +2953,7 @@
           "location": "レストラン",
           "bgm": "normal2",
           "background": "restaurant",
-          "voice": "うむ",
+          "voice": "うむ_店の中から飛び出すべきか迷っていたぞ",
           "text": "渋川「うむ、店の中から飛び出すべきか迷っていたぞ」"
         },
         {
@@ -2338,7 +3035,7 @@
           "location": "レストラン",
           "bgm": "normal2",
           "background": "restaurant",
-          "voice": "ふむ",
+          "voice": "まあいきなりだと警戒しますよね_お前_生きてて良かったな_明日生きてるかは今日の結果次第だけど",
           "text": "成瀬「まあいきなりだと警戒しますよね。お前、生きてて良かったな。明日生きてるかは今日の結果次第だけど」"
         },
         {
@@ -2364,6 +3061,7 @@
           "location": "レストラン",
           "bgm": "normal2",
           "background": "restaurant",
+          "voice": "あ_別にそういう目的で渋川さんを連れてきたわけじゃなくて_友達があまりいないので今日は渋川さんにお願",
           "text": "星奈「あ、別にそういう目的で渋川さんを連れてきたわけじゃなくて、友達があまりいないので今日は渋川さんにお願いしたんです」"
         },
         {
@@ -2389,6 +3087,7 @@
           "location": "レストラン",
           "bgm": "normal2",
           "background": "restaurant",
+          "voice": "星奈くんの人の見る目は確かなので心配しておらん_今日は友人として参加させてもらっておる",
           "text": "渋川「星奈くんの人の見る目は確かなので心配しておらん。今日は友人として参加させてもらっておる」"
         },
         {
@@ -2463,7 +3162,7 @@
           "location": "レストラン",
           "bgm": "normal2",
           "background": "restaurant",
-          "voice": "えっと",
+          "voice": "半年ぐらいですね",
           "text": "星奈「半年ぐらいですね」"
         },
         {
@@ -2488,6 +3187,7 @@
           ],
           "location": "レストラン",
           "bgm": "normal2",
+          "voice": "星奈くんが来てから客が増えた気がするな_たまに悪い虫がいるので駆除しておるが",
           "background": "restaurant",
           "text": "渋川「星奈くんが来てから客が増えた気がするな。たまに悪い虫がいるので駆除しておるが」"
         },
@@ -2539,6 +3239,7 @@
           "location": "レストラン",
           "bgm": "normal2",
           "background": "restaurant",
+          "voice": "渋川さんはモテるんですよ",
           "text": "星奈「渋川さんはモテるんですよ」"
         },
         {
@@ -2564,6 +3265,7 @@
           "location": "レストラン",
           "bgm": "normal2",
           "background": "restaurant",
+          "voice": "やっぱり筋肉か____筋肉が全てなのか",
           "text": "成瀬「やっぱり筋肉か・・・筋肉が全てなのか」"
         },
         {
@@ -2589,7 +3291,7 @@
           "location": "レストラン",
           "bgm": "normal2",
           "background": "restaurant",
-          "voice": "うむ",
+          "voice": "確かに筋肉は嘘をつかんな",
           "text": "渋川「確かに筋肉は嘘をつかんな」"
         },
         {
@@ -2639,6 +3341,7 @@
           "location": "レストラン",
           "bgm": "normal2",
           "background": "restaurant",
+          "voice": "星奈さんはマッチョが好きですか",
           "text": "成瀬「星奈さんはマッチョが好きですか？」"
         },
         {
@@ -2664,6 +3367,7 @@
           "location": "レストラン",
           "bgm": "normal2",
           "background": "restaurant",
+          "voice": "私ですか_つよいに越したことはないと思いますけど_あまり考えたことないですね____あ_私に敬語はい",
           "text": "星奈「私ですか？強いに越したことはないと思いますけど、あまり考えたことないですね。・・・あ、私に敬語はいらないですよ。年下ですし」"
         },
         {
@@ -2713,6 +3417,7 @@
           "location": "レストラン",
           "bgm": "normal2",
           "background": "restaurant",
+          "voice": "というか_お前ずっと硬い口調でやり取り続けてたの",
           "text": "成瀬「というか、お前ずっと硬い口調でやり取り続けてたの？」"
         },
         {
@@ -2848,7 +3553,7 @@
           "location": "ロビー",
           "bgm": "normal2",
           "background": "lobby",
-          "voice": "ふむ",
+          "voice": "星奈さん_めちゃ可愛いな",
           "text": "成瀬「星奈さん、めちゃ可愛いな」"
         },
         {
@@ -2877,6 +3582,7 @@
           "location": "ロビー",
           "bgm": "normal2",
           "background": "lobby",
+          "voice": "渋川さん_謎だな",
           "text": "成瀬「渋川さん、謎だな」"
         },
         {
@@ -2920,6 +3626,7 @@
           "location": "ロビー",
           "bgm": "normal2",
           "background": "lobby",
+          "voice": "別に悪い印象はないだろうし_次は二人でのデートに誘ってみろよ",
           "text": "成瀬「別に悪い印象はないだろうし、次は2人でのデートに誘ってみろよ」"
         },
         {
@@ -2949,6 +3656,7 @@
           "location": "ロビー",
           "bgm": "normal2",
           "background": "lobby",
+          "voice": "じゃ_俺はここで_また会社でな",
           "text": "成瀬「じゃ、俺はここで。また会社でな」"
         },
         {
@@ -3090,6 +3798,7 @@
           "location": "オフィス",
           "bgm": "normal",
           "background": "office",
+          "voice": "星奈さんとはちゃんと連絡とってるか",
           "text": "成瀬「星奈さんとはちゃんと連絡とってるか？」"
         },
         {
@@ -3132,6 +3841,7 @@
           "location": "オフィス",
           "bgm": "normal",
           "background": "office",
+          "voice": "良かった_じゃあデートはどこ行くかは決まった",
           "text": "成瀬「良かった。じゃあデートはどこ行くかは決まった？」"
         },
         {
@@ -3174,7 +3884,7 @@
           "location": "オフィス",
           "bgm": "normal",
           "background": "office",
-          "voice": "ふむ",
+          "voice": "お前は真面目だもんなぁ_いっそのことプロジェクトだと思って取り組めば",
           "text": "成瀬「お前は真面目だもんなぁ。いっそのことプロジェクトだと思って取り組めば？」"
         },
         {
@@ -3218,6 +3928,7 @@
           "location": "オフィス",
           "bgm": "normal",
           "background": "office",
+          "voice": "いや_初デートの計画にそんなもんいらんだろ___そもそもお前_類似案件あんのか",
           "text": "成瀬「いや、初デートの計画にそんなもんいらんだろ・・・そもそもお前、類似案件あんのか？」"
         },
         {
@@ -3246,6 +3957,7 @@
           "location": "オフィス",
           "bgm": "normal",
           "background": "office",
+          "voice": "ぜったい類似してねぇから_それ",
           "text": "成瀬「ぜったい類似してねぇから、それ・・・」"
         },
         {
@@ -3275,6 +3987,7 @@
           "location": "オフィス",
           "bgm": "normal",
           "background": "office",
+          "voice": "俺にそんな便利な機能はねぇ",
           "text": "成瀬「俺にそんな便利な機能はねぇ」"
         },
         {
@@ -3289,6 +4002,7 @@
           "location": "オフィス",
           "bgm": "normal",
           "background": "office",
+          "voice": "どこ行くか決まったらレビューさせてくれ_じゃあな",
           "text": "成瀬「どこ行くか決まったらレビューさせてくれ。じゃあな」"
         },
         {
@@ -3437,6 +4151,7 @@
           "location": "繁華街",
           "bgm": "normal2",
           "background": "town",
+          "voice": "新宿駅って迷路みたいで道を間違ったら大変だって渋川さんに言われたので早めに来たんだけど_幸い道は間違",
           "text": "星奈「新宿駅って迷路みたいで道を間違ったら大変だって渋川さんに言われたので早めに来たんだけど、幸い道は間違わなかったみたい」"
         },
         {
@@ -3465,6 +4180,7 @@
           "location": "繁華街",
           "bgm": "normal2",
           "background": "town",
+          "voice": "あ_いえいえ_いろんな場所を知れて楽しいです",
           "text": "星奈「あ、いえいえ、いろんな場所を知れて楽しいです」"
         },
         {
@@ -3521,7 +4237,7 @@
           "location": "レストラン",
           "bgm": "normal2",
           "background": "restaurant2",
-          "voice": "お腹ぺこぺこ",
+          "voice": "はぁもうお腹ペコペコ_朝も何も食べてないし",
           "text": "星奈「はぁもうお腹ペコペコ。朝も何も食べてないし」"
         },
         {
@@ -3550,6 +4266,7 @@
           "location": "レストラン",
           "bgm": "normal2",
           "background": "restaurant2",
+          "voice": "あまりお金がないので節約してて",
           "text": "星奈「あまりお金がないので節約してて・・・」"
         },
         {
@@ -3578,7 +4295,7 @@
           "location": "レストラン",
           "bgm": "normal2",
           "background": "restaurant2",
-          "voice": "すみません",
+          "voice": "この前も出してもらったのに本当にすみません",
           "text": "星奈「この前も出してもらったのに本当にすみません・・・」"
         },
         {
@@ -3636,7 +4353,7 @@
           "location": "レストラン",
           "bgm": "normal2",
           "background": "restaurant2",
-          "voice": "わあ",
+          "voice": "わぁ_美味しい",
           "text": "星奈「わぁ、美味しい！」"
         },
         {
@@ -3679,6 +4396,7 @@
           "location": "レストラン",
           "bgm": "normal2",
           "background": "restaurant2",
+          "voice": "こういうところにはあまり来ないの",
           "text": "星奈「こういうところにはあまり来ないの？」"
         },
         {
@@ -3707,6 +4425,7 @@
           "location": "レストラン",
           "bgm": "normal2",
           "background": "restaurant2",
+          "voice": "アイティー会社って大変なのね",
           "text": "星奈「IT会社って大変なのね」"
         },
         {
@@ -3735,6 +4454,7 @@
           "location": "レストラン",
           "bgm": "normal2",
           "background": "restaurant2",
+          "voice": "ストレス発散も大事だけど_ちゃんと計画的に使わないと",
           "text": "星奈「ストレス発散も大事だけど、ちゃんと計画的に使わないと」"
         },
         {
@@ -3778,6 +4498,7 @@
           "location": "レストラン",
           "bgm": "normal2",
           "background": "restaurant2",
+          "voice": "使い道に困ったらいつでもどうぞ",
           "text": "星奈「使い道に困ったらいつでもどうぞ♪」"
         },
         {
@@ -3806,6 +4527,7 @@
           "location": "レストラン",
           "bgm": "normal2",
           "background": "restaurant2",
+          "voice": "あ_ごめんなさい",
           "text": "星奈「あ、ごめんなさい！」"
         },
         {
@@ -3835,6 +4557,7 @@
           "location": "レストラン",
           "bgm": "normal2",
           "background": "restaurant2",
+          "voice": "ふぐぅ",
           "text": "星奈「ふぐぅ・・・」"
         },
         {
@@ -3863,6 +4586,7 @@
           "location": "レストラン",
           "bgm": "normal2",
           "background": "restaurant2",
+          "voice": "余裕のある生活はしてないかな_たまたま渋川さんと出会って働かせてもらって_それでなんとか",
           "text": "星奈「・・・余裕のある生活はしてないかな。たまたま渋川さんと出会って働かせてもらって、それでなんとか」"
         },
         {
@@ -3891,7 +4615,7 @@
           "location": "レストラン",
           "bgm": "normal2",
           "background": "restaurant2",
-          "voice": "えっと",
+          "voice": "うーん_そうね",
           "text": "星奈「うーん、そうね」"
         },
         {
@@ -3921,6 +4645,7 @@
           "location": "レストラン",
           "bgm": "normal2",
           "background": "restaurant2",
+          "voice": "知ってる_一キロ以上離れると銃声より先に銃弾が来るらしいよ",
           "text": "星奈「・・・知ってる？1km以上離れると銃声より先に銃弾が来るらしいよ」"
         },
         {
@@ -3950,6 +4675,7 @@
           "location": "レストラン",
           "bgm": "normal2",
           "background": "restaurant2",
+          "voice": "冗談_多分",
           "text": "星奈「冗談、多分」"
         },
         {
@@ -4062,7 +4788,7 @@
           "location": "ゲームセンター",
           "bgm": "normal2",
           "background": "gamecenter",
-          "voice": "すみません",
+          "voice": "あ_ごめんなさい_顔に出てたかな_やったことなくて興味がすごくあって",
           "text": "星奈「あ、ごめんなさい。顔に出てたかな。やったことなくて興味がすごくあって・・・」"
         },
         {
@@ -4105,7 +4831,7 @@
           "location": "ゲームセンター",
           "bgm": "normal2",
           "background": "gamecenter",
-          "voice": "えっと",
+          "voice": "これが欲しいかな",
           "text": "星奈「これが欲しいかな」"
         },
         {
@@ -4162,6 +4888,7 @@
           "location": "ゲームセンター",
           "bgm": "normal2",
           "background": "gamecenter",
+          "voice": "ありがとう_よーしっ",
           "text": "星奈「ありがとう！よーしっ！」"
         },
         {
@@ -4218,7 +4945,7 @@
           "location": "ゲームセンター",
           "bgm": "normal2",
           "background": "gamecenter",
-          "voice": "やったー",
+          "voice": "きゃーやったー_取れた",
           "text": "星奈「きゃーやったー！取れた！」"
         },
         {
@@ -4261,6 +4988,7 @@
           "location": "ゲームセンター",
           "bgm": "normal2",
           "background": "gamecenter",
+          "voice": "年甲斐もなくはしゃいですみません",
           "text": "星奈「・・・年甲斐もなくはしゃいですみません・・・」"
         },
         {
@@ -4353,6 +5081,7 @@
           "location": "ショップ",
           "bgm": "normal2",
           "background": "shop",
+          "voice": "欲しいけど_お金に余裕がなくて",
           "text": "星奈「欲しいけど、お金に余裕がなくて・・・」"
         },
         {
@@ -4381,6 +5110,7 @@
           "location": "ショップ",
           "bgm": "normal2",
           "background": "shop",
+          "voice": "あ_これなんかどうかな",
           "text": "星奈「あ、これなんかどうかな？」"
         },
         {
@@ -4507,6 +5237,7 @@
           "location": "ショップ",
           "bgm": "normal2",
           "background": "shop",
+          "voice": "ごめんなさい",
           "text": "星奈「・・・ごめんなさい」"
         },
         {
@@ -4521,7 +5252,7 @@
           "location": "ショップ",
           "bgm": "normal2",
           "background": "shop",
-          "text": "星奈「どうしよう。どこか休める場所を探そう」"
+          "text": "碧川「どうしよう。どこか休める場所を探そう」"
         },
         {
           "avatars": [
@@ -4549,7 +5280,7 @@
           "location": "ショップ",
           "bgm": "normal2",
           "background": "shop",
-          "voice": "すみません",
+          "voice": "本当にごめんなさい_今日はもう帰るね",
           "text": "星奈「本当にごめんなさい、今日はもう帰るね」"
         },
         {
@@ -4578,6 +5309,7 @@
           "location": "ショップ",
           "bgm": "normal2",
           "background": "shop",
+          "voice": "本当に大丈夫だから_じゃあ",
           "text": "星奈「・・・本当に大丈夫だから、じゃあ」"
         },
         {
@@ -4620,7 +5352,7 @@
           "location": "ショップ",
           "bgm": "normal2",
           "background": "shop",
-          "text": "星奈「付き合ってもらったお礼、ありがとう」"
+          "text": "碧川「付き合ってもらったお礼、ありがとう」"
         },
         {
           "avatars": [
@@ -4634,6 +5366,7 @@
           "location": "ショップ",
           "bgm": "normal2",
           "background": "shop",
+          "voice": "ありがとう_今日はとっても楽しかった_こんなの久しぶりで嬉しかったよ",
           "text": "星奈「・・・ありがとう。今日はとっても楽しかった。こんなの久しぶりで嬉しかったよ」"
         },
         {
@@ -4718,7 +5451,7 @@
           "bgm": "dark",
           "background": "office",
           "text": "成瀬「今日はどしたん？めっちゃ辛そうじゃん」",
-          "voice": "おっす"
+          "voice": "今日はどしたん_めっちゃ辛そうじゃん"
         },
         {
           "avatars": [
@@ -4747,6 +5480,7 @@
           "location": "オフィス",
           "bgm": "dark",
           "background": "office",
+          "voice": "タイムリープじゃないぞ",
           "text": "成瀬「タイムリープじゃないぞ」"
         },
         {
@@ -4775,6 +5509,7 @@
           "location": "オフィス",
           "bgm": "dark",
           "background": "office",
+          "voice": "どうした_デートでやらかしたのか",
           "text": "成瀬「どうした？デートでやらかしたのか？」"
         },
         {
@@ -4803,7 +5538,7 @@
           "location": "オフィス",
           "bgm": "dark",
           "background": "office",
-          "voice": "ふむ",
+          "voice": "連絡取れないほど体調が悪い",
           "text": "成瀬「連絡取れないほど体調が悪い・・・？」"
         },
         {
@@ -4833,7 +5568,8 @@
           "location": "オフィス",
           "bgm": "dark",
           "background": "office",
-          "text": "碧川「・・・渋川さんには聞いてみたか？」"
+          "voice": "渋川さんには聞いてみたか",
+          "text": "成瀬「・・・渋川さんには聞いてみたか？」"
         },
         {
           "avatars": [
@@ -4861,6 +5597,7 @@
           "location": "オフィス",
           "bgm": "dark",
           "background": "office",
+          "voice": "それならそれで安否がわかって良いだろ",
           "text": "成瀬「それならそれで安否がわかって良いだろ」"
         },
         {
@@ -4890,6 +5627,7 @@
           "location": "オフィス",
           "bgm": "dark",
           "background": "office",
+          "voice": "どうせ仕事も手がつかないんだろ_早退して渋川さんのお店に行ってみたらどうだ",
           "text": "成瀬「どうせ仕事も手がつかないんだろ。早退して渋川さんのお店に行ってみたらどうだ」"
         },
         {
@@ -4988,7 +5726,7 @@
           "location": "コンビニ",
           "bgm": "dark",
           "background": "convinience",
-          "voice": "うむ",
+          "voice": "ちょっと外に出ようか",
           "text": "渋川「ちょっと外に出ようか」"
         },
         {
@@ -5032,6 +5770,7 @@
           "location": "公園",
           "bgm": "dark",
           "background": "park",
+          "voice": "俺も星奈くんとは連絡は取れない_今日も出勤予定だったが来ていない",
           "text": "渋川「・・・俺も星奈くんとは連絡は取れない。今日も出勤予定だったが来ていない」"
         },
         {
@@ -5060,6 +5799,7 @@
           "location": "公園",
           "bgm": "dark",
           "background": "park",
+          "voice": "急にいなくなるかもしれないというは星奈くんからは言われていた",
           "text": "渋川「急にいなくなるかもしれないというは星奈くんからは言われていた」"
         },
         {
@@ -5088,6 +5828,7 @@
           "location": "公園",
           "bgm": "dark",
           "background": "park",
+          "voice": "星奈くんはどんな様子だった_会ってたんだろ",
           "text": "渋川「星奈くんはどんな様子だった？会ってたんだろ？」"
         },
         {
@@ -5116,7 +5857,7 @@
           "location": "公園",
           "bgm": "dark",
           "background": "park",
-          "voice": "うむ",
+          "voice": "そうか",
           "text": "渋川「そうか・・・」"
         },
         {
@@ -5145,6 +5886,7 @@
           "location": "公園",
           "bgm": "dark",
           "background": "park",
+          "voice": "教えてはくれなかったな",
           "text": "渋川「教えてはくれなかったな」"
         },
         {
@@ -5173,6 +5915,7 @@
           "location": "公園",
           "bgm": "dark",
           "background": "park",
+          "voice": "何かわかったら君にも連絡する_連絡先を交換しておこう",
           "text": "渋川「何かわかったら君にも連絡する。連絡先を交換しておこう」"
         },
         {
@@ -5304,7 +6047,7 @@
           "location": "公園",
           "bgm": "dark",
           "background": "park",
-          "voice": "なになに",
+          "voice": "なになにー_ぷりちーしすたーの声が聞きたくなった",
           "text": "妹「なになにー？ぷりちーしすたーの声が聞きたくなった？」"
         },
         {
@@ -5319,6 +6062,7 @@
           "location": "公園",
           "bgm": "dark",
           "background": "park",
+          "voice": "えー_これ_これはアオサちゃんのだよー_いまアオサちゃんの部屋にいるのー",
           "text": "妹「えー、これ？これは葵紗ちゃんのだよー。いま葵紗ちゃんの部屋にいるのー」"
         },
         {
@@ -5340,6 +6084,7 @@
           "location": "公園",
           "bgm": "dark",
           "background": "park",
+          "voice": "ほーい____嫌だって",
           "text": "妹「ほーい・・・嫌だって」"
         },
         {
@@ -5354,6 +6099,7 @@
           "location": "公園",
           "bgm": "dark",
           "background": "park",
+          "voice": "聞きたいことがあれば会いに来たらー_というか_プレゼント買ってくれた",
           "text": "妹「聞きたいことがあれば会いに来たらー？というかプレゼント買ってくれた？」"
         },
         {
@@ -5409,7 +6155,7 @@
           "location": "実家",
           "bgm": "main2",
           "background": "home",
-          "voice": "おっかえりー",
+          "voice": "おー_おかえりお兄ちゃん",
           "text": "妹「おー、おかえりお兄ちゃん」"
         },
         {
@@ -5424,6 +6170,7 @@
           "location": "実家",
           "bgm": "main2",
           "background": "home",
+          "voice": "プレゼントは",
           "text": "妹「プレゼントは？」"
         },
         {
@@ -5452,6 +6199,7 @@
           "location": "実家",
           "bgm": "main2",
           "background": "home",
+          "voice": "じゃあ____なんで帰ってきたの",
           "text": "妹「じゃあ・・・なんで帰ってきたの？」"
         },
         {
@@ -5480,6 +6228,7 @@
           "location": "実家",
           "bgm": "main2",
           "background": "home",
+          "voice": "うひょー_ありがとう_ふむふむ____おー_お兄ちゃんセンスいいじゃん",
           "text": "妹「うひょー、ありがとう！ふむふむ・・・おー！お兄ちゃんセンスいいじゃん！」"
         },
         {
@@ -5508,6 +6257,7 @@
           "location": "実家",
           "bgm": "main2",
           "background": "home",
+          "voice": "んー_大学帰りにばったり会って_久しぶりーってなってアオサちゃんの家にお邪魔してた",
           "text": "妹「んー、大学帰りにばったり会って、久しぶりーってなって葵紗ちゃんの家にお邪魔してた」"
         },
         {
@@ -5536,6 +6286,7 @@
           "location": "実家",
           "bgm": "main2",
           "background": "home",
+          "voice": "あー_あれはアオサちゃんの家にあったやつ_昔_アオサちゃんのところにいた巫女さんのお古なんだって",
           "text": "妹「あーあれは葵紗ちゃんの家にあったやつ。昔、葵紗ちゃんのところにいた巫女さんのお古なんだって」"
         },
         {
@@ -5578,6 +6329,7 @@
           "location": "実家",
           "bgm": "main2",
           "background": "home",
+          "voice": "そういやそうだね_お兄ちゃんも会ったことある人だって言ってたよ",
           "text": "妹「そういやそうだね。お兄ちゃんも会ったことある人だって言ってたよ」"
         },
         {
@@ -5620,6 +6372,7 @@
           "location": "実家",
           "bgm": "main2",
           "background": "home",
+          "voice": "んで_アルバム見たら写真あるかもってアオサちゃん言ってたからアルバム漁って見てたんだよねー",
           "text": "妹「んで、アルバム見たら写真あるかもって葵紗ちゃん言ってたからアルバム漁って見てたんだよねー」"
         },
         {
@@ -5648,6 +6401,7 @@
           "location": "実家",
           "bgm": "main2",
           "background": "home",
+          "voice": "お兄ちゃん_アオサちゃんと結構仲良かったんだね_いっぱい写真がある",
           "text": "妹「お兄ちゃん、葵紗ちゃんと結構仲良かったんだね。いっぱい写真がある」"
         },
         {
@@ -5719,6 +6473,7 @@
           "bgm": "main2",
           "background": "home",
           "image": "./images/photo_2.jpg",
+          "voice": "あ_同じ服を着ている人がいる_綺麗な人だね",
           "text": "妹「あ、同じ服を着ている人がいる。綺麗な人だね」"
         },
         {
@@ -5762,6 +6517,7 @@
           "location": "実家",
           "bgm": "main2",
           "background": "home",
+          "voice": "え_ちょっと",
           "text": "妹「え、ちょっと！」"
         },
         {
@@ -5897,6 +6653,7 @@
           "location": "神社",
           "bgm": "main2",
           "background": "shrine_night",
+          "voice": "彼女は２５年前_ここで働いていた",
           "text": "葵紗「彼女は25年前、ここで働いていた」"
         },
         {
@@ -5925,6 +6682,7 @@
           "location": "神社",
           "bgm": "main2",
           "background": "shrine_night",
+          "voice": "そう",
           "text": "葵紗「そう」"
         },
         {
@@ -5978,7 +6736,7 @@
           "location": "葵紗の家",
           "bgm": "main2",
           "background": "aisa_home",
-          "voice": "久しぶりだね",
+          "voice": "青川くん_久しぶりだね",
           "text": "葵紗の父「碧川くん、久しぶりだね」"
         },
         {
@@ -6036,6 +6794,7 @@
           "location": "葵紗の家",
           "bgm": "main2",
           "background": "aisa_home",
+          "voice": "うん_そうだろうね",
           "text": "葵紗の父「うん、そうだろうね」"
         },
         {
@@ -6055,6 +6814,7 @@
           "location": "葵紗の家",
           "bgm": "main2",
           "background": "aisa_home",
+          "voice": "星奈くんのことを知りたいんだよね",
           "text": "葵紗の父「星奈くんのことを知りたいんだよね」"
         },
         {
@@ -6093,6 +6853,7 @@
           "location": "葵紗の家",
           "bgm": "main2",
           "background": "aisa_home",
+          "voice": "星奈くんに会ったんだよね",
           "text": "葵紗の父「星奈くんに会ったんだよね？」"
         },
         {
@@ -6132,6 +6893,7 @@
           "location": "葵紗の家",
           "bgm": "main2",
           "background": "aisa_home",
+          "voice": "告白したかい",
           "text": "葵紗の父「告白したかい？」"
         },
         {
@@ -6189,6 +6951,7 @@
           "location": "葵紗の家",
           "bgm": "main2",
           "background": "aisa_home",
+          "voice": "そうなるようになっていたからね",
           "text": "葵紗の父「そうなるようになっていたからね」"
         },
         {
@@ -6247,6 +7010,7 @@
           "location": "葵紗の家",
           "bgm": "main2",
           "background": "aisa_home",
+          "voice": "無事_フラグは回収されたようだし_説明をしよう",
           "text": "葵紗の父「無事、フラグは回収されたようだし、説明をしよう」"
         },
         {
@@ -6286,6 +7050,7 @@
           "location": "葵紗の家",
           "bgm": "main2",
           "background": "aisa_home",
+          "voice": "星奈くんは異世界から来た住人だ_そして時間移動をしている",
           "text": "葵紗の父「星奈くんは異世界から来た住人だ。そして時間移動をしている」"
         },
         {
@@ -6344,6 +7109,7 @@
           "location": "葵紗の家",
           "bgm": "main2",
           "background": "aisa_home",
+          "voice": "順を追って説明しよう",
           "text": "葵紗の父「順を追って説明しよう」"
         },
         {
@@ -6421,7 +7187,7 @@
           "location": "25年前の神社",
           "bgm": "main2",
           "background": "shrine",
-          "voice": "大丈夫ですか",
+          "voice": "大丈夫ですか",
           "text": "葵紗の父「大丈夫ですか？」"
         },
         {
@@ -6479,7 +7245,7 @@
           "location": "25年前の葵紗の家",
           "bgm": "main2",
           "background": "aisa_home",
-          "voice": "すみません",
+          "voice": "ありがとうございます_だいぶ体調は良くなりました",
           "text": "星奈「ありがとうございます、だいぶ体調は良くなりました」"
         },
         {
@@ -6499,6 +7265,7 @@
           "location": "25年前の葵紗の家",
           "bgm": "main2",
           "background": "aisa_home",
+          "voice": "それはよかった_どうぞゆっくりしていってください",
           "text": "葵紗の父「それはよかった。どうぞゆっくりしていってください」"
         },
         {
@@ -6518,6 +7285,7 @@
           "location": "25年前の葵紗の家",
           "bgm": "main2",
           "background": "aisa_home",
+          "voice": "ここは神社ですか",
           "text": "星奈「・・・ここは神社ですか？」"
         },
         {
@@ -6537,6 +7305,7 @@
           "location": "25年前の葵紗の家",
           "bgm": "main2",
           "background": "aisa_home",
+          "voice": "はい_そうです",
           "text": "葵紗の父「はい、そうです」"
         },
         {
@@ -6556,6 +7325,7 @@
           "location": "25年前の葵紗の家",
           "bgm": "main2",
           "background": "aisa_home",
+          "voice": "今は西暦何年ですか",
           "text": "星奈「今は西暦何年ですか？」"
         },
         {
@@ -6594,6 +7364,7 @@
           "location": "25年前の葵紗の家",
           "bgm": "main2",
           "background": "aisa_home",
+          "voice": "あなたはこの世界の住人ではないですね",
           "text": "葵紗の父「・・・あなたはこの世界の住人ではないですね？」"
         },
         {
@@ -6632,6 +7403,7 @@
           "location": "25年前の葵紗の家",
           "bgm": "main2",
           "background": "aisa_home",
+          "voice": "私は神に使える身_いろいろと経験がありまして____あなたからはこの世界の人とは違う力を感じる",
           "text": "葵紗の父「私は神に使える身。いろいろと経験がありまして・・・。あなたからはこの世界の人とは違う力を感じる」"
         },
         {
@@ -6651,6 +7423,7 @@
           "location": "25年前の葵紗の家",
           "bgm": "main2",
           "background": "aisa_home",
+          "voice": "この世界にもマナを感じれる人がいたのですね____はい_私は異世界から来ました",
           "text": "星奈「この世界にもマナを感じれる人がいたのですね・・・はい、私は異世界から来ました」"
         },
         {
@@ -6670,6 +7443,7 @@
           "location": "25年前の葵紗の家",
           "bgm": "main2",
           "background": "aisa_home",
+          "voice": "お話を伺っても",
           "text": "葵紗の父「お話を伺っても？」"
         },
         {
@@ -6689,6 +7463,7 @@
           "location": "25年前の葵紗の家",
           "bgm": "main2",
           "background": "aisa_home",
+          "voice": "わかりました___私の本当の名前はユア_ステラリア_この世界では星奈結愛と名乗っています",
           "text": "星奈「わかりました・・・私の本当の名前はユア・ステラリア。この世界では星奈結愛と名乗っています」"
         },
         {
@@ -6708,6 +7483,7 @@
           "location": "25年前の葵紗の家",
           "bgm": "main2",
           "background": "aisa_home",
+          "voice": "私はこことは異なる世界で神官をしていました_この身を神に捧げ_そして魔王を討伐するために勇者と行動を",
           "text": "星奈「私はこことは異なる世界で神官をしていました。この身を神に捧げ、そして魔王を討伐するために勇者と行動を共にしておりました」"
         },
         {
@@ -6727,6 +7503,7 @@
           "location": "25年前の葵紗の家",
           "bgm": "main2",
           "background": "aisa_home",
+          "voice": "なるほど_あなたも神職だったのですね_どおりで私と近いものを感じると思いました",
           "text": "葵紗の父「なるほど、あなたも神職だったのですね。どおりで私と近いものを感じると思いました」"
         },
         {
@@ -6746,6 +7523,7 @@
           "location": "25年前の葵紗の家",
           "bgm": "main2",
           "background": "aisa_home",
+          "voice": "そうですね_私もあなたからは近いものを感じます",
           "text": "星奈「そうですね、私もあなたからは近いものを感じます」"
         },
         {
@@ -6784,6 +7562,7 @@
           "location": "25年前の葵紗の家",
           "bgm": "main2",
           "background": "aisa_home",
+          "voice": "私たちは長い旅を経て_仲間たちと共に魔王を討伐できました_しかし_魔王の消滅間際に放出された強い魔力",
           "text": "星奈「私たちは長い旅を経て、仲間たちと共に魔王を討伐できました。しかし、魔王の消滅間際に放出された強い魔力の影響で私は異世界へと飛ばされてしまいました」"
         },
         {
@@ -6803,6 +7582,7 @@
           "location": "25年前の葵紗の家",
           "bgm": "main2",
           "background": "aisa_home",
+          "voice": "なんと_それでこの世界に",
           "text": "葵紗の父「なんと、それでこの世界に・・・」"
         },
         {
@@ -6822,6 +7602,7 @@
           "location": "25年前の葵紗の家",
           "bgm": "main2",
           "background": "aisa_home",
+          "voice": "それだけではないのです_魔王は死ぬ間際に呪いを放ちました_そして私は運悪くその呪いを受けることになっ",
           "text": "星奈「それだけではないのです。魔王は死ぬ間際に呪いを放ちました。そして私は運悪くその呪いを受けることになったのです」"
         },
         {
@@ -6841,6 +7622,7 @@
           "location": "25年前の葵紗の家",
           "bgm": "main2",
           "background": "aisa_home",
+          "voice": "その呪いにより私の中で魔力制御の暴走がたまに発生し_時間移動が発生するようになったようです",
           "text": "星奈「その呪いにより私の中で魔力制御の暴走がたまに発生し、時間移動が発生するようになったようです」"
         },
         {
@@ -6860,6 +7642,7 @@
           "location": "25年前の葵紗の家",
           "bgm": "main2",
           "background": "aisa_home",
+          "voice": "異世界に来るだけでもお辛いのに_さらに時間まで変わる___ということはすでに何度か",
           "text": "葵紗の父「異世界に来るだけでもお辛いのに、さらに時間まで変わる・・・ということはすでに何度か？」"
         },
         {
@@ -6879,6 +7662,7 @@
           "location": "25年前の葵紗の家",
           "bgm": "main2",
           "background": "aisa_home",
+          "voice": "えぇ____これでこの世界に来て２回目の時間移動です",
           "text": "星奈「えぇ・・・これでこの世界に来て2回目の時間移動です」"
         },
         {
@@ -7050,6 +7834,7 @@
           "location": "葵紗の家",
           "bgm": "main2",
           "background": "aisa_home",
+          "voice": "ここまでが私が星奈くんと出会ったときのこと_次は青川くんのことだ",
           "text": "葵紗の父「ここまでが私が星奈くんと出会ったときのこと。次は碧川くんのことだ」"
         },
         {
@@ -7070,6 +7855,7 @@
           "location": "葵紗の家",
           "bgm": "main2",
           "background": "aisa_home",
+          "voice": "青川くん_君には神が宿っている",
           "text": "葵紗の父「碧川くん、君には神が宿っている」"
         },
         {
@@ -7108,6 +7894,7 @@
           "location": "葵紗の家",
           "bgm": "main2",
           "background": "aisa_home",
+          "voice": "君はきっと前世でとっても素晴らしいことをしたんだろうね_君には神が宿っている",
           "text": "葵紗の父「君はきっと前世でとっても素晴らしいことをしたんだろうね。君には神が宿っている」"
         },
         {
@@ -7127,6 +7914,7 @@
           "location": "葵紗の家",
           "bgm": "main2",
           "background": "aisa_home",
+          "voice": "私もアオサも_あるとき神託を受けてね_この神社は君のためにあるといっても過言ではない",
           "text": "葵紗の父「私も葵紗も、あるとき神託を受けてね。この神社は君のためにあるといっても過言ではない」"
         },
         {
@@ -7165,6 +7953,7 @@
           "location": "葵紗の家",
           "bgm": "main2",
           "background": "aisa_home",
+          "voice": "君自身は神ではないよ_普通の人間だ_だが君には神の加護がついている_正確にはこのあたりの土地神さまだ",
           "text": "葵紗の父「君自身は神ではないよ。普通の人間だ。だが君には神の加護がついている。正確にはこのあたりの土地神さまだね」"
         },
         {
@@ -7184,6 +7973,7 @@
           "location": "葵紗の家",
           "bgm": "main2",
           "background": "aisa_home",
+          "voice": "あなたの加護は強すぎた_あなたが望めば世界はその通りになる",
           "text": "葵紗「あなたの加護は強すぎた。あなたが望めば世界はその通りになる」"
         },
         {
@@ -7223,6 +8013,7 @@
           "location": "葵紗の家",
           "bgm": "main2",
           "background": "aisa_home",
+          "voice": "その言葉通り_あなたは世界改変ができるほど強力な加護を持っていた",
           "text": "葵紗の父「その言葉通り。あなたは世界改変ができるほど強力な加護を持っていた」"
         },
         {
@@ -7244,6 +8035,7 @@
           "location": "葵紗の家",
           "bgm": "main2",
           "background": "aisa_home",
+          "voice": "だが強すぎる力は災いを呼ぶ_私たちはあなたを災いから守るためにいる",
           "text": "葵紗「だが強すぎる力は災いを呼ぶ。私たちはあなたを災いから守るためにいる」"
         },
         {
@@ -7263,6 +8055,7 @@
           "location": "葵紗の家",
           "bgm": "main2",
           "background": "aisa_home",
+          "voice": "神様もやりすぎたと後で思ったのかね_我々にお願いしてきたというわけだ",
           "text": "葵紗の父「神様もやりすぎたと後で思ったのかね。我々にお願いしてきたというわけだ」"
         },
         {
@@ -7301,6 +8094,7 @@
           "location": "葵紗の家",
           "bgm": "main2",
           "background": "aisa_home",
+          "voice": "まあ神様もいろいろだよ____だが君の力は強く_願ったことが叶う力を持っていた",
           "text": "葵紗の父「まあ神様もいろいろだよ。・・・だが君の力は強く、願ったことが叶う力を持っていた」"
         },
         {
@@ -7320,6 +8114,7 @@
           "location": "葵紗の家",
           "bgm": "main2",
           "background": "aisa_home",
+          "voice": "今はその力は弱くなっている_それが星奈さんとの繋がり",
           "text": "葵紗「今はその力は弱くなっている。それが星奈さんとの繋がり」"
         },
         {
@@ -7365,6 +8160,7 @@
           "location": "25年前の神社",
           "bgm": "main3",
           "background": "shrine",
+          "voice": "ゆうとくんはどんな子が好きなの",
           "text": "5歳の葵紗「ゆうとくんはどんな子が好きなの？」"
         },
         {
@@ -7391,6 +8187,7 @@
           "location": "25年前の神社",
           "bgm": "main3",
           "background": "shrine",
+          "voice": "わかった、くーるびゅーてぃーね！ちょっと体温下げてくる！",
           "text": "5歳の葵紗「わかった、くーるびゅーてぃーね！ちょっと体温下げてくる！」"
         },
         {
@@ -7440,6 +8237,7 @@
           "location": "25年前の神社",
           "bgm": "main3",
           "background": "shrine",
+          "voice": "そうなんだ_よく知ってるね",
           "text": "葵紗の父「そうなんだ。よく知ってるね」"
         },
         {
@@ -7487,7 +8285,8 @@
           "location": "25年前の神社",
           "bgm": "main3",
           "background": "shrine",
-          "text": "葵紗「いいわね、みんなで見ましょう！」"
+          "voice": "いいわね_みんなで見ましょう",
+          "text": "5歳の葵紗「いいわね、みんなで見ましょう！」"
         },
         {
           "avatars": [
@@ -7506,7 +8305,8 @@
           "location": "25年前の神社",
           "bgm": "main3",
           "background": "shrine",
-          "text": "葵紗「あ、せっかく冷蔵庫で冷やしてきたのに、走ったら暑くなってきた！」"
+          "voice": "あ_せっかく冷蔵庫で冷やしてきたのに_走ったら暑くなってきた",
+          "text": "5歳の葵紗「あ、せっかく冷蔵庫で冷やしてきたのに、走ったら暑くなってきた！」"
         },
         {
           "avatars": [
@@ -7535,6 +8335,7 @@
           "location": "25年前の神社",
           "bgm": "main3",
           "background": "shrine",
+          "voice": "じゃあ流れ星を見るってお父さんとお母さんに連絡するね",
           "text": "葵紗の父「じゃあ流れ星を見るってお父さんとお母さんに連絡するね」"
         },
         {
@@ -7693,7 +8494,7 @@
           "location": "葵紗の家",
           "bgm": "main3",
           "background": "aisa_home",
-          "voice": "あなたのためじゃない",
+          "voice": "これが私の地_あなたのためじゃない",
           "text": "葵紗「これが私の地。あなたのためじゃない」"
         },
         {
@@ -7779,6 +8580,7 @@
           "location": "25年前の神社（夜）",
           "bgm": "main3",
           "background": "shrine_night",
+          "voice": "そうか____星の力と関係していたのか",
           "text": "星奈「そうか・・・星の力と関係していたのか・・・」"
         },
         {
@@ -7808,6 +8610,7 @@
           "location": "25年前の神社（夜）",
           "bgm": "main3",
           "background": "shrine_night",
+          "voice": "また時間を飛ぶのか___良いところだと良いのだが",
           "text": "星奈「また時間を飛ぶのか・・・良いところだと良いのだが・・・」"
         },
         {
@@ -7873,6 +8676,7 @@
           "location": "25年前の神社（夜）",
           "bgm": "main3",
           "background": "shrine_night",
+          "voice": "碧川___ゆーと____君は_碧川悠斗というの",
           "text": "星奈「碧川・・・ゆーと・・・。君は碧川悠斗というの？」"
         },
         {
@@ -7923,6 +8727,7 @@
           "location": "25年前の神社（夜）",
           "bgm": "main3",
           "background": "shrine_night",
+          "voice": "なんという偶然か____いや_君からは神聖な力を感じる_必然なのかもしれない",
           "text": "星奈「なんという偶然か・・・いや、君からは神聖な力を感じる。必然なのかもしれない」"
         },
         {
@@ -7948,6 +8753,7 @@
           "location": "25年前の神社（夜）",
           "bgm": "main3",
           "background": "shrine_night",
+          "voice": "止めてみせる_アオサ_手伝いなさい",
           "text": "葵紗の父「止めてみせる！葵紗、手伝いなさい！」"
         },
         {
@@ -7998,6 +8804,7 @@
           "location": "25年前の神社（夜）",
           "bgm": "main3",
           "background": "shrine_night",
+          "voice": "く____これは手強いな____遅らせることで精一杯かもしれない",
           "text": "葵紗の父「く・・・これは手強いな・・・遅らせることで精一杯かもしれない」"
         },
         {
@@ -8023,6 +8830,7 @@
           "location": "25年前の神社（夜）",
           "bgm": "main3",
           "background": "shrine_night",
+          "voice": "これは魔王の命をかけた呪い_それこそ神の力でも使わない限り無理だわ",
           "text": "星奈「これは魔王の命をかけた呪い。それこそ神の力でも使わない限り無理だわ」"
         },
         {
@@ -8048,6 +8856,7 @@
           "location": "25年前の神社（夜）",
           "bgm": "main3",
           "background": "shrine_night",
+          "voice": "そうか____青川くん_星奈くんが無事なことを祈ってくれ_どこにも行かないようにと",
           "text": "葵紗の父「そうか・・・碧川くん！星奈くんが無事なことを祈ってくれ！どこにも行かないようにと！」"
         },
         {
@@ -8098,6 +8907,7 @@
           "location": "25年前の神社（夜）",
           "bgm": "main3",
           "background": "shrine_night",
+          "voice": "くっ____青川くんの加護でも力が足りない",
           "text": "葵紗の父「くっ・・・碧川くんの加護でも力が足りない」"
         },
         {
@@ -8123,7 +8933,7 @@
           "location": "25年前の神社（夜）",
           "bgm": "main3",
           "background": "shrine_night",
-          "voice": "もう持たないよ",
+          "voice": "お父さん_もう持たないよ",
           "text": "葵紗「お父さん、もう持たないよ！」"
         },
         {
@@ -8149,6 +8959,7 @@
           "location": "25年前の神社（夜）",
           "bgm": "main3",
           "background": "shrine_night",
+          "voice": "加護____そうか_そういうことね_君が聞いていたあの子だったのね_それがあお川さんだったなんて",
           "text": "星奈「加護・・・そうか、そういうことね。君が聞いていたあの子だったのね。それが碧川さんだったなんて・・・」"
         },
         {
@@ -8174,6 +8985,7 @@
           "location": "25年前の神社（夜）",
           "bgm": "main3",
           "background": "shrine_night",
+          "voice": "もう無理_あと５秒が限界",
           "text": "葵紗「もう無理！あと5秒が限界！」"
         },
         {
@@ -8199,6 +9011,7 @@
           "location": "25年前の神社（夜）",
           "bgm": "main3",
           "background": "shrine_night",
+          "voice": "碧川悠斗",
           "text": "星奈「碧川悠斗」"
         },
         {
@@ -8224,7 +9037,7 @@
           "location": "25年前の神社（夜）",
           "bgm": "main3",
           "background": "shrine_night",
-          "voice": "告白してください",
+          "voice": "私を見たら告白をしてください_そして_私はここであなたを待っています",
           "text": "星奈「私を見たら告白をしてください。そして、私はここであなたを待っています」"
         },
         {
@@ -8275,6 +9088,7 @@
           "location": "25年前の神社（夜）",
           "bgm": "main3",
           "background": "shrine_night",
+          "voice": "力_借ります",
           "text": "星奈「力、借ります」"
         },
         {
@@ -8407,6 +9221,7 @@
           "location": "葵紗の家",
           "bgm": "main3",
           "background": "aisa_home",
+          "voice": "境内を見てみると良い",
           "text": "葵紗の父「境内を見てみると良い」"
         },
         {
@@ -8592,6 +9407,7 @@
           "location": "神社",
           "bgm": "main",
           "background": "shrine_night",
+          "voice": "君に星奈さんがここにいると確信されるため_力は弱まっているとはいえ_ゼロにはなっていない",
           "text": "葵紗「君に星奈さんがここにいると確信されるため。力は弱まっているとはいえ、ゼロにはなっていない」"
         },
         {
@@ -8649,7 +9465,7 @@
           "location": "神社",
           "bgm": "main",
           "background": "shrine_night",
-          "voice": "泥棒猫",
+          "voice": "さて_泥棒猫さん_持って行ったものを返してもらうわよ",
           "text": "葵紗「さて、泥棒猫さん。持って行ったものを返してもらうわよ」"
         },
         {
@@ -8670,7 +9486,7 @@
           "location": "神社",
           "bgm": "main",
           "background": "shrine_night",
-          "voice": "あら、それは",
+          "voice": "あら____それは力の方_それとも心のほうかしら",
           "text": "星奈「あら・・・それは力の方？それとも心の方かしら？」"
         },
         {
@@ -8690,7 +9506,7 @@
           "location": "神社",
           "bgm": "main",
           "background": "shrine_night",
-          "voice": "離れなさいよ",
+          "voice": "全部よ_いい加減離れなさいよ",
           "text": "葵紗「全部よ！いい加減離れなさいよ！」"
         },
         {
@@ -8725,6 +9541,7 @@
           "bgm": "main",
           "background": "unknown",
           "effect": "dark",
+          "voice": "こちらデルタ_ターゲットが出現した",
           "text": "成瀬「こちらデルタ。ターゲットが出現した」"
         },
         {
@@ -8755,6 +9572,7 @@
           "bgm": "main",
           "background": "unknown",
           "effect": "dark",
+          "voice": "了解_引き続き監視を続ける",
           "text": "成瀬「了解。引き続き監視を続ける」"
         },
         {
@@ -8770,7 +9588,7 @@
           "bgm": "main",
           "background": "unknown",
           "effect": "dark",
-          "voice": "親友としては",
+          "voice": "親友としては恋を応援したいんだけどねぇ",
           "text": "成瀬「親友としては恋を応援したいんだけどねぇ」"
         },
         {
@@ -8816,6 +9634,7 @@
           "bgm": "main",
           "background": "unknown2",
           "effect": "dark",
+          "voice": "そうか___戻ってきたか",
           "text": "渋川「そうか・・・戻ってきたか」"
         },
         {
@@ -8846,6 +9665,7 @@
           "bgm": "main",
           "background": "unknown2",
           "effect": "dark",
+          "voice": "まあ当然だろうな",
           "text": "渋川「まあ当然だろうな」"
         },
         {
@@ -8861,6 +9681,7 @@
           "bgm": "main",
           "background": "unknown2",
           "effect": "dark",
+          "voice": "この場で動くバカはおらんだろう_適当に切り上げるぞ",
           "text": "渋川「この場で動くバカはおらんだろう。適当に切り上げるぞ」"
         },
         {
@@ -8891,7 +9712,7 @@
           "bgm": "main",
           "background": "unknown2",
           "effect": "dark",
-          "voice": "考え直すか",
+          "voice": "帰ってコンビニのシフト表を考え直すかな",
           "text": "渋川「・・・帰ってコンビニのシフト表を考え直すかな」"
         },
         {

@@ -5,12 +5,14 @@ import {
   Bloom,
   HueSaturation,
   BrightnessContrast,
+  ToneMapping,
 } from "@react-three/postprocessing";
 import Avatar from "./Avatar";
 import * as THREE from "three";
 import { useSnapshot } from "valtio";
 import { gameStatus, gamgeConfig, imangeCache } from "./Store";
 import { PerspectiveCamera } from "@react-three/drei/core/PerspectiveCamera";
+import { ToneMappingMode } from "postprocessing";
 
 const Background: React.FC<{ url: string }> = ({ url }) => {
   const { camera } = useThree();
@@ -78,8 +80,8 @@ const CanvasComponent: React.FC<{ onClick: () => void }> = ({ onClick }) => {
     >
       {backgroundUrl && <Background url={backgroundUrl} />}
       <CameraController isZoom={!!isZoom} />
-      <ambientLight color={0xff4444} intensity={1.2} />
-      <directionalLight position={[0.5, 2, 2]} intensity={2.2} />
+      <ambientLight color={0xbb8888} intensity={1.0} />
+      <directionalLight position={[0.5, 2, 2]} intensity={3.0} />
       {currentScene?.avatars?.map((avatar, index) => {
         const avatarConfig = config.avatars.find((av) => av.key === avatar.id);
         const animationConfig = config.animations.find(
@@ -88,10 +90,15 @@ const CanvasComponent: React.FC<{ onClick: () => void }> = ({ onClick }) => {
         const faceConfig = config.textures.find(
           (texture) => texture.key === avatar.face
         );
+        const speaker = currentScene.text.split("「")[0];
         return (
           <Avatar
             key={index}
             url={avatarConfig ? avatarConfig.value : ""}
+            isTalking={
+              speaker == avatarConfig?.option ||
+              (speaker.length == 0 && currentScene?.avatars?.length == 1)
+            }
             animationUrl={animationConfig ? animationConfig.value : ""}
             faceUrl={faceConfig ? faceConfig.value : ""}
             expression={avatar.expression}
@@ -101,8 +108,9 @@ const CanvasComponent: React.FC<{ onClick: () => void }> = ({ onClick }) => {
         );
       })}
       <EffectComposer>
-        <Bloom luminanceThreshold={0} luminanceSmoothing={1.4} height={300} />
-        <HueSaturation saturation={0.2} />
+        <ToneMapping mode={ToneMappingMode.REINHARD} />
+        <Bloom luminanceThreshold={0.3} luminanceSmoothing={1.2} />
+        <HueSaturation saturation={0.5} />
         {currentScene.effect === "dark" ? (
           <BrightnessContrast brightness={-0.2} contrast={0.1} />
         ) : (

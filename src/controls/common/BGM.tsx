@@ -30,11 +30,17 @@ const BGM: React.FC = () => {
   }, [bgmUrl, isPlaying]);
 
   useEffect(() => {
-    if (voiceUrl && audioRef2.current) {
-      if (audioRef2.current.src !== voiceUrl) {
-        audioRef2.current.src = voiceUrl;
+    if (audioRef2.current) {
+      if (voiceUrl) {
+        if (audioRef2.current.src !== voiceUrl) {
+          audioRef2.current.src = voiceUrl;
+          if (isPlaying) {
+            audioRef2.current.play();
+          }
+        }
+      } else {
         if (isPlaying) {
-          audioRef2.current.play();
+          audioRef2.current.pause();
         }
       }
     }
@@ -53,7 +59,6 @@ const BGM: React.FC = () => {
         const mediaStream = dest.stream;
         const analyzer = new AudioAnalyzer((p) => {
           gamgeConfig.phoneme = p;
-          console.log(p);
         });
         analyzer.setAudioAnalyzerForMediaStream(mediaStream);
       } catch {}

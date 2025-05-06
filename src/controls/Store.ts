@@ -6,6 +6,7 @@ import * as THREE from "three";
 interface ConfigItem {
   key: string;
   value: string;
+  option?: string;
 }
 
 interface Config {
