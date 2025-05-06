@@ -4,27 +4,27 @@ const GoodEnd = () => {
   const contents = [
     {
       image: "images/endroll_hoshina_1.jpg",
-      text: "星奈 結愛: 水瀬 玲奈\n（にじボイス）",
+      text: "星奈 結愛",
     },
     {
       image: "images/endroll_naruse_1.jpg",
-      text: "成瀬 陽介: 久咲 悠仁\n（にじボイス）",
+      text: "成瀬 陽介",
     },
     {
       image: "images/endroll_shibukawa_1.jpg",
-      text: "渋川 猛: ベン・カーター\n（にじボイス）",
+      text: "渋川 猛",
     },
     {
       image: "images/endroll_sister_1.jpg",
-      text: "妹: 橘 すずか\n（にじボイス）",
+      text: "妹",
     },
     {
       image: "images/endroll_aisa_1.jpg",
-      text: "華宮 葵紗: 若宮 紬\n（にじボイス）",
+      text: "華宮 葵紗",
     },
     {
       image: "images/endroll_aisa_father_1.jpg",
-      text: "葵紗の父: ヴィクター・D・アシュフォード\n（にじボイス）",
+      text: "葵紗の父",
     },
     {
       image: "images/hero.png",
@@ -67,7 +67,9 @@ const GoodEnd = () => {
           }
           return prevIndex + 1;
         });
-        setIsTransitioning(false);
+        setTimeout(() => {
+          setIsTransitioning(false);
+        }, 1000);
       }, 500); // アニメーション時間に合わせる
     }, 5000);
 
