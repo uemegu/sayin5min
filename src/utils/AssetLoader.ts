@@ -1,15 +1,9 @@
 import { useEffect, useMemo } from "react";
-import {
-  gamgeConfig,
-  animationCache,
-  avatarCache,
-  imangeCache,
-} from "../controls/Store";
+import { gamgeConfig, animationCache, avatarCache } from "../controls/Store";
 import { useLoader } from "@react-three/fiber";
 import { GLTFLoader } from "three/examples/jsm/loaders/GLTFLoader.js";
 import { VRMLoaderPlugin } from "@pixiv/three-vrm";
 import { FBXLoader } from "three/examples/jsm/Addons.js";
-import * as THREE from "three";
 
 const AssetLoader: React.FC<{ onLoadComplete: () => void }> = ({
   onLoadComplete,

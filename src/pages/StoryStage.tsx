@@ -18,7 +18,6 @@ interface StoryStageProps {
 const StoryStage: React.FC<StoryStageProps> = ({ onExit }) => {
   const [isLoading, setIsLoading] = useState(false);
   const [pan, setPan] = useState(0);
-  const [zoom, setZoom] = useState(false);
   const [showingImagePath, setShowingImagePath] = useState<string | null>(null);
   const [ending, setEnding] = useState<string | null>(null);
   const [location, setLocation] = useState(
