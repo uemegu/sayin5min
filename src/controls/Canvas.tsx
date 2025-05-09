@@ -8,41 +8,11 @@ import {
   ToneMapping,
 } from "@react-three/postprocessing";
 import Avatar from "./Avatar";
-import * as THREE from "three";
 import { useSnapshot } from "valtio";
-import { gameStatus, gamgeConfig, imangeCache } from "./Store";
+import { gameStatus, gamgeConfig } from "./Store";
 import { PerspectiveCamera } from "@react-three/drei/core/PerspectiveCamera";
-import { ToneMappingMode } from "postprocessing";
+import { KernelSize, ToneMappingMode } from "postprocessing";
 
-const Background: React.FC<{ url: string }> = ({ url }) => {
-  const { camera } = useThree();
-  const planeRef = useRef<THREE.Mesh>(null);
-
-  useEffect(() => {
-    const texture = imangeCache.find((r) => r.key === url)!.value!;
-    // テクスチャを背景平面のマテリアルに適用
-    if (planeRef.current) {
-      (planeRef.current.material as THREE.MeshBasicMaterial).map = texture;
-      (planeRef.current.material as THREE.MeshBasicMaterial).needsUpdate = true;
-    }
-  }, [url]);
-
-  useFrame(() => {
-    if (planeRef.current) {
-      // 背景の平面をカメラの位置に追従させる
-      planeRef.current.position.copy(camera.position);
-      planeRef.current.position.z -= 20; // カメラの背後に配置
-      planeRef.current.position.y += 8; // カメラの背後に配置
-    }
-  });
-
-  return (
-    <mesh ref={planeRef}>
-      <planeGeometry args={[16 * 3, 9 * 3]} />
-      <meshBasicMaterial side={THREE.DoubleSide} />
-    </mesh>
-  );
-};
 const CameraController: React.FC<{ isZoom: boolean }> = ({ isZoom }) => {
   const cameraRef = useRef<any>();
 
@@ -66,63 +36,63 @@ const CanvasComponent: React.FC<{ onClick: () => void }> = ({ onClick }) => {
   const { messageIndex, chapterIndex } = useSnapshot(gameStatus);
   const { chapters, config } = useSnapshot(gamgeConfig);
   const currentScene = chapters[chapterIndex].scenes[messageIndex];
-  const backgroundConfig = config.backgrounds.find(
-    (bg) => bg.key === currentScene?.background
-  );
-  const backgroundUrl = backgroundConfig ? backgroundConfig.value : "";
+
   const isZoom = currentScene?.avatars?.find((a) => a.attension)?.zoom;
 
   return (
-    <Canvas
-      className="w-screen h-screen"
-      style={{ maxWidth: "1280px" }}
-      onClick={onClick}
-    >
-      {backgroundUrl && <Background url={backgroundUrl} />}
-      <CameraController isZoom={!!isZoom} />
-      <ambientLight color={0xbb8888} intensity={1.0} />
-      <directionalLight position={[0.5, 2, 2]} intensity={3.0} />
-      {currentScene?.avatars?.map((avatar, index) => {
-        const avatarConfig = config.avatars.find((av) => av.key === avatar.id);
-        const animationConfig = config.animations.find(
-          (anim) => anim.key === avatar.action
-        );
-        const faceConfig = config.textures.find(
-          (texture) => texture.key === avatar.face
-        );
-        const speaker = currentScene.text.split("「")[0];
-        return (
-          <Avatar
-            key={index}
-            url={avatarConfig ? avatarConfig.value : ""}
-            isTalking={
-              speaker == avatarConfig?.option ||
-              (speaker.length == 0 && currentScene?.avatars?.length == 1)
-            }
-            animationUrl={animationConfig ? animationConfig.value : ""}
-            faceUrl={faceConfig ? faceConfig.value : ""}
-            expression={avatar.expression}
-            index={index}
-            attention={avatar.attension}
+    <>
+      <Canvas
+        className="w-screen h-screen"
+        style={{ maxWidth: "1280px" }}
+        onClick={onClick}
+      >
+        <CameraController isZoom={!!isZoom} />
+        <ambientLight color={0xbb8888} intensity={1.0} />
+        <directionalLight position={[0.5, 2, 2]} intensity={3.0} />
+        {currentScene?.avatars?.map((avatar, index) => {
+          const avatarConfig = config.avatars.find(
+            (av) => av.key === avatar.id
+          );
+          const animationConfig = config.animations.find(
+            (anim) => anim.key === avatar.action
+          );
+          const speaker = currentScene.text.split("「")[0];
+          return (
+            <Avatar
+              key={index}
+              url={avatarConfig ? avatarConfig.value : ""}
+              isTalking={
+                speaker == avatarConfig?.option ||
+                (speaker.length == 0 && currentScene?.avatars?.length == 1)
+              }
+              animationUrl={animationConfig ? animationConfig.value : ""}
+              expression={avatar.expression}
+              index={index}
+              attention={avatar.attension}
+            />
+          );
+        })}
+        <EffectComposer>
+          <ToneMapping mode={ToneMappingMode.REINHARD} />
+          <Bloom
+            luminanceThreshold={0.4}
+            luminanceSmoothing={1.0}
+            kernelSize={KernelSize.VERY_SMALL}
           />
-        );
-      })}
-      <EffectComposer>
-        <ToneMapping mode={ToneMappingMode.REINHARD} />
-        <Bloom luminanceThreshold={0.3} luminanceSmoothing={1.2} />
-        <HueSaturation saturation={0.5} />
-        {currentScene.effect === "dark" ? (
-          <BrightnessContrast brightness={-0.2} contrast={0.1} />
-        ) : (
-          <></>
-        )}
-        {currentScene.effect === "light" ? (
-          <BrightnessContrast brightness={0.5} contrast={0.1} />
-        ) : (
-          <></>
-        )}
-      </EffectComposer>
-    </Canvas>
+          <HueSaturation saturation={0.5} />
+          {currentScene.effect === "dark" ? (
+            <BrightnessContrast brightness={-0.2} contrast={0.1} />
+          ) : (
+            <></>
+          )}
+          {currentScene.effect === "light" ? (
+            <BrightnessContrast brightness={0.5} contrast={0.1} />
+          ) : (
+            <></>
+          )}
+        </EffectComposer>
+      </Canvas>
+    </>
   );
 };
 

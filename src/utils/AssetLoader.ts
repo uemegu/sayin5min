@@ -19,13 +19,10 @@ const AssetLoader: React.FC<{ onLoadComplete: () => void }> = ({
   const assets = useMemo(() => {
     const gltfPaths: string[] = [];
     const animationPaths: string[] = [];
-    const imagePaths: string[] = [];
 
     const avatarKeySet = new Set<string>();
     const actionKeySet = new Set<string>();
-    const faceKeySet = new Set<string>();
     const audioKeySet = new Set<string>();
-    const imageKeySet = new Set<string>();
 
     // FIXME 本当はチャプター単位でロードしたい
     gamgeConfig.chapters.forEach((chapter) =>
@@ -33,11 +30,9 @@ const AssetLoader: React.FC<{ onLoadComplete: () => void }> = ({
         s.avatars?.forEach((a) => {
           avatarKeySet.add(a.id);
           actionKeySet.add(a.action);
-          if (a.face) faceKeySet.add(a.face);
         });
         if (s.bgm) audioKeySet.add(s.bgm);
         if (s.voice) audioKeySet.add(s.voice);
-        if (s.background) imageKeySet.add(s.background);
       })
     );
 
@@ -61,24 +56,7 @@ const AssetLoader: React.FC<{ onLoadComplete: () => void }> = ({
       }
     });
 
-    faceKeySet.forEach((key) => {
-      const texureConfig = gamgeConfig.config.textures.find(
-        (av) => av.key === key
-      );
-      if (texureConfig) {
-        if (animationCache.find((r) => r.key === texureConfig.value)) return;
-        imagePaths.push(texureConfig.value);
-      }
-    });
-
-    imageKeySet.forEach((key) => {
-      const imageConfig = gamgeConfig.config.backgrounds.find(
-        (bg) => bg.key === key
-      );
-      if (imageConfig) imagePaths.push(imageConfig.value);
-    });
-
-    return { gltfPaths, imagePaths, animationPaths };
+    return { gltfPaths, animationPaths };
   }, []);
 
   const tasks: Array<Promise<any>> = [];
@@ -91,12 +69,6 @@ const AssetLoader: React.FC<{ onLoadComplete: () => void }> = ({
     );
   });
   Promise.all(tasks);
-
-  assets.imagePaths.forEach((path) => {
-    const loader = new THREE.TextureLoader();
-    const obj = loader.load(path);
-    imangeCache.push({ key: path, value: obj });
-  });
 
   const gltf = useLoader(GLTFLoader, assets.gltfPaths, (loader) => {
     loader.register((parser) => new VRMLoaderPlugin(parser));

@@ -579,6 +579,11 @@ video {
   right: 0px;
 }
 
+.inset-y-0 {
+  top: 0px;
+  bottom: 0px;
+}
+
 .bottom-0 {
   bottom: 0px;
 }
@@ -883,6 +888,70 @@ video {
   animation: bounce 1s infinite;
 }
 
+@keyframes panCenterFromLeft {
+  0% {
+    -o-object-position: -200px 0;
+       object-position: -200px 0;
+  }
+
+  100% {
+    -o-object-position: 0 0;
+       object-position: 0 0;
+  }
+}
+
+.animate-centerL {
+  animation: panCenterFromLeft  0.5s ease-out forwards;
+}
+
+@keyframes panCenterFromRight {
+  0% {
+    -o-object-position: 200px 0;
+       object-position: 200px 0;
+  }
+
+  100% {
+    -o-object-position: 0 0;
+       object-position: 0 0;
+  }
+}
+
+.animate-centerR {
+  animation: panCenterFromRight 0.5s ease-out forwards;
+}
+
+@keyframes panLeft {
+  0% {
+    -o-object-position: 0px 0px;
+       object-position: 0px 0px;
+  }
+
+  100% {
+    -o-object-position: -200px 0px;
+       object-position: -200px 0px;
+  }
+}
+
+.animate-panLeft {
+  animation: panLeft 0.5s ease-in-out forwards;
+}
+
+@keyframes panRight {
+  0% {
+    -o-object-position: -200px 0px;
+       object-position: -200px 0px;
+  }
+
+  100% {
+    -o-object-position: 0px 0px;
+       object-position: 0px 0px;
+  }
+}
+
+.animate-panRight {
+  animation: panRight 0.5s ease-in-out forwards;
+}
+
 @keyframes slideIn {
   0% {
     transform: translateX(100px);
@@ -939,6 +1008,34 @@ video {
 
 .animate-toast-out {
   animation: toast-out 0.5s ease-in forwards;
+}
+
+@keyframes zoomIn {
+  0% {
+    transform: scale(1);
+  }
+
+  100% {
+    transform: scale(1.1);
+  }
+}
+
+.animate-zoomIn {
+  animation: zoomIn  0.5s ease-out forwards;
+}
+
+@keyframes zoomOut {
+  0% {
+    transform: scale(1.1);
+  }
+
+  100% {
+    transform: scale(1);
+  }
+}
+
+.animate-zoomOut {
+  animation: zoomOut 0.5s ease-out forwards;
 }
 
 .cursor-pointer {
@@ -1116,6 +1213,12 @@ video {
   background-image: linear-gradient(to right, var(--tw-gradient-stops));
 }
 
+.from-gray-950\/0 {
+  --tw-gradient-from: rgb(3 7 18 / 0) var(--tw-gradient-from-position);
+  --tw-gradient-to: rgb(3 7 18 / 0) var(--tw-gradient-to-position);
+  --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to);
+}
+
 .from-pink-700\/90 {
   --tw-gradient-from: rgb(190 24 93 / 0.9) var(--tw-gradient-from-position);
   --tw-gradient-to: rgb(190 24 93 / 0) var(--tw-gradient-to-position);
@@ -1125,12 +1228,6 @@ video {
 .from-purple-500 {
   --tw-gradient-from: #a855f7 var(--tw-gradient-from-position);
   --tw-gradient-to: rgb(168 85 247 / 0) var(--tw-gradient-to-position);
-  --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to);
-}
-
-.from-sky-950\/0 {
-  --tw-gradient-from: rgb(8 47 73 / 0) var(--tw-gradient-from-position);
-  --tw-gradient-to: rgb(8 47 73 / 0) var(--tw-gradient-to-position);
   --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to);
 }
 
@@ -1144,8 +1241,8 @@ video {
   --tw-gradient-stops: var(--tw-gradient-from), rgb(190 24 93 / 0.7) var(--tw-gradient-via-position), var(--tw-gradient-to);
 }
 
-.to-gray-950\/90 {
-  --tw-gradient-to: rgb(3 7 18 / 0.9) var(--tw-gradient-to-position);
+.to-gray-950\/100 {
+  --tw-gradient-to: rgb(3 7 18 / 1) var(--tw-gradient-to-position);
 }
 
 .to-pink-500 {
@@ -1159,6 +1256,16 @@ video {
 .object-contain {
   -o-object-fit: contain;
      object-fit: contain;
+}
+
+.object-cover {
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.object-center {
+  -o-object-position: center;
+     object-position: center;
 }
 
 .p-2 {

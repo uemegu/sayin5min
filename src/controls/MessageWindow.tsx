@@ -30,7 +30,7 @@ const MessageWindow: React.FC<{ onClick: () => void }> = ({ onClick }) => {
   return (
     <div
       onClick={onClick}
-      className="fixed bottom-0 left-0 right-0 h-96 text-xl p-4 pt-32 text-white  bg-gradient-to-b from-sky-950/0 via-gray-950/70 to-gray-950/90 flex justify-center"
+      className="fixed bottom-0 left-0 right-0 h-96 text-xl p-4 pt-32 text-white  bg-gradient-to-b from-gray-950/0 via-gray-950/70 to-gray-950/100 flex justify-center"
     >
       <div className="text-left text-teal-100 w-[40rem] kiwi-maru-regular select-none">
         {" "}

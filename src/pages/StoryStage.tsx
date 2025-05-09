@@ -9,6 +9,7 @@ import LoadingOverlay from "../controls/common/LoadingOverlay";
 import Save from "../controls/common/Save";
 import GoodEnd from "../controls/GoodEnding";
 import SlideInImage from "../controls/common/SlideInImage";
+import clsx from "clsx";
 
 interface StoryStageProps {
   onExit: () => void;
@@ -16,6 +17,8 @@ interface StoryStageProps {
 
 const StoryStage: React.FC<StoryStageProps> = ({ onExit }) => {
   const [isLoading, setIsLoading] = useState(false);
+  const [pan, setPan] = useState(0);
+  const [zoom, setZoom] = useState(false);
   const [showingImagePath, setShowingImagePath] = useState<string | null>(null);
   const [ending, setEnding] = useState<string | null>(null);
   const [location, setLocation] = useState(
@@ -59,6 +62,28 @@ const StoryStage: React.FC<StoryStageProps> = ({ onExit }) => {
       );
     } else {
       setShowingImagePath(null);
+    }
+
+    const avatars =
+      gamgeConfig.chapters[gameStatus.chapterIndex].scenes[
+        gameStatus.messageIndex
+      ].avatars;
+    if (avatars) {
+      if (avatars.find((a) => a.attension)) {
+        if (avatars.indexOf(avatars.find((a) => a.attension)!) == 2) {
+          setPan(2);
+        } else if (avatars.indexOf(avatars.find((a) => a.attension)!) == 1) {
+          setPan(1);
+        } else {
+          if (pan == 2) {
+            setPan(-2);
+          } else if (pan == 1) {
+            setPan(-1);
+          } else {
+            setPan(0);
+          }
+        }
+      }
     }
   };
 
@@ -155,6 +180,15 @@ const StoryStage: React.FC<StoryStageProps> = ({ onExit }) => {
       ? (document.body.clientWidth - 1280) / 2
       : 0;
 
+  const backgroundConfig = gamgeConfig.config.backgrounds.find(
+    (bg) =>
+      bg.key ===
+      gamgeConfig.chapters[gameStatus.chapterIndex].scenes[
+        gameStatus.messageIndex
+      ].background
+  );
+  const backgroundUrl = backgroundConfig ? backgroundConfig.value : "";
+
   return (
     <Suspense fallback={<Loading />}>
       <div className="flex justify-center w-screen h-screen relative bg-black">
@@ -170,6 +204,13 @@ const StoryStage: React.FC<StoryStageProps> = ({ onExit }) => {
           </>
         ) : (
           <>
+            {backgroundUrl && (
+              <img
+                src={backgroundUrl}
+                className={clsx("fixed w-screen h-screen object-cover")}
+                style={{ maxWidth: "1280px" }}
+              />
+            )}
             <CanvasComponent onClick={handleClick} />
             <MessageWindow onClick={handleClick} />
             <ItemsDisplay onClick={itemSelected} />

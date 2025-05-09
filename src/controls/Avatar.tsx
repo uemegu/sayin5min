@@ -1,6 +1,6 @@
 import React, { useEffect, useRef, useState } from "react";
 import { useFrame } from "@react-three/fiber";
-import { MToonMaterial, VRM } from "@pixiv/three-vrm";
+import { VRM } from "@pixiv/three-vrm";
 import { useThree } from "@react-three/fiber";
 import * as THREE from "three";
 import { gsap } from "gsap";
@@ -10,7 +10,6 @@ import {
   animationCache,
   animationClipCache,
   avatarCache,
-  imangeCache,
   gamgeConfig,
 } from "./Store";
 
@@ -26,15 +25,7 @@ const Avatar: React.FC<{
   index: number;
   attention?: boolean;
   isTalking: boolean;
-}> = ({
-  url,
-  animationUrl,
-  expression,
-  faceUrl,
-  index,
-  attention,
-  isTalking,
-}) => {
+}> = ({ url, animationUrl, expression, index, attention, isTalking }) => {
   const { scene, camera } = useThree();
   const { cameraDirection } = useSnapshot(gameStatus);
   const { phoneme } = useSnapshot(gamgeConfig);
@@ -211,42 +202,6 @@ const Avatar: React.FC<{
       }
     };
   }, [gltf, scene]);
-
-  // FIXME 変になる
-  useEffect(() => {
-    if (avatar && faceUrl) {
-      const texture = imangeCache.find((r) => r.key === faceUrl)!.value!;
-
-      // VRMモデルをロード済みと仮定
-      avatar.scene.traverse((object) => {
-        if (object instanceof THREE.Mesh) {
-          console.log(`Mesh found: ${object.name}`);
-
-          // オブジェクト名で対象を絞り込む
-          if (object.name === "Face_(merged)_2") {
-            const material = object.material;
-
-            if (Array.isArray(material) && material.length > 1) {
-              // マテリアルが単一の場合のみ
-              if (material[0] instanceof MToonMaterial) {
-                console.log("Editing material for:", object.name);
-
-                material[0].uniforms.map.value = texture;
-                material[0].uniformsNeedUpdate = true;
-              } else {
-                console.log(
-                  "Material is not a MeshStandardMaterial:",
-                  material
-                );
-              }
-            } else {
-              console.log("Material is an array, additional handling needed.");
-            }
-          }
-        }
-      });
-    }
-  }, [avatar, faceUrl]);
 
   useEffect(() => {
     if (attention && avatar) {
