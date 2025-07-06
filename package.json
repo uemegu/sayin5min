@@ -18,10 +18,12 @@
     "crypto-js": "^4.2.0",
     "fluent-ffmpeg": "^2.1.3",
     "gsap": "^3.12.5",
+    "i18next": "^25.3.1",
     "meyda": "^5.6.3",
     "postprocessing": "^6.35.6",
     "react": "^19.1.0",
     "react-dom": "^19.1.0",
+    "react-i18next": "^15.6.0",
     "three": "^0.176.0",
     "valtio": "^1.13.2",
     "video-canvas-screenshot": "^1.0.2"

@@ -1,0 +1,787 @@
+{
+  "version": 1,
+  "config": {
+    "avatars": [
+      {
+        "key": "hoshina01",
+        "value": "./models/hoshina-01.vrm",
+        "option": "Hoshina"
+      },
+      {
+        "key": "hoshina02",
+        "value": "./models/hoshina-02.vrm",
+        "option": "Hoshina"
+      },
+      {
+        "key": "hoshina03",
+        "value": "./models/hoshina-03.vrm",
+        "option": "Hoshina"
+      },
+      {
+        "key": "aisa01",
+        "value": "./models/aisa-01.vrm",
+        "option": "Aisa"
+      },
+      {
+        "key": "aisa02",
+        "value": "./models/aisa-02.vrm",
+        "option": "Aisa"
+      },
+      {
+        "key": "aisa03",
+        "value": "./models/aisa-03.vrm",
+        "option": "5-year-old Aisa"
+      },
+      {
+        "key": "naruse01",
+        "value": "./models/naruse-01.vrm",
+        "option": "Naruse"
+      },
+      {
+        "key": "naruse02",
+        "value": "./models/naruse-02.vrm",
+        "option": "Naruse"
+      },
+      {
+        "key": "naruse03",
+        "value": "./models/naruse-03.vrm",
+        "option": "Naruse"
+      },
+      {
+        "key": "shibukawa01",
+        "value": "./models/shibukawa-01.vrm",
+        "option": "Shibukawa"
+      },
+      {
+        "key": "sister01",
+        "value": "./models/sister-01.vrm",
+        "option": "Sister"
+      },
+      {
+        "key": "aisa_futher-01",
+        "value": "./models/aisa_futher-01.vrm",
+        "option": "Aisa's Father"
+      }
+    ],
+    "textures": [],
+    "animations": [
+      {
+        "key": "idle",
+        "value": "./animations/Idle.fbx"
+      },
+      {
+        "key": "punching",
+        "value": "./animations/Punching.fbx"
+      },
+      {
+        "key": "bow",
+        "value": "./animations/Quick Formal Bow.fbx"
+      },
+      {
+        "key": "greeting",
+        "value": "./animations/Standing Greeting.fbx"
+      },
+      {
+        "key": "surprised",
+        "value": "./animations/Surprised.fbx"
+      },
+      {
+        "key": "angry",
+        "value": "./animations/Angry.fbx"
+      },
+      {
+        "key": "acknowledging",
+        "value": "./animations/Acknowledging.fbx"
+      },
+      {
+        "key": "clapping",
+        "value": "./animations/Clapping.fbx"
+      },
+      {
+        "key": "defeat",
+        "value": "./animations/Defeat.fbx"
+      },
+      {
+        "key": "cheering",
+        "value": "./animations/Cheering.fbx"
+      },
+      {
+        "key": "dismissing",
+        "value": "./animations/Dismissing Gesture.fbx"
+      },
+      {
+        "key": "injured",
+        "value": "./animations/Injured Idle.fbx"
+      },
+      {
+        "key": "jump",
+        "value": "./animations/Joyful Jump.fbx"
+      },
+      {
+        "key": "kiss",
+        "value": "./animations/Kiss.fbx"
+      },
+      {
+        "key": "laying",
+        "value": "./animations/Laying Idle.fbx"
+      },
+      {
+        "key": "death",
+        "value": "./animations/Standing Death Left 01.fbx"
+      }
+    ],
+    "backgrounds": [
+      {
+        "key": "park",
+        "value": "./images/park.webp"
+      },
+      {
+        "key": "room",
+        "value": "./images/room.webp"
+      },
+      {
+        "key": "home",
+        "value": "./images/home.webp"
+      },
+      {
+        "key": "office",
+        "value": "./images/office.webp"
+      },
+      {
+        "key": "lobby",
+        "value": "./images/lobby.webp"
+      },
+      {
+        "key": "restaurant",
+        "value": "./images/restaurant.webp"
+      },
+      {
+        "key": "restaurant2",
+        "value": "./images/restaurant2.webp"
+      },
+      {
+        "key": "dining",
+        "value": "./images/dining.webp"
+      },
+      {
+        "key": "convinience",
+        "value": "./images/convinience.webp"
+      },
+      {
+        "key": "shop",
+        "value": "./images/shop.webp"
+      },
+      {
+        "key": "gamecenter",
+        "value": "./images/gamecenter.webp"
+      },
+      {
+        "key": "shrine_night",
+        "value": "./images/shrine_night.webp"
+      },
+      {
+        "key": "shrine",
+        "value": "./images/shrine.webp"
+      },
+      {
+        "key": "town",
+        "value": "./images/town.webp"
+      },
+      {
+        "key": "aisa_home",
+        "value": "./images/aisa_home.webp"
+      },
+      {
+        "key": "unknown",
+        "value": "./images/unknown.webp"
+      },
+      {
+        "key": "unknown2",
+        "value": "./images/unknown2.webp"
+      }
+    ],
+    "bgms": [
+      {
+        "key": "main",
+        "value": "./bgms/時空を超えた愛.mp3"
+      },
+      {
+        "key": "main2",
+        "value": "./bgms/時空を超えた愛_v4.mp3"
+      },
+      {
+        "key": "main3",
+        "value": "./bgms/夢見る騎士.mp3"
+      },
+      {
+        "key": "normal",
+        "value": "./bgms/Playful Keys.mp3"
+      },
+      {
+        "key": "normal2",
+        "value": "./bgms/Dance with the Night.mp3"
+      },
+      {
+        "key": "dark",
+        "value": "./bgms/Monsters in the Dark.mp3"
+      }
+    ],
+    "voices": []
+  },
+  "chapters": [
+    {
+      "id": "1st",
+      "title": "The First Chapter",
+      "scenes": [
+        {
+          "avatars": [
+            {
+              "id": "hoshina01",
+              "action": "idle",
+              "expression": "normal",
+              "attension": "true"
+            }
+          ],
+          "id": "test",
+          "location": "Park",
+          "bgm": "main",
+          "background": "park",
+          "text": "",
+          "items": [
+            {
+              "text": "I've liked you since the moment I met you!"
+            },
+            {
+              "text": "I've always liked you!"
+            },
+            {
+              "text": "To be blunt, I like you!"
+            }
+          ]
+        },
+        {
+          "avatars": [
+            {
+              "id": "hoshina02",
+              "action": "surprised",
+              "expression": "surprised",
+              "attension": "true",
+              "zoom": true
+            }
+          ],
+          "location": "Park",
+          "bgm": "main",
+          "background": "park",
+          "text": "'What...?'",
+          "voice": "えっ"
+        },
+        {
+          "avatars": [
+            {
+              "id": "hoshina02",
+              "action": "idle",
+              "expression": "surprised",
+              "attension": "true"
+            }
+          ],
+          "location": "Park",
+          "bgm": "main",
+          "background": "park",
+          "text": "'Didn't we just meet...?'",
+          "voice": "私たち_さっき会ったばかりですよね"
+        },
+        {
+          "avatars": [
+            {
+              "id": "hoshina02",
+              "action": "idle",
+              "expression": "surprised",
+              "attension": "true"
+            }
+          ],
+          "location": "Park",
+          "bgm": "main",
+          "background": "park",
+          "text": "",
+          "items": [
+            {
+              "text": "..."
+            },
+            {
+              "text": "It's a love that transcends time and space!"
+            }
+          ]
+        },
+        {
+          "avatars": [
+            {
+              "id": "hoshina02",
+              "action": "idle",
+              "expression": "normal",
+              "attension": "true"
+            }
+          ],
+          "location": "Park",
+          "bgm": "main",
+          "background": "park",
+          "text": "'Have we met somewhere before...?'",
+          "voice": "どこかでお会いしてましたか"
+        },
+        {
+          "avatars": [
+            {
+              "id": "hoshina02",
+              "action": "idle",
+              "expression": "normal",
+              "attension": "true"
+            }
+          ],
+          "location": "Park",
+          "bgm": "main",
+          "background": "park",
+          "text": "",
+          "items": [
+            {
+              "text": "..."
+            },
+            {
+              "text": "We met 5 seconds ago..."
+            }
+          ]
+        },
+        {
+          "avatars": [
+            {
+              "id": "hoshina02",
+              "action": "bow",
+              "expression": "happy",
+              "attension": "true",
+              "zoom": true
+            }
+          ],
+          "location": "Park",
+          "bgm": "main",
+          "background": "park",
+          "text": "'Oh, maybe!'",
+          "voice": "あ_もしかして"
+        },
+        {
+          "avatars": [
+            {
+              "id": "hoshina02",
+              "action": "idle",
+              "expression": "normal",
+              "attension": "true"
+            }
+          ],
+          "location": "Park",
+          "bgm": "main",
+          "background": "park",
+          "text": "'You saved me when I was little.... One rainy day, I slipped and fell into a river.... Just when I thought it was over, you pulled me out with great force....'",
+          "voice": "小さい頃あなたに助けられた____ある雨の日_足を滑らした私は川に溺れて____もうダメだと思ってい"
+        },
+        {
+          "avatars": [
+            {
+              "id": "hoshina02",
+              "action": "idle",
+              "expression": "normal",
+              "attension": "true"
+            }
+          ],
+          "location": "Park",
+          "bgm": "main",
+          "background": "park",
+          "text": "",
+          "items": [
+            {
+              "text": "What is this, Spirited Away?",
+              "flg": "1"
+            },
+            {
+              "text": "Wow, did that really happen...!",
+              "flg": "2"
+            }
+          ]
+        },
+        {
+          "conditions": ["1"],
+          "avatars": [
+            {
+              "id": "hoshina02",
+              "action": "normal",
+              "expression": "happy",
+              "attension": "true"
+            }
+          ],
+          "location": "Park",
+          "bgm": "main",
+          "background": "park",
+          "text": "'Ahaha, you're Haku. So, have we met before?'",
+          "voice": "あはは_あなたはハクだね_で_前に会ったことありました"
+        },
+        {
+          "conditions": ["2"],
+          "avatars": [
+            {
+              "id": "hoshina02",
+              "action": "normal",
+              "expression": "sad",
+              "attension": "true"
+            }
+          ],
+          "location": "Park",
+          "bgm": "main",
+          "background": "park",
+          "text": "'I'm sorry, I was lying...'",
+          "voice": "すみません_嘘です"
+        },
+        {
+          "avatars": [
+            {
+              "id": "hoshina02",
+              "action": "idle",
+              "expression": "normal",
+              "attension": "true"
+            }
+          ],
+          "location": "Park",
+          "bgm": "main",
+          "background": "park",
+          "text": "",
+          "items": [
+            {
+              "text": "I think this is the first time we've met...."
+            }
+          ]
+        },
+        {
+          "avatars": [
+            {
+              "id": "hoshina02",
+              "action": "acknowledging",
+              "expression": "normal",
+              "attension": "true"
+            }
+          ],
+          "location": "Park",
+          "bgm": "main",
+          "background": "park",
+          "text": "'Um... is this love at first sight...?'",
+          "voice": "えっと___一目惚れということでしょうか"
+        },
+        {
+          "avatars": [
+            {
+              "id": "hoshina02",
+              "action": "idle",
+              "expression": "normal",
+              "attension": "true"
+            }
+          ],
+          "location": "Park",
+          "bgm": "main",
+          "background": "park",
+          "text": "",
+          "items": [
+            {
+              "text": "Maybe so..."
+            },
+            {
+              "text": "I don't know..."
+            }
+          ]
+        },
+        {
+          "avatars": [
+            {
+              "id": "hoshina02",
+              "action": "idle",
+              "expression": "normal",
+              "attension": "true"
+            }
+          ],
+          "location": "Park",
+          "bgm": "main",
+          "background": "park",
+          "text": "",
+          "items": [
+            {
+              "text": "But, I think I... like you?"
+            }
+          ]
+        },
+        {
+          "avatars": [
+            {
+              "id": "hoshina02",
+              "action": "idle",
+              "expression": "sad",
+              "attension": "true"
+            }
+          ],
+          "location": "Park",
+          "bgm": "main",
+          "background": "park",
+          "text": "'Why the question...?'",
+          "voice": "なぜ疑問系"
+        },
+        {
+          "avatars": [
+            {
+              "id": "hoshina02",
+              "action": "acknowledging",
+              "expression": "happy",
+              "attension": "true"
+            }
+          ],
+          "location": "Park",
+          "bgm": "main",
+          "background": "park",
+          "text": "'...I don't know what to do since this is so sudden, but let's start with being friends.'",
+          "voice": "突然でどうしたら良いのかわからないのですが_とりあえずお友達からで"
+        },
+        {
+          "avatars": [
+            {
+              "id": "hoshina02",
+              "action": "idle",
+              "expression": "normal",
+              "attension": "true"
+            }
+          ],
+          "location": "Park",
+          "bgm": "main",
+          "background": "park",
+          "text": "",
+          "items": [
+            {
+              "text": "Thank you!"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "2nd",
+      "title": "Love Story on a Sudden",
+      "scenes": [
+        {
+          "avatars": [],
+          "location": "Office",
+          "bgm": "normal",
+          "background": "office",
+          "text": "Yuto Aokawa is an ordinary office worker at an IT company. His hobbies are the internet and manga, and he has a decent number of friends. He doesn't have a girlfriend."
+        },
+        {
+          "avatars": [],
+          "location": "Office",
+          "bgm": "normal",
+          "background": "office",
+          "text": "His grades in school weren't bad, and he neither liked nor disliked sports. It's been five years since he started working, and he's been given more and more responsibilities, spending his days swamped with work."
+        },
+        {
+          "avatars": [],
+          "location": "Office",
+          "bgm": "normal",
+          "background": "office",
+          "text": "He had been living the life of a typical office worker."
+        },
+        {
+          "avatars": [],
+          "location": "Office",
+          "bgm": "normal",
+          "background": "office",
+          "text": "Aokawa: 'What in the world has gotten into me?'"
+        },
+        {
+          "avatars": [],
+          "location": "Office",
+          "bgm": "normal",
+          "background": "office",
+          "text": "He was bewildered by his own actions from a moment ago."
+        },
+        {
+          "avatars": [],
+          "location": "Office",
+          "bgm": "normal",
+          "background": "office",
+          "text": "Today, Aokawa was working as usual. On his way to a business appointment, he stopped by a convenience store in a park and fell in love at first sight with the clerk."
+        },
+        {
+          "avatars": [],
+          "location": "Office",
+          "bgm": "normal",
+          "background": "office",
+          "text": "The convenience store clerk, Hoshina, was about to leave the store after her shift, saying goodbye to her colleagues, when Aokawa came in."
+        },
+        {
+          "avatars": [],
+          "location": "Office",
+          "bgm": "normal",
+          "background": "office",
+          "text": "As they passed each other, Aokawa unconsciously blurted out and confessed to her in front of the convenience store. Being a rather reserved person, he had never done anything like this before."
+        },
+        {
+          "avatars": [],
+          "location": "Office",
+          "bgm": "normal",
+          "background": "office",
+          "text": "His body had moved so naturally that he had confessed before he knew it. Fortunately, or perhaps luckily, Hoshina didn't seem to think he was a bad guy and they exchanged contact information."
+        },
+        {
+          "avatars": [],
+          "location": "Office",
+          "bgm": "normal",
+          "background": "office",
+          "text": "Aokawa: 'It's a miracle that she didn't reject such a suspicious guy. And she's so cute....'"
+        },
+        {
+          "avatars": [],
+          "location": "Office",
+          "bgm": "normal",
+          "background": "office",
+          "items": [
+            {
+              "text": "Am I handsome?"
+            },
+            {
+              "text": "Is this what they call a fateful choice?"
+            }
+          ],
+          "text": ""
+        },
+        {
+          "avatars": [],
+          "location": "Office",
+          "bgm": "normal",
+          "background": "office",
+          "text": "He would never make the mistake of thinking he was handsome. Aokawa was that kind of man. Normally, he would have kept his distance from Hoshina, who was so beautiful that she was out of his league."
+        },
+        {
+          "avatars": [],
+          "location": "Office",
+          "bgm": "normal",
+          "background": "office",
+          "text": "Of course, he didn't dislike beautiful women. But more than that, a strange feeling welled up inside him when he thought of Hoshina."
+        },
+        {
+          "avatars": [],
+          "location": "Office",
+          "bgm": "normal",
+          "background": "office",
+          "text": "Aokawa: 'Is this... love at first sight?'"
+        },
+        {
+          "avatars": [],
+          "location": "Office",
+          "bgm": "normal",
+          "background": "office",
+          "text": "He was confused, but he gradually calmed down and then began to worry about how to contact her."
+        },
+        {
+          "avatars": [],
+          "location": "Office",
+          "bgm": "normal",
+          "background": "office",
+          "text": "When you start off like this, what kind of message are you supposed to send first...?"
+        },
+        {
+          "avatars": [],
+          "location": "Office",
+          "bgm": "normal",
+          "background": "office",
+          "text": "While he was thinking about it, he arrived at his workplace, so he pushed his worries to the back of his mind and immersed himself in his work."
+        },
+        {
+          "avatars": [],
+          "location": "My Room",
+          "bgm": "normal",
+          "background": "room",
+          "effect": "dark",
+          "text": "It was past 11 p.m. when Aokawa got home. It had been another hectic day. As he took a shower, he wondered if these days would continue forever, and as he reflected on his day, he suddenly realized something."
+        },
+        {
+          "avatars": [],
+          "location": "My Room",
+          "bgm": "normal",
+          "background": "room",
+          "effect": "dark",
+          "text": "Aokawa: 'I haven't contacted Hoshina-san!'"
+        },
+        {
+          "avatars": [],
+          "location": "My Room",
+          "bgm": "normal",
+          "background": "room",
+          "effect": "dark",
+          "text": "It was too rude not to contact her at all after what he had done. She would think he was joking. He hurriedly finished his shower, picked up his phone, and froze."
+        },
+        {
+          "avatars": [],
+          "location": "My Room",
+          "bgm": "normal",
+          "background": "room",
+          "effect": "dark",
+          "text": "He didn't know what to send. Should he confess his love, make small talk, introduce himself, or tell a funny story? What was the right answer...?"
+        },
+        {
+          "avatars": [],
+          "location": "My Room",
+          "bgm": "normal",
+          "background": "room",
+          "effect": "dark",
+          "text": "But he couldn't send a message too late at night. Aokawa was starting to panic."
+        },
+        {
+          "avatars": [],
+          "location": "My Room",
+          "bgm": "normal",
+          "background": "room",
+          "effect": "dark",
+          "items": [
+            {
+              "text": "Should I just send something random?"
+            },
+            {
+              "text": "No, should I take my time and write a proper message?"
+            }
+          ],
+          "text": ""
+        },
+        {
+          "avatars": [],
+          "location": "My Room",
+          "bgm": "normal",
+          "background": "room",
+          "effect": "dark",
+          "text": "As he was doing so, the night grew later and later.... Reporting, contacting, and consulting are the basics of a working adult. The later the contact, the worse the situation becomes."
+        },
+        {
+          "avatars": [],
+          "location": "My Room",
+          "bgm": "normal",
+          "background": "room",
+          "effect": "dark",
+          "text": "To think this would be his first time.... If there was a ranking for disappointing first moves, wouldn't he be in it?"
+        },
+        {
+          "avatars": [],
+          "location": "My Room",
+          "bgm": "normal",
+          "background": "room",
+          "effect": "dark",
+          "text": "With that thought, Aokawa sent a message to Hoshina."
+        },
+        {
+          "avatars": [],
+          "location": "My Room",
+          "bgm": "normal",
+          "background": "room",
+          "effect": "dark",
+          "text": "'I am very sorry for the trouble I caused you today. It is already late, so I will contact you again tomorrow.'"
+        }
+      ]
+    }
+  ]
+}

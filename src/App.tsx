@@ -3,22 +3,30 @@ import "./App.css";
 import StoryStage from "./pages/StoryStage";
 import { gamgeConfig, gameStatus, Chapter, SavedItem } from "./controls/Store";
 import Loading from "./controls/common/Loading";
-import json from "./assets/Story.json";
 import AssetLoader from "./utils/AssetLoader";
 import Top from "./pages/Top";
 import LoadingOverlay from "./controls/common/LoadingOverlay";
 import { ToastProvider } from "./controls/common/Toast";
+import { useTranslation } from "react-i18next";
 
 function App() {
   const [isStoryLoaded, setIsStoryLoaded] = useState(false);
   const [showTopMenu, setShowTopMenu] = useState(true);
   const [isLoading, setIsLoading] = useState(false);
+  const [isStoryDataLoaded, setIsStoryDataLoaded] = useState(false); // New state
+  const { t, i18n } = useTranslation();
 
   useEffect(() => {
-    gamgeConfig.chapters = json.chapters as any as Chapter[];
-    gamgeConfig.config = json.config;
-    gameStatus.chapterIndex = 0;
-  }, []);
+    const loadStory = async () => {
+      const response = await fetch(`./assets/Story.${i18n.language}.json`);
+      const story = await response.json();
+      gamgeConfig.chapters = story.chapters as any as Chapter[];
+      gamgeConfig.config = story.config;
+      gameStatus.chapterIndex = 0;
+      setIsStoryDataLoaded(true); // Set to true after data is loaded
+    };
+    loadStory();
+  }, [i18n.language]);
 
   const handleLoadComplete = () => {
     setIsStoryLoaded(true);
@@ -57,20 +65,29 @@ function App() {
     }, 1000);
   };
 
+  const changeLanguage = (lng: string) => {
+    i18n.changeLanguage(lng);
+  };
+
   return (
     <ToastProvider>
       <Suspense fallback={<Loading />}>
         <AssetLoader onLoadComplete={handleLoadComplete} />
       </Suspense>
-      {showTopMenu ? (
-        <Top onStart={handleStart} onContinue={handleContinue} />
+      {isStoryDataLoaded ? (
+        showTopMenu ? (
+          <Top onStart={handleStart} onContinue={handleContinue} />
+        ) : (
+          <>
+            <StoryStage onExit={handleExit} />
+          </>
+        )
       ) : (
-        <>
-          <StoryStage onExit={handleExit} />
-        </>
+        <Loading />
       )}
       {isLoading && <LoadingOverlay onClose={handleLoadingClose} />}
       {!isStoryLoaded && <Loading />}{" "}
+      
     </ToastProvider>
   );
 }

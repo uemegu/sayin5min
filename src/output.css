@@ -579,11 +579,6 @@ video {
   right: 0px;
 }
 
-.inset-y-0 {
-  top: 0px;
-  bottom: 0px;
-}
-
 .bottom-0 {
   bottom: 0px;
 }
@@ -612,6 +607,10 @@ video {
   left: 50%;
 }
 
+.left-5 {
+  left: 1.25rem;
+}
+
 .right-0 {
   right: 0px;
 }
@@ -622,6 +621,10 @@ video {
 
 .right-24 {
   right: 6rem;
+}
+
+.right-4 {
+  right: 1rem;
 }
 
 .right-48 {
@@ -660,6 +663,14 @@ video {
   top: 3rem;
 }
 
+.top-4 {
+  top: 1rem;
+}
+
+.top-5 {
+  top: 1.25rem;
+}
+
 .z-30 {
   z-index: 30;
 }
@@ -670,6 +681,10 @@ video {
 
 .mb-4 {
   margin-bottom: 1rem;
+}
+
+.ml-2 {
+  margin-left: 0.5rem;
 }
 
 .mr-16 {
@@ -888,70 +903,6 @@ video {
   animation: bounce 1s infinite;
 }
 
-@keyframes panCenterFromLeft {
-  0% {
-    -o-object-position: -200px 0;
-       object-position: -200px 0;
-  }
-
-  100% {
-    -o-object-position: 0 0;
-       object-position: 0 0;
-  }
-}
-
-.animate-centerL {
-  animation: panCenterFromLeft  0.5s ease-out forwards;
-}
-
-@keyframes panCenterFromRight {
-  0% {
-    -o-object-position: 200px 0;
-       object-position: 200px 0;
-  }
-
-  100% {
-    -o-object-position: 0 0;
-       object-position: 0 0;
-  }
-}
-
-.animate-centerR {
-  animation: panCenterFromRight 0.5s ease-out forwards;
-}
-
-@keyframes panLeft {
-  0% {
-    -o-object-position: 0px 0px;
-       object-position: 0px 0px;
-  }
-
-  100% {
-    -o-object-position: -200px 0px;
-       object-position: -200px 0px;
-  }
-}
-
-.animate-panLeft {
-  animation: panLeft 0.5s ease-in-out forwards;
-}
-
-@keyframes panRight {
-  0% {
-    -o-object-position: -200px 0px;
-       object-position: -200px 0px;
-  }
-
-  100% {
-    -o-object-position: 0px 0px;
-       object-position: 0px 0px;
-  }
-}
-
-.animate-panRight {
-  animation: panRight 0.5s ease-in-out forwards;
-}
-
 @keyframes slideIn {
   0% {
     transform: translateX(100px);
@@ -1008,34 +959,6 @@ video {
 
 .animate-toast-out {
   animation: toast-out 0.5s ease-in forwards;
-}
-
-@keyframes zoomIn {
-  0% {
-    transform: scale(1);
-  }
-
-  100% {
-    transform: scale(1.1);
-  }
-}
-
-.animate-zoomIn {
-  animation: zoomIn  0.5s ease-out forwards;
-}
-
-@keyframes zoomOut {
-  0% {
-    transform: scale(1.1);
-  }
-
-  100% {
-    transform: scale(1);
-  }
-}
-
-.animate-zoomOut {
-  animation: zoomOut 0.5s ease-out forwards;
 }
 
 .cursor-pointer {
@@ -1104,6 +1027,10 @@ video {
 
 .rounded-lg {
   border-radius: 0.5rem;
+}
+
+.rounded-md {
+  border-radius: 0.375rem;
 }
 
 .rounded-l-lg {
@@ -1263,11 +1190,6 @@ video {
      object-fit: cover;
 }
 
-.object-center {
-  -o-object-position: center;
-     object-position: center;
-}
-
 .p-2 {
   padding: 0.5rem;
 }
@@ -1368,6 +1290,11 @@ video {
 .text-white {
   --tw-text-opacity: 1;
   color: rgb(255 255 255 / var(--tw-text-opacity));
+}
+
+.text-black {
+  --tw-text-opacity: 1;
+  color: rgb(0 0 0 / var(--tw-text-opacity));
 }
 
 .opacity-0 {

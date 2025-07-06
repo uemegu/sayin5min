@@ -10,7 +10,7 @@ const MessageWindow: React.FC<{ onClick: () => void }> = ({ onClick }) => {
   const [charIndex, setCharIndex] = useState(0);
 
   useEffect(() => {
-    const currentScene = chapters[chapterIndex].scenes[messageIndex];
+    const currentScene = chapters[chapterIndex]?.scenes[messageIndex];
     if (currentScene && charIndex < currentScene.text.length) {
       const timer = setTimeout(() => {
         setCurrentMessage((prev) => prev + currentScene.text[charIndex]);
@@ -18,12 +18,12 @@ const MessageWindow: React.FC<{ onClick: () => void }> = ({ onClick }) => {
       }, 30);
       return () => clearTimeout(timer);
     }
-  }, [charIndex, messageIndex, chapters]);
+  }, [charIndex, messageIndex, chapterIndex, chapters]);
 
   useEffect(() => {
     setCurrentMessage("");
     setCharIndex(0);
-  }, [messageIndex]);
+  }, [messageIndex, chapterIndex]);
 
   const splitMessages = currentMessage.split("。");
 
@@ -50,8 +50,8 @@ const MessageWindow: React.FC<{ onClick: () => void }> = ({ onClick }) => {
           </div>
         ))}
       </div>
-      {charIndex === chapters[chapterIndex].scenes[messageIndex]?.text.length &&
-        !chapters[chapterIndex].scenes[messageIndex]?.items && (
+      {chapters[chapterIndex]?.scenes[messageIndex]?.text.length === charIndex &&
+        !chapters[chapterIndex]?.scenes[messageIndex]?.items && (
           <span>
             <img
               src={next}
