@@ -3,6 +3,7 @@ import { SavedItem } from "../controls/Store";
 import { loadData } from "../controls/common/LocalStorage";
 import { useToast } from "../controls/common/Toast";
 import { useTranslation } from "react-i18next";
+import clsx from "clsx";
 
 const Top: React.FC<{
   onStart: () => void;
@@ -40,10 +41,30 @@ const Top: React.FC<{
   return (
     <div className="top-menu h-screen w-screen flex flex-col items-center justify-center text-white gap-4">
       <div className="absolute top-4 right-4">
-        <button onClick={() => changeLanguage('ja')} className="bg-white p-2 rounded-md text-black">JP</button>
-        <button onClick={() => changeLanguage('en')} className="bg-white p-2 rounded-md ml-2 text-black">EN</button>
+        <button
+          onClick={() => changeLanguage("ja")}
+          className={clsx(
+            "p-2 w-16 rounded-md mr-4",
+            i18n.language === "ja"
+              ? "text-black border-solid border-2 border-sky-600"
+              : "bg-sky-600 text-white"
+          )}
+        >
+          JP
+        </button>
+        <button
+          onClick={() => changeLanguage("en")}
+          className={clsx(
+            "p-2 w-16 rounded-md ",
+            i18n.language === "en"
+              ? "text-black border-solid border-2 border-sky-600"
+              : "bg-sky-600 text-white"
+          )}
+        >
+          EN
+        </button>
       </div>
-      <h1 className="text-white absolute top-5 left-5">{t('title')}</h1>
+      <h1 className="text-white absolute top-5 left-5">{t("title")}</h1>
       <img className="w-96" src="./images/title.png" alt="Title Logo" />
       <button
         className="bg-pink-500 px-6 py-3 mb-4 rounded hover:bg-pink-400 text-xl mt-16"
@@ -57,7 +78,10 @@ const Top: React.FC<{
       >
         {t("continue")}
       </button>
-      <div className="text-sm text-pink-600 mt-8" dangerouslySetInnerHTML={{ __html: t("memory_warning") }}></div>
+      <div
+        className="text-sm text-pink-600 mt-8"
+        dangerouslySetInnerHTML={{ __html: t("memory_warning") }}
+      ></div>
 
       {showSaveList && (
         <div className="fixed inset-0 bg-black bg-opacity-75 flex flex-col items-center justify-center z-30">
