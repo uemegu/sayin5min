@@ -14,7 +14,7 @@ function App() {
   const [showTopMenu, setShowTopMenu] = useState(true);
   const [isLoading, setIsLoading] = useState(false);
   const [isStoryDataLoaded, setIsStoryDataLoaded] = useState(false); // New state
-  const { t, i18n } = useTranslation();
+  const { i18n } = useTranslation();
 
   useEffect(() => {
     const loadStory = async () => {
@@ -65,10 +65,6 @@ function App() {
     }, 1000);
   };
 
-  const changeLanguage = (lng: string) => {
-    i18n.changeLanguage(lng);
-  };
-
   return (
     <ToastProvider>
       <Suspense fallback={<Loading />}>
@@ -87,7 +83,6 @@ function App() {
       )}
       {isLoading && <LoadingOverlay onClose={handleLoadingClose} />}
       {!isStoryLoaded && <Loading />}{" "}
-      
     </ToastProvider>
   );
 }
