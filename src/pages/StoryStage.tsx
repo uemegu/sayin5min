@@ -1,4 +1,4 @@
-import React, { useState, Suspense } from "react";
+import React, { useState, Suspense, useEffect } from "react";
 import CanvasComponent from "../controls/Canvas";
 import MessageWindow from "../controls/MessageWindow";
 import { gamgeConfig, gameStatus } from "../controls/Store";
@@ -10,6 +10,7 @@ import Save from "../controls/common/Save";
 import GoodEnd from "../controls/GoodEnding";
 import SlideInImage from "../controls/common/SlideInImage";
 import clsx from "clsx";
+import { useTranslation } from "react-i18next";
 
 interface StoryStageProps {
   onExit: () => void;
@@ -21,22 +22,31 @@ const StoryStage: React.FC<StoryStageProps> = ({ onExit }) => {
   const [showingImagePath, setShowingImagePath] = useState<string | null>(null);
   const [ending, setEnding] = useState<string | null>(null);
   const [location, setLocation] = useState(
-    gamgeConfig.chapters[gameStatus.chapterIndex].scenes[
-      gameStatus.messageIndex
-    ].location
+    gamgeConfig.chapters[gameStatus.chapterIndex]?.scenes[gameStatus.messageIndex]
+      ?.location
   );
+  const { t } = useTranslation();
+
+  useEffect(() => {
+    if (gamgeConfig.chapters.length > 0) {
+      setLocation(
+        gamgeConfig.chapters[gameStatus.chapterIndex]?.scenes[
+          gameStatus.messageIndex
+        ]?.location
+      );
+    }
+  }, [gameStatus.chapterIndex, gameStatus.messageIndex]);
 
   const updateLocation = () => {
     if (
       location !=
-      gamgeConfig.chapters[gameStatus.chapterIndex].scenes[
-        gameStatus.messageIndex
-      ].location
+      gamgeConfig.chapters[gameStatus.chapterIndex]?.scenes[gameStatus.messageIndex]
+        ?.location
     ) {
       setLocation(
-        gamgeConfig.chapters[gameStatus.chapterIndex].scenes[
+        gamgeConfig.chapters[gameStatus.chapterIndex]?.scenes[
           gameStatus.messageIndex
-        ].location
+        ]?.location
       );
     }
   };
@@ -44,7 +54,7 @@ const StoryStage: React.FC<StoryStageProps> = ({ onExit }) => {
   const changeMessageIndex = (index: number) => {
     if (
       location !=
-      gamgeConfig.chapters[gameStatus.chapterIndex].scenes[index].location
+      gamgeConfig.chapters[gameStatus.chapterIndex]?.scenes[index]?.location
     ) {
       setIsLoading(true);
       setTimeout(() => {
@@ -55,7 +65,7 @@ const StoryStage: React.FC<StoryStageProps> = ({ onExit }) => {
       gameStatus.messageIndex = index;
       updateLocation();
     }
-    if (gamgeConfig.chapters[gameStatus.chapterIndex].scenes[index].image) {
+    if (gamgeConfig.chapters[gameStatus.chapterIndex]?.scenes[index]?.image) {
       setShowingImagePath(
         gamgeConfig.chapters[gameStatus.chapterIndex].scenes[index].image!
       );
@@ -64,9 +74,8 @@ const StoryStage: React.FC<StoryStageProps> = ({ onExit }) => {
     }
 
     const avatars =
-      gamgeConfig.chapters[gameStatus.chapterIndex].scenes[
-        gameStatus.messageIndex
-      ].avatars;
+      gamgeConfig.chapters[gameStatus.chapterIndex]?.scenes[gameStatus.messageIndex]
+        ?.avatars;
     if (avatars) {
       if (avatars.find((a) => a.attension)) {
         if (avatars.indexOf(avatars.find((a) => a.attension)!) == 2) {
@@ -90,9 +99,9 @@ const StoryStage: React.FC<StoryStageProps> = ({ onExit }) => {
     const { scenes } = gamgeConfig.chapters[gameStatus.chapterIndex];
     if (gameStatus.messageIndex < scenes.length - increment) {
       if (
-        gamgeConfig.chapters[gameStatus.chapterIndex].scenes[
+        gamgeConfig.chapters[gameStatus.chapterIndex]?.scenes[
           gameStatus.messageIndex + increment
-        ].goto
+        ]?.goto
       ) {
         if (
           gamgeConfig.chapters[gameStatus.chapterIndex].scenes[
@@ -120,9 +129,9 @@ const StoryStage: React.FC<StoryStageProps> = ({ onExit }) => {
           changeMessageIndex(chapter.scenes.indexOf(scene));
         }
       } else if (
-        gamgeConfig.chapters[gameStatus.chapterIndex].scenes[
+        gamgeConfig.chapters[gameStatus.chapterIndex]?.scenes[
           gameStatus.messageIndex + increment
-        ].conditions
+        ]?.conditions
       ) {
         const allElementsExist = gamgeConfig.chapters[
           gameStatus.chapterIndex
@@ -153,9 +162,9 @@ const StoryStage: React.FC<StoryStageProps> = ({ onExit }) => {
   const handleClick = () => {
     if (isLoading) return;
     if (
-      gamgeConfig.chapters[gameStatus.chapterIndex].scenes[
+      gamgeConfig.chapters[gameStatus.chapterIndex]?.scenes[
         gameStatus.messageIndex
-      ].items
+      ]?.items
     ) {
       return;
     }
@@ -179,12 +188,15 @@ const StoryStage: React.FC<StoryStageProps> = ({ onExit }) => {
       ? (document.body.clientWidth - 1280) / 2
       : 0;
 
+  if (gamgeConfig.chapters.length === 0) {
+    return <Loading />;
+  }
+
   const backgroundConfig = gamgeConfig.config.backgrounds.find(
     (bg) =>
       bg.key ===
-      gamgeConfig.chapters[gameStatus.chapterIndex].scenes[
-        gameStatus.messageIndex
-      ].background
+      gamgeConfig.chapters[gameStatus.chapterIndex]?.scenes[gameStatus.messageIndex]
+        ?.background
   );
   const backgroundUrl = backgroundConfig ? backgroundConfig.value : "";
 
@@ -198,7 +210,7 @@ const StoryStage: React.FC<StoryStageProps> = ({ onExit }) => {
               className="absolute text-sm top-0 h-8 right-0 p-2 text-white hover:underline"
               onClick={handleExit}
             >
-              終了する
+              {t("exit")}
             </button>
           </>
         ) : (
@@ -233,7 +245,7 @@ const StoryStage: React.FC<StoryStageProps> = ({ onExit }) => {
               className="absolute text-sm top-0 h-8 right-0 p-2 text-white hover:underline"
               onClick={handleExit}
             >
-              終了する
+              {t("exit")}
             </button>
             <div
               className={`fixed top-10 w-screen left-[${locationLeftOffset}px] `}

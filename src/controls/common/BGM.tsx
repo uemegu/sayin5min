@@ -2,6 +2,7 @@ import React, { useEffect, useRef, useState } from "react";
 import { useSnapshot } from "valtio";
 import { gamgeConfig, gameStatus } from "../Store";
 import AudioAnalyzer from "./AudioAnalyzer";
+import { useTranslation } from "react-i18next";
 
 const BGM: React.FC = () => {
   const { chapters, config } = useSnapshot(gamgeConfig);
@@ -16,6 +17,7 @@ const BGM: React.FC = () => {
   );
   const voiceUrl = voiceConfig ? voiceConfig.value : "";
   const [isPlaying, setIsPlaying] = useState(true);
+  const { t } = useTranslation();
 
   useEffect(() => {
     if (bgmUrl && audioRef.current) {
@@ -84,7 +86,7 @@ const BGM: React.FC = () => {
         className="absolute text-sm top-0 h-8 right-48 p-2 text-white hover:underline"
         onClick={handleToggleBGM}
       >
-        {isPlaying ? "BGMをOFFにする" : "BGMをONにする"}
+        {isPlaying ? t("bgm off") : t("bgm on")}
       </button>
     </>
   );

@@ -1,46 +1,48 @@
 import { useState, useEffect, useRef } from "react";
+import { useTranslation } from "react-i18next";
 
 const GoodEnd = () => {
+  const { t } = useTranslation();
   const contents = [
     {
       image: "images/endroll_hoshina_1.jpg",
-      text: "星奈 結愛",
+      text: t("GoodEnd.hoshina"),
     },
     {
       image: "images/endroll_naruse_1.jpg",
-      text: "成瀬 陽介",
+      text: t("GoodEnd.naruse"),
     },
     {
       image: "images/endroll_shibukawa_1.jpg",
-      text: "渋川 猛",
+      text: t("GoodEnd.shibukawa"),
     },
     {
       image: "images/endroll_sister_1.jpg",
-      text: "妹",
+      text: t("GoodEnd.sister"),
     },
     {
       image: "images/endroll_aisa_1.jpg",
-      text: "華宮 葵紗",
+      text: t("GoodEnd.aisa"),
     },
     {
       image: "images/endroll_aisa_father_1.jpg",
-      text: "葵紗の父",
+      text: t("GoodEnd.aisa_father"),
     },
     {
       image: "images/hero.png",
-      text: "Music: SUNO\n\n・時空を超えた愛\n・夢見る騎士\n・Playful Keys\n・Dance with the Night\n・Monsters in the Dark",
+      text: t("GoodEnd.music"),
     },
     {
       image: "images/top_background.png",
-      text: "人にはそれぞれの世界があって\n私たちはお互いの世界を知らずに生きている",
+      text: t("GoodEnd.world"),
     },
     {
       image: "images/title.png",
-      text: "原作： Ueda",
+      text: t("GoodEnd.original"),
     },
     {
       image: "images/title.png",
-      text: "おしまい\n（Good End）",
+      text: t("GoodEnd.end"),
     },
   ];
 
