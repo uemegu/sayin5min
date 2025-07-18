@@ -8,9 +8,11 @@ https://github.com/uemegu/ReactPractice
 Game URL（フルボイス版）: https://uemegu.github.io/sayin5min/  
 Game URL（過去版）: https://uemegu.github.io/sayin5min/v1/
 
-# 更新 2025/05/06
+# 更新履歴
 
-音声をにじボイスから Tsukasa Speech に変更し、フルボイス化してみました。
+- 2025/07/19: タイトル画面に BGM 追加
+- 2025/07/08: 多言語対応（音声以外）
+- 2025/05/06: 音声をにじボイスから Tsukasa Speech に変更し、フルボイス化してみました。
 
 # ライセンス
 
@@ -18,7 +20,8 @@ Game URL（過去版）: https://uemegu.github.io/sayin5min/v1/
 
 背景画像： [Dalle-3](https://openai.com/ja-JP/)  
 効果音： [Springin’ Sound Stock](https://www.springin.org/sound-stock/)  
-BGM: [Suno](https://suno.com/)  
+BGM: [Suno](https://suno.com/)、タイトル画面の曲だけこちらから → [
+【フリー BGM】出会って 5 秒で恋をして！【かわいい/元気/疾走感】](https://www.youtube.com/watch?v=oXD9X4sge34)  
 音声： [Tsukasa Speech](https://huggingface.co/Respair/Tsukasa_Speech), 過去版は[にじボイス](https://nijivoice.com/)
 
 また、アバターは [VRoid Studio](https://vroid.com/studio)を使って制作しています。

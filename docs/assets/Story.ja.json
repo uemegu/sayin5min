@@ -224,6 +224,10 @@
       {
         "key": "dark",
         "value": "./bgms/Monsters in the Dark.mp3"
+      },
+      {
+        "key": "5min_love",
+        "value": "./bgms/5min_love.mp3"
       }
     ],
     "voices": [
