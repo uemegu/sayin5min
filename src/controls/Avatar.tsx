@@ -29,12 +29,15 @@ const Avatar: React.FC<{
   const { scene, camera } = useThree();
   const { cameraDirection } = useSnapshot(gameStatus);
   const { phoneme } = useSnapshot(gamgeConfig);
-  const gltf = avatarCache.find((r) => r.key === url)!.value!;
+  const gltfEntry = avatarCache.find((r) => r.key === url);
+  const gltf = gltfEntry?.value;
   const [avatar, setAvatar] = useState<VRM | null>(null);
   const [prevAnimationUrl, setPrevAnimationUrl] = useState<string | null>(null);
   const [mixer, setMixer] = useState<THREE.AnimationMixer | null>(null);
   const [currentAnimation, setCurrentAnimation] =
     useState<THREE.AnimationAction | null>(null);
+
+  if (!gltf) return null;
   const positions = [0, 0.7, -0.7];
   const rotation = [0, -30, 30];
 

@@ -58,6 +58,13 @@ export interface Chapter {
   scenes: Scene[];
 }
 
+export interface RequiredAssets {
+  avatarKeys: string[];
+  actionKeys: string[];
+  bgmKeys: string[];
+  voiceKeys: string[];
+}
+
 export interface Store {
   config: Config;
   chapters: Chapter[];
@@ -120,3 +127,26 @@ export const animationClipCache: Array<{
 }> = [];
 export const imangeCache: Array<{ key: string; value: THREE.Texture | null }> =
   [];
+
+export function getRequiredAssetsForChapter(chapter: Chapter): RequiredAssets {
+  const avatarKeySet = new Set<string>();
+  const actionKeySet = new Set<string>();
+  const bgmKeySet = new Set<string>();
+  const voiceKeySet = new Set<string>();
+
+  chapter.scenes.forEach((s) => {
+    s.avatars?.forEach((a) => {
+      avatarKeySet.add(a.id);
+      actionKeySet.add(a.action);
+    });
+    if (s.bgm) bgmKeySet.add(s.bgm);
+    if (s.voice) voiceKeySet.add(s.voice);
+  });
+
+  return {
+    avatarKeys: Array.from(avatarKeySet),
+    actionKeys: Array.from(actionKeySet),
+    bgmKeys: Array.from(bgmKeySet),
+    voiceKeys: Array.from(voiceKeySet),
+  };
+}
