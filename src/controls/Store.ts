@@ -78,6 +78,8 @@ export interface GameStatus {
   chapterIndex: number;
   flags: string[];
   version: number;
+  isTransitioning: boolean;
+  isLoading: boolean;
 }
 
 export const gamgeConfig = proxy<Store>({
@@ -106,6 +108,8 @@ export const gameStatus = proxy<GameStatus>({
   chapterIndex: -1,
   flags: [],
   version: 1,
+  isTransitioning: false,
+  isLoading: false,
 });
 
 export interface SavedItem {

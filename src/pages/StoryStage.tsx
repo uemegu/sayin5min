@@ -1,11 +1,10 @@
-import React, { useState, Suspense, useEffect } from "react";
+import React, { useState, Suspense, useEffect, useCallback } from "react";
 import CanvasComponent from "../controls/Canvas";
 import MessageWindow from "../controls/MessageWindow";
 import { gamgeConfig, gameStatus } from "../controls/Store";
 import BGM from "../controls/common/BGM";
 import ItemsDisplay from "../controls/common/Items";
 import Loading from "../controls/common/Loading";
-import LoadingOverlay from "../controls/common/LoadingOverlay";
 import Save from "../controls/common/Save";
 import GoodEnd from "../controls/GoodEnding";
 import SlideInImage from "../controls/common/SlideInImage";
@@ -18,7 +17,6 @@ interface StoryStageProps {
 }
 
 const StoryStage: React.FC<StoryStageProps> = ({ onExit }) => {
-  const [isLoading, setIsLoading] = useState(false);
   const [pan, setPan] = useState(0);
   const [showingImagePath, setShowingImagePath] = useState<string | null>(null);
   const [ending, setEnding] = useState<string | null>(null);
@@ -44,10 +42,12 @@ const StoryStage: React.FC<StoryStageProps> = ({ onExit }) => {
 
   const changeMessageIndex = (index: number) => {
     if (location != chapters[chapterIndex]?.scenes[index]?.location) {
-      setIsLoading(true);
+      gameStatus.isLoading = true;
+      gameStatus.isTransitioning = true;
       setTimeout(() => {
         gameStatus.messageIndex = index;
         updateLocation();
+        gameStatus.isTransitioning = false;
       }, 1000);
     } else {
       gameStatus.messageIndex = index;
@@ -87,11 +87,13 @@ const StoryStage: React.FC<StoryStageProps> = ({ onExit }) => {
           chapters[chapterIndex].scenes[messageIndex + increment].goto ===
           "good_end"
         ) {
-          setIsLoading(true);
+          gameStatus.isLoading = true;
+          gameStatus.isTransitioning = true;
           setTimeout(() => {
             setEnding(
               chapters[chapterIndex].scenes[messageIndex + increment].goto!
             );
+            gameStatus.isTransitioning = false;
           }, 1000);
         } else {
           const targets =
@@ -121,11 +123,13 @@ const StoryStage: React.FC<StoryStageProps> = ({ onExit }) => {
       }
     } else {
       if (chapters.length > chapterIndex + 1) {
-        setIsLoading(true);
+        gameStatus.isLoading = true;
+        gameStatus.isTransitioning = true;
         setTimeout(() => {
           gameStatus.chapterIndex++;
           increment = 0;
           gameStatus.messageIndex = 0;
+          gameStatus.isTransitioning = false;
           // Note: App side useEffect in StoreStage will update things
         }, 1000);
       }
@@ -133,7 +137,7 @@ const StoryStage: React.FC<StoryStageProps> = ({ onExit }) => {
   };
 
   const handleClick = () => {
-    if (isLoading) return;
+    if (gameStatus.isLoading) return;
     if (
       gamgeConfig.chapters[gameStatus.chapterIndex]?.scenes[
         gameStatus.messageIndex
@@ -144,17 +148,14 @@ const StoryStage: React.FC<StoryStageProps> = ({ onExit }) => {
     next(1);
   };
 
-  const itemSelected = () => {
+  const itemSelected = useCallback(() => {
     next(1);
-  };
+  }, [next]);
 
-  const handleLoadingClose = () => {
-    setIsLoading(false);
-  };
 
-  const handleExit = () => {
+  const handleExit = useCallback(() => {
     onExit();
-  };
+  }, [onExit]);
 
   const locationLeftOffset =
     document.body.clientWidth > 1280
@@ -229,7 +230,6 @@ const StoryStage: React.FC<StoryStageProps> = ({ onExit }) => {
           </>
         )}
       </div>
-      {isLoading && <LoadingOverlay onClose={handleLoadingClose} />}
     </Suspense>
   );
 };

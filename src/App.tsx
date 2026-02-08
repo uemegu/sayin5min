@@ -1,4 +1,4 @@
-import { useEffect, useState, Suspense } from "react";
+import { useEffect, useState, Suspense, useCallback } from "react";
 import "./App.css";
 import StoryStage from "./pages/StoryStage";
 import {
@@ -18,10 +18,14 @@ import { useSnapshot } from "valtio";
 function App() {
   const [isAssetsLoaded, setIsAssetsLoaded] = useState(false);
   const [showTopMenu, setShowTopMenu] = useState(true);
-  const [isLoading, setIsLoading] = useState(false);
   const [isStoryDataLoaded, setIsStoryDataLoaded] = useState(false);
   const { i18n } = useTranslation();
-  const { chapterIndex } = useSnapshot(gameStatus);
+  const { chapterIndex, isLoading, isTransitioning } = useSnapshot(gameStatus);
+
+  const handleLoadingClose = useCallback(() => {
+    gameStatus.isLoading = false;
+    gameStatus.isTransitioning = false;
+  }, []);
 
   useEffect(() => {
     const loadStory = async () => {
@@ -42,42 +46,46 @@ function App() {
     }
   }, [chapterIndex]);
 
-  const handleLoadComplete = () => {
+  const handleLoadComplete = useCallback(() => {
     setIsAssetsLoaded(true);
-  };
+  }, []);
 
-  const handleStart = () => {
+  const handleStart = useCallback(() => {
     gameStatus.chapterIndex = 0;
     gameStatus.messageIndex = 0;
     gameStatus.flags = [];
-    setIsLoading(true);
+    gameStatus.isLoading = true;
+    gameStatus.isTransitioning = true;
     setTimeout(() => {
       setShowTopMenu(false);
+      gameStatus.isTransitioning = false;
     }, 1000);
-  };
+  }, []);
 
-  const handleContinue = (savedGame: SavedItem) => {
+  const handleContinue = useCallback((savedGame: SavedItem) => {
     gameStatus.cameraDirection = savedGame.gameStatus.cameraDirection;
     gameStatus.flags = [...savedGame.gameStatus.flags];
     gameStatus.chapterIndex = savedGame.gameStatus.chapterIndex;
     gameStatus.messageIndex = savedGame.gameStatus.messageIndex;
 
-    setIsLoading(true);
+    gameStatus.isLoading = true;
+    gameStatus.isTransitioning = true;
     setTimeout(() => {
       setShowTopMenu(false);
+      gameStatus.isTransitioning = false;
     }, 1000);
-  };
+  }, []);
 
-  const handleLoadingClose = () => {
-    setIsLoading(false);
-  };
+  // Removed local definition as it's now wrapped in useCallback above
 
-  const handleExit = () => {
-    setIsLoading(true);
+  const handleExit = useCallback(() => {
+    gameStatus.isLoading = true;
+    gameStatus.isTransitioning = true;
     setTimeout(() => {
       setShowTopMenu(true);
+      gameStatus.isTransitioning = false;
     }, 1000);
-  };
+  }, []);
 
   return (
     <ToastProvider>
@@ -101,7 +109,7 @@ function App() {
       {(isLoading || (!isAssetsLoaded && !showTopMenu)) && (
         <LoadingOverlay
           onClose={handleLoadingClose}
-          loading={!isAssetsLoaded && !showTopMenu}
+          loading={isTransitioning || (!isAssetsLoaded && !showTopMenu)}
         />
       )}
       {!isAssetsLoaded && chapterIndex >= 0 && showTopMenu && <Loading />}

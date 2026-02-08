@@ -9,28 +9,30 @@ const LoadingOverlay: React.FC<LoadingOverlayProps> = ({
   onClose,
   loading = false,
 }) => {
-  const [isActive, setIsActive] = useState(false);
+  const [status, setStatus] = useState<"idle" | "active" | "opening">("idle");
 
   useEffect(() => {
-    setIsActive(true);
-    if (!loading) {
-      const timer = setTimeout(() => {
-        setIsActive(false);
-        setTimeout(onClose, 500);
-      }, 2000);
-      return () => clearTimeout(timer);
+    let timer: any;
+    if (loading) {
+      if (status === "idle") {
+        timer = setTimeout(() => setStatus("active"), 100);
+      }
+    } else {
+      if (status === "active") {
+        setStatus("opening");
+      } else if (status === "opening") {
+        timer = setTimeout(() => {
+          onClose();
+        }, 600);
+      } else if (status === "idle") {
+        // If it was never loading, just close
+        onClose();
+      }
     }
-  }, [loading]);
+    return () => clearTimeout(timer);
+  }, [loading, status, onClose]);
 
-  useEffect(() => {
-    if (isActive && !loading) {
-      const timer = setTimeout(() => {
-        setIsActive(false);
-        setTimeout(onClose, 500);
-      }, 500); // Wait a bit before sliding out if it was a long load
-      return () => clearTimeout(timer);
-    }
-  }, [isActive, loading, onClose]);
+  const isActive = status === "active";
 
   return (
     <>
