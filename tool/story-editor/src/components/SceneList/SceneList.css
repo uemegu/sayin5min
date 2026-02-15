@@ -1,0 +1,102 @@
+.scene-list-container {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.scene-list-header {
+    padding: 0.8rem 1rem;
+    border-bottom: 1px solid var(--border-color);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-weight: bold;
+    font-size: 0.9rem;
+    color: var(--text-muted);
+}
+
+.scene-item {
+    display: flex;
+    align-items: flex-start;
+    padding: 0.8rem;
+    border-bottom: 1px solid var(--border-color);
+    cursor: pointer;
+    transition: background-color 0.2s;
+    position: relative;
+}
+
+.scene-item:hover {
+    background-color: #1c2128;
+}
+
+.scene-item.active {
+    background-color: #1f6feb22;
+    border-left: 3px solid var(--highlight-color);
+}
+
+.scene-item-num {
+    font-size: 0.8rem;
+    color: var(--text-muted);
+    width: 20px;
+    margin-top: 2px;
+}
+
+.scene-item-content {
+    flex: 1;
+    overflow: hidden;
+}
+
+.scene-item-title {
+    font-weight: 600;
+    font-size: 0.9rem;
+    margin-bottom: 0.2rem;
+    color: var(--text-main);
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.scene-item-loc {
+    font-size: 0.75rem;
+    color: #58a6ff;
+    margin-bottom: 0.2rem;
+}
+
+.scene-item-preview {
+    font-size: 0.8rem;
+    color: var(--text-muted);
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+.icon-button {
+    background: transparent;
+    border: none;
+    color: var(--text-muted);
+    padding: 4px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 4px;
+}
+
+.icon-button:hover {
+    background: var(--border-color);
+    color: var(--text-main);
+}
+
+.delete-button {
+    display: none;
+    background: transparent;
+    border: none;
+    color: var(--danger-color);
+    position: absolute;
+    right: 0.5rem;
+    top: 0.5rem;
+}
+
+.scene-item:hover .delete-button {
+    display: flex;
+}
